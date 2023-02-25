@@ -1,33 +1,24 @@
-# Prerequisites
-*.d
+# DIRECTORIOS
+.vs/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+Eldersbane/Temp/
+Eldersbane/Lib/
+
+Eldersbane/Eldersbane/x64/
+
+# TIPOS DE ARCHIVOS
+*.vcxproj.user
+
+*.pdb
+*.log
+*.ik
+*.idb
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
-*.vs
+*.exe.recipe
+*.lib.recipe
+*.lastbuildstate
+*.exp
+
+# Ignore vim files
+*.swp
