@@ -70,16 +70,30 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>FlamingoGame_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>FlamingoGame_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>FlamingoGame</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>FlamingoGame</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\SDL2-2.24.1\include;$(SolutionDir)Motor-Grupo3\Dependencias\Bullet\Src\src;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\include;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Src\OgreMain\include;$(SolutionDir)Motor-Grupo3\Src\IMGUI;$(SolutionDir)Motor-Grupo3\Src\Motor;$(SolutionDir)Motor-Grupo3\Src\Physics;$(SolutionDir)Motor-Grupo3\Src\Render;$(SolutionDir)Motor-Grupo3\Src\ECS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,12 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\SDL2-2.24.1\include;$(SolutionDir)Motor-Grupo3\Dependencias\Bullet\Src\src;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\include;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Src\OgreMain\include;$(SolutionDir)Motor-Grupo3\Src\IMGUI;$(SolutionDir)Motor-Grupo3\Src\Motor;$(SolutionDir)Motor-Grupo3\Src\Physics;$(SolutionDir)Motor-Grupo3\Src\Render;$(SolutionDir)Motor-Grupo3\Src\ECS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -104,10 +120,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\SDL2-2.24.1\include;$(SolutionDir)Motor-Grupo3\Dependencias\Bullet\Src\src;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\include;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Src\OgreMain\include;$(SolutionDir)Motor-Grupo3\Src\IMGUI;$(SolutionDir)Motor-Grupo3\Src\Motor;$(SolutionDir)Motor-Grupo3\Src\Physics;$(SolutionDir)Motor-Grupo3\Src\Render;$(SolutionDir)Motor-Grupo3\Src\ECS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -118,21 +136,18 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\SDL2-2.24.1\include;$(SolutionDir)Motor-Grupo3\Dependencias\Bullet\Src\src;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Build\include;$(SolutionDir)Motor-Grupo3\Dependencias\Ogre\Src\OgreMain\include;$(SolutionDir)Motor-Grupo3\Src\IMGUI;$(SolutionDir)Motor-Grupo3\Src\Motor;$(SolutionDir)Motor-Grupo3\Src\Physics;$(SolutionDir)Motor-Grupo3\Src\Render;$(SolutionDir)Motor-Grupo3\Src\ECS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Eldersbane.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Motor-Grupo3\Projects\Motor\Motor.vcxproj">
-      <Project>{32d20654-5369-407b-b247-d36f1f6fb8ee}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
