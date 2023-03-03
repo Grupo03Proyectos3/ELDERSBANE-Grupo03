@@ -1,8 +1,8 @@
 
 #include <iostream>
-#include <Light.h>
+#include <Component.h>
 
 int main()
 {
-	Light l;
+	auto m = new ecs::Component();
 }
