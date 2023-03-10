@@ -152,7 +152,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\Render\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\Physics\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\IMGUI\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoBase\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoUtils\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\ECS\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Motor.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
