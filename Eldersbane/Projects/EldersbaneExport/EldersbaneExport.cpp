@@ -12,4 +12,5 @@ bool InitJuego(void)
 	//CMotorDll* miMotor = CMotor::Instance();
 	//miMotor->HazAlgo();
 	std::cout << "Fin juego \n";
+	return true;
 }
