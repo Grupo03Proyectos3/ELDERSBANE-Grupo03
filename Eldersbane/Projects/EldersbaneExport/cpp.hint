@@ -1,0 +1,2 @@
+#define ELDERSBANEEXPORT_API __declspec(dllexport)
+#define ELDERSBANEEXPORT_API __declspec(dllimport)
