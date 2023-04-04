@@ -10,4 +10,4 @@
 #define ELDERSBANEEXPORT_API __declspec(dllimport)
 #endif
 
-extern ELDERSBANEEXPORT_API bool InitJuego(void);
+extern "C" ELDERSBANEEXPORT_API bool InitJuego(void);
