@@ -4,5 +4,5 @@
 
 int main()
 {
-	auto m = new ecs::Component();
+
 }

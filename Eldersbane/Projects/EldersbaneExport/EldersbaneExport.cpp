@@ -4,13 +4,14 @@
 #include "pch.h"
 #include "framework.h"
 #include "EldersbaneExport.h"
+#include "FlamingoExport/FlamingoExport.h"
 
 #include <iostream>
 
 bool InitJuego(void)
 {
-	//CMotorDll* miMotor = CMotor::Instance();
-	//miMotor->HazAlgo();
+	CFlamingoExport* miMotor = CFlamingoExport::Instance();
+	miMotor->DoSomething();
 	std::cout << "Fin juego \n";
 	return true;
 }
