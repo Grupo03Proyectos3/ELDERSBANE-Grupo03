@@ -21,7 +21,16 @@ public:
 		BOSS
 	};
 	Enemy(enemyType t_type);
+	void initEnemy();
 private:
 	enemyType m_type;
+	//Las siguientes variables son provisionales, habra que usar los componentes correspondientes
+	float m_speed;
+	float m_health;
+	float m_max_health;
+	float m_damage;
+
+	float m_size;
+	//GameObject gO;
 };
 #endif
