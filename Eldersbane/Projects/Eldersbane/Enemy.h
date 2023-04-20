@@ -1,12 +1,14 @@
 #pragma once
 #ifndef __ENEMY_H__
 #define __ENEMY_H__
+
+#include "GameObject.h"
 /**
 * Clase que representa los enemigos del juego.
 *
 *
 */
-class Enemy
+class Enemy: public ecs::GameObject
 {
 public:
 	enum enemyType
