@@ -104,7 +104,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoBase\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>FlamingoExport_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -126,7 +126,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoBase\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>FlamingoExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -144,7 +144,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes\;$(SolutionDir)Motor-Grupo3\Lib\FlamingoBase\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>FlamingoExport_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -166,7 +166,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Motor-Grupo3\Exes\;$(SolutionDir)Motor-Grupo3\Lib\FlamingoBase\$(Platform)\$(Configuration);$(SolutionDir)Motor-Grupo3\Lib\FlamingoExport\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
       <AdditionalDependencies>FlamingoExport.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

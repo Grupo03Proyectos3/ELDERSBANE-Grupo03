@@ -4,17 +4,22 @@
 #include "pch.h"
 #include "framework.h"
 #include "EldersbaneExport.h"
-#include "FlamingoExport/FlamingoExport.h"
 #include <iostream>
+
+#include "FlamingoExport/FlamingoExport.h"
+#include "FlamingoExport/FlamingoCore.h"
 
 bool InitJuego(void)
 {
 	CFlamingoExport* miMotor = CFlamingoExport::Instance();
-	miMotor->DoSomething();
-
+	//miMotor->DoSomething();
+	
 	// Inicializar primera escena
 
+	const std::string first_scene = "EldersbaneMap.json";
+	Flamingo::SetFirstScene(first_scene);
 
-	std::cout << "Fin juego \n";
+	// pasarle la lista de componentes del juego
+
 	return true;
 }

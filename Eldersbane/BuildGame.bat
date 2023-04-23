@@ -4,6 +4,8 @@ set EXES=.\Motor-Grupo3\Exes
 msbuild "Eldersbane.sln" /p:configuration=Debug
 msbuild "Eldersbane.sln" /p:configuration=Release
 
+:: Renombrar DLLs para que sean genéricas
+
 :: Copia de DLLs a Exes 
 XCOPY /y /s .\Bin\EldersbaneExport.dll %EXES%
 XCOPY /y /s .\Bin\EldersbaneExport_d.dll %EXES%
