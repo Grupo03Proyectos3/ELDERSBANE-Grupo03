@@ -16,7 +16,7 @@ bool InitJuego(void)
 	
 	// Inicializar primera escena
 
-	const std::string first_scene = "EldersbaneMap.json";
+	const std::string first_scene = "mapa";
 	Flamingo::SetFirstScene(first_scene);
 
 	// pasarle la lista de componentes del juego

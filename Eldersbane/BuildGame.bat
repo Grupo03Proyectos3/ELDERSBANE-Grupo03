@@ -10,10 +10,14 @@ msbuild "Eldersbane.sln" /p:configuration=Release
 XCOPY /y /s .\Bin\EldersbaneExport.dll %EXES%
 XCOPY /y /s .\Bin\EldersbaneExport_d.dll %EXES%
 
-:: Copiar la carpeta de Assets
-XCOPY /y /s .\Exes\Assets %EXES%
+:: Copiar la carpeta de Assets -> NO
+:: XCOPY /y /s .\Exes\Assets %EXES%
 
 :: Compila la solucion del motor
 cd .\Motor-Grupo3\
 msbuild "MiMotor.sln" /p:configuration=Debug
 msbuild "MiMotor.sln" /p:configuration=Release
+
+:: Mover assets del motor y .exe del motor a Eldersbane
+
+:: Ejecutar .exe del motor

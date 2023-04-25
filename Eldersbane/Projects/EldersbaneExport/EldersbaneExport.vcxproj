@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>EldersbaneExport</TargetName>
+    <TargetName>GameExport</TargetName>
     <OutDir>$(SolutionDir)Bin</OutDir>
     <IntDir>$(SolutionDir)Temp</IntDir>
   </PropertyGroup>
@@ -81,7 +81,7 @@
     <IntDir>$(SolutionDir)Temp</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>EldersbaneExport_d</TargetName>
+    <TargetName>GameExport_d</TargetName>
     <OutDir>$(SolutionDir)Bin</OutDir>
     <IntDir>$(SolutionDir)Temp</IntDir>
   </PropertyGroup>
