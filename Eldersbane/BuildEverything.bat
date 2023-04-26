@@ -1,7 +1,12 @@
-:: Compiles the engine using the game DLL and moves the files in order to execute the .exe file correctly
+:: Compiles the engine after creating its dependencies using the game DLL 
+:: and moves the files in order to execute the .exe file correctly
 
 set EXES=.\Motor-Grupo3\Exes\
 set GAME_EXES=.\Exes\Assets\
+
+cd .\Motor-Grupo3\
+call BuildEngine.bat
+cd ..
 
 :: Compilar la solucion del juego para generar las DLLs
 msbuild "Eldersbane.sln" /p:configuration=Debug
@@ -20,5 +25,3 @@ cd ..
 
 :: Mover assets del motor y .exe del motor a Eldersbane
 XCOPY /y /s .\Motor-Grupo3\Exes .\Exes\
-
-
