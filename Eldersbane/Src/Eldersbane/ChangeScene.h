@@ -23,6 +23,8 @@ public:
 
 	void initComponent() override;
 
+	void clickFuntion() override;
+
 	void setFirstScene();
 };
 
