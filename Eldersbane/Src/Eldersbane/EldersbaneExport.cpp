@@ -14,8 +14,6 @@
 #include "ChangeScene.h"
 
 bool InitJuego(void)
-{
-	CFlamingoExport* miMotor = CFlamingoExport::Instance();
 	//miMotor->DoSomething();
 	
 	// Inicializar primera escena

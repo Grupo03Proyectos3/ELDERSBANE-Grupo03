@@ -24,6 +24,9 @@
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -33,6 +36,15 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Eldersbane.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

@@ -176,10 +176,14 @@
   <ItemGroup>
     <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h" />
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\Eldersbane.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\Main.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
