@@ -12,19 +12,26 @@
 #include "ECS/Manager.h"
 
 #include "ChangeScene.h"
+#include "PlayerHealth.h"
 
 bool InitJuego(void)
+{
 	//miMotor->DoSomething();
 	
-	// Inicializar primera escena
-
 	std::cout << "juegoDado" << "\n";
-	Flamingo::ScriptManager::instance()->addGameScript("changeScene", new ChangeScene());
 
+	// Inicializar primera escena
 	const std::string first_scene = "menu";
 	Flamingo::SetFirstScene(first_scene);
 
 	// pasarle la lista de componentes del juego
+	setGameComponents();
 
 	return true;
+}
+
+void setGameComponents() 
+{
+	Flamingo::ScriptManager::instance()->addGameScript("changeScene", new ChangeScene());
+	Flamingo::ScriptManager::instance()->addGameScript("playerHealth", new PlayerHealth());
 }
