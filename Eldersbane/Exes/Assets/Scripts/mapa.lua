@@ -129,7 +129,7 @@ Arbol = {
         t_static = "1"
     },
     MeshRenderer = {
-        t_model_name = "dragon.mesh",
+        t_model_name = "dragon2.mesh",
         t_entity_name= "dragon",
         t_node_x="0",
         t_node_y="0",
