@@ -7,7 +7,7 @@ public:
 
 	PlayerMovement();
 	~PlayerMovement();
-
+	void start() override;
 	void initValues() override;
 	void initComponent() override;
 

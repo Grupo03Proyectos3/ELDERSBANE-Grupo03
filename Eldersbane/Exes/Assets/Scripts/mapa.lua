@@ -113,7 +113,7 @@ Arbol = {
     },
     Transform = {
         positionX = "1000.0",
-        positionY = "100.0",
+        positionY = "200.0",
         positionZ = "0.0",
         scaleX = "20",
         scaleY = "20",
@@ -138,6 +138,9 @@ Arbol = {
     },
     Animator={
         t_name="dragon"
+    },
+    Scripts={
+        t_scriptName="PlayerMovement"
     }
 }
 EspadaMetal = {

@@ -1,11 +1,22 @@
 #include "PlayerMovement.h"
 #include <ECS/Manager.h>
+#include <FlamingoExport/FlamingoCore.h>
+#include <Render/Animator.h>
+#include <FlamingoBase/SceneManager.h>
 //#include <ECS/InputHandlerContainer.h>
 //#include <FlamingoUtils/FlamingoKeys.h>
 PlayerMovement::PlayerMovement(){
 }
 
 PlayerMovement::~PlayerMovement(){
+}
+
+void PlayerMovement::start(){
+	auto m_mngr = Flamingo::FlamingoCore::getManager();
+	auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
+	auto x = m_mngr->getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
+	x->setAnimation("my_animation", true, true);
+	std::cout << "ddfssdfsdfsdf\n";
 }
 
 void PlayerMovement::initValues(){

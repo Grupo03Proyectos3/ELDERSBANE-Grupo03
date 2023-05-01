@@ -13,7 +13,9 @@
 
 #include "ChangeScene.h"
 #include "PlayerHealth.h"
-
+//#include "Render/Animator.h"
+//#include "FlamingoBase/SceneManager.h"
+#include "PlayerMovement.h"
 bool InitJuego(void)
 {
 	//miMotor->DoSomething();
@@ -24,14 +26,18 @@ bool InitJuego(void)
 	// Inicializar primera escena
 	std::string first_scene = "menu";
 	f_core->addSceneToLoad("mapa");
-	f_core->addSceneToLoad(first_scene);
-	f_core->setFirstScene(first_scene);
+	//f_core->addSceneToLoad(first_scene);
+	f_core->setFirstScene("mapa");
 
 	// pasarle la lista de componentes del juego
 	f_core->addGameScript("ChangeScene", new ChangeScene());
+	f_core->addGameScript("PlayerMovement", new PlayerMovement());
 	//setGameComponents(); // -> no lo encuentra :(
-	//Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new ChangeScene());
-	//t_core->addGameScript("ChangeScene", new ChangeScene());
+	Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new ChangeScene());
+	Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new PlayerMovement());
+	//t_core->addGameScript("ChangeScene", new ChangeScene());	
+
+
 
 	return true;
 }
