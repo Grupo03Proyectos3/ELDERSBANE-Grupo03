@@ -5,13 +5,18 @@
 #include <FlamingoBase/SceneManager.h>
 //#include <ECS/InputHandlerContainer.h>
 //#include <FlamingoUtils/FlamingoKeys.h>
-PlayerMovement::PlayerMovement(){
+PlayerMovement::PlayerMovement() {
 }
 
-PlayerMovement::~PlayerMovement(){
+PlayerMovement::~PlayerMovement() {
 }
 
-void PlayerMovement::start(){
+Flamingo::BehaviourScript* PlayerMovement::clone()
+{
+	return new PlayerMovement();
+}
+
+void PlayerMovement::start() {
 	auto m_mngr = Flamingo::FlamingoCore::getManager();
 	auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
 	auto x = m_mngr->getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
@@ -19,11 +24,11 @@ void PlayerMovement::start(){
 	std::cout << "ddfssdfsdfsdf\n";
 }
 
-void PlayerMovement::initValues(){
+void PlayerMovement::initValues() {
 }
 
-void PlayerMovement::initComponent(){
-	m_mngr->getComponent<Flamingo::Transform>(m_ent);	
+void PlayerMovement::initComponent() {
+	m_mngr->getComponent<Flamingo::Transform>(m_ent);
 }
 
 //void PlayerMovement::update(float t_deltaTime){

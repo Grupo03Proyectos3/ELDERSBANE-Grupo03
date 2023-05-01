@@ -2,11 +2,12 @@
 #include "Lua\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
 
-class PlayerMovement :public Flamingo::BehaviourScript{
+class PlayerMovement :public Flamingo::BehaviourScript {
 public:
 
 	PlayerMovement();
 	~PlayerMovement();
+	virtual BehaviourScript* clone();
 	void start() override;
 	void initValues() override;
 	void initComponent() override;
