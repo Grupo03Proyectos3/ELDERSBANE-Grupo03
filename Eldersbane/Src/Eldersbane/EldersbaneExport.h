@@ -14,4 +14,4 @@ namespace Flamingo {
 	class FlamingoCore;
 }
 
-extern "C" ELDERSBANEEXPORT_API bool InitJuego(Flamingo::FlamingoCore* t_core);
+extern "C" ELDERSBANEEXPORT_API bool InitJuego(void);

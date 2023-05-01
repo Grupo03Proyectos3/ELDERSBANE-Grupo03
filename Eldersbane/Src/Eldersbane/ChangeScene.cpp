@@ -25,8 +25,8 @@ Flamingo::BehaviourScript* ChangeScene::clone()
 
 void ChangeScene::initComponent()
 {
-	auto m_mngr = Flamingo::Manager::instance();
-	auto m_sceneMngr = Flamingo::SceneManager::instance();
+	auto m_mngr = Flamingo::FlamingoCore::getManager();
+	auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
 	Flamingo::Scene* m = m_sceneMngr->getSceneActive();
 
 	auto d = m->getObject("button");
@@ -37,7 +37,8 @@ void ChangeScene::initComponent()
 
 void ChangeScene::setFirstScene()
 {
-	Flamingo::setFirstScene("mapa");
+	std::string mapa = "mapa";
+	Flamingo::FlamingoCore::instance()->setFirstScene(mapa);
 }
 
 void ChangeScene::update(float t_deltaTime)
