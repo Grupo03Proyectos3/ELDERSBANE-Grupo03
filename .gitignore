@@ -3,11 +3,8 @@
 
 Eldersbane/Temp/
 Eldersbane/Lib/
-Eldersbane/Bin/
-Eldersbane/Eldersbane/x64/
 
-Eldersbane/Exes/*
-!Eldersbane/Exes/Assets/
+Eldersbane/Eldersbane/x64/
 
 # TIPOS DE ARCHIVOS
 *.vcxproj.user
