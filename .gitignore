@@ -6,9 +6,6 @@ Eldersbane/Lib/
 
 Eldersbane/Eldersbane/x64/
 
-Exes/*
-!Exes/Assets/
-
 # TIPOS DE ARCHIVOS
 *.vcxproj.user
 
