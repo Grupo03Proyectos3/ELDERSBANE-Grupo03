@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.3 -->
+<!-- export_time: Mon, 01 May 2023 21:15:29 +0000 -->
+<!-- previous_export_time: Mon, 01 May 2023 21:08:39 +0000 -->
+<scene author="sarai" formatVersion="1.1" >
+  <nodes >
+    <node name="Camera" >
+      <position x="7.358891" y="-6.925791" z="4.958309" />
+      <rotation qw="0.780483" qx="0.483536" qy="0.208704" qz="0.336872" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBCamera", name="als", address=0x00000159DB7AA528&gt;' name="als" type="IDPropertyGroup" />
+      </userData>
+      <camera fov="0.356186" name="Camera" projectionType="perspective" >
+        <clipping far="100.000000" near="0.100000" />
+      </camera>
+    </node>
+    <node name="axe" >
+      <position x="0.000000" y="-1.121748" z="3.668497" />
+      <rotation qw="1.000000" qx="-0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <node name="axe_left" >
+        <position x="-4.283231" y="-11.451952" z="-2.335079" />
+        <rotation qw="0.707107" qx="-0.707107" qy="-0.000000" qz="-0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <entity meshFile="Cube.003.mesh" name="axe_left" >
+          <userData />
+        </entity>
+      </node>
+      <node name="axe_right" >
+        <position x="4.283231" y="-11.400735" z="-2.335078" />
+        <rotation qw="0.707107" qx="-0.707107" qy="-0.000000" qz="0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000001" />
+        <entity meshFile="Cube.004.mesh" name="axe_right" >
+          <userData />
+        </entity>
+      </node>
+      <node name="chin" >
+        <position x="0.000000" y="1.121748" z="-3.668497" />
+        <rotation qw="1.000000" qx="-0.000000" qy="-0.000000" qz="-0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <entity meshFile="Cube.002.mesh" name="chin" >
+          <userData />
+        </entity>
+      </node>
+      <node name="dinosaur" >
+        <position x="0.000000" y="1.121748" z="-3.668497" />
+        <rotation qw="1.000000" qx="-0.000000" qy="-0.000000" qz="-0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <entity meshFile="Cube.012.mesh" name="dinosaur" >
+          <userData />
+        </entity>
+      </node>
+      <node name="equip_arm" >
+        <position x="-0.000000" y="1.184961" z="-3.668497" />
+        <rotation qw="1.000000" qx="-0.000000" qy="-0.000000" qz="-0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <entity meshFile="Cube.001.mesh" name="equip_arm" >
+          <userData />
+        </entity>
+      </node>
+      <node name="equip_leg" >
+        <position x="0.000000" y="1.121748" z="-3.668497" />
+        <rotation qw="1.000000" qx="-0.000000" qy="-0.000000" qz="-0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <entity meshFile="Cube.000.mesh" name="equip_leg" >
+          <userData />
+        </entity>
+      </node>
+    </node>
+  </nodes>
+  <externals />
+  <environment >
+    <colourBackground b="0.050876" g="0.050876" r="0.050876" />
+  </environment>
+</scene>
