@@ -21,6 +21,9 @@ ButtonGame = {
         t_name = "button",
         t_text = "PLAY",
         t_image = ""
+    },
+    Scripts = {
+        t_scriptName = "ChangeScene"
     }
 }
 Title = {

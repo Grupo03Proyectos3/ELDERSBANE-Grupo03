@@ -7,17 +7,6 @@
 
 ChangeScene::ChangeScene() : BehaviourScript()
 {
-
-	auto m_mngr = Flamingo::Manager::instance();
-	auto m_sceneMngr = Flamingo::SceneManager::instance();
-	Flamingo::Scene* m = m_sceneMngr->getSceneActive();
-
-	auto d = m->getObject("button");
-	auto a = m_mngr->getComponent<Flamingo::UIElement>(d);
-
-
-	//a->subsEvent(setFirstScene, this);
-
 }
 
 ChangeScene::~ChangeScene()
@@ -29,8 +18,21 @@ void ChangeScene::initValues()
 {
 }
 
+Flamingo::BehaviourScript* ChangeScene::clone()
+{
+	return new ChangeScene();
+}
+
 void ChangeScene::initComponent()
 {
+	auto m_mngr = Flamingo::Manager::instance();
+	auto m_sceneMngr = Flamingo::SceneManager::instance();
+	Flamingo::Scene* m = m_sceneMngr->getSceneActive();
+
+	auto d = m->getObject("button");
+	auto a = m_mngr->getComponent<Flamingo::UIElement>(d);
+
+	a->subsEvent(this);
 }
 
 void ChangeScene::setFirstScene()

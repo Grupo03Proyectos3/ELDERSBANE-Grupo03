@@ -12,6 +12,7 @@ public:
 
 	void initValues() override;
 
+	BehaviourScript* clone() override;
 
 	void update(float t_deltaTime) override;
 

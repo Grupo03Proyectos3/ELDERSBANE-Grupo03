@@ -21,13 +21,14 @@ bool InitJuego(Flamingo::FlamingoCore* t_core)
 	std::cout << "juegoDado" << "\n";
 
 	// Inicializar primera escena
-	const std::string first_scene = "mapa";
+	const std::string first_scene = "menu";
 	t_core->addSceneToLoad(first_scene);
 	t_core->setFirstScene(first_scene);
 
 	// pasarle la lista de componentes del juego
 	//setGameComponents(); // -> no lo encuentra :(
-	//Flamingo::ScriptManager::instance()->addGameScript("changeScene", new ChangeScene());
+	//Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new ChangeScene());
+	t_core->addGameScript("ChangeScene", new ChangeScene());
 
 	return true;
 }
