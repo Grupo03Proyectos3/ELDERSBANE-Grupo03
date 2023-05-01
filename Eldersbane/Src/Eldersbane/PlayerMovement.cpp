@@ -15,7 +15,7 @@ void PlayerMovement::initComponent(){
 	m_mngr->getComponent<Flamingo::Transform>(m_ent);	
 }
 
-void PlayerMovement::update(float t_deltaTime){
+//void PlayerMovement::update(float t_deltaTime){
 	//Flamingo::SVector3 traslation;
 	//Flamingo::SVector3 rotation;
 	//if (Flamingo::Input().isKeyDown(Flamingo::FLM_w)) {
@@ -40,4 +40,4 @@ void PlayerMovement::update(float t_deltaTime){
 	//	rotation = Flamingo::SVector3(0, 0, Flamingo::Input().getMouseMotionPos().first*0.1);
 	//}
 	//m_transform->translate(traslation);
-}
+//}

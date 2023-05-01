@@ -11,7 +11,7 @@ public:
 	void initValues() override;
 	void initComponent() override;
 
-	void update(float t_deltaTime) override;
+	/*void update(float t_deltaTime) override;*/
 
 private:
 	float speed = 10.0f;
