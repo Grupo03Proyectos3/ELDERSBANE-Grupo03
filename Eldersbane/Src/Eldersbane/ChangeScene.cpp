@@ -35,7 +35,7 @@ void ChangeScene::initComponent()
 
 void ChangeScene::setFirstScene()
 {
-	Flamingo::SetFirstScene("mapa");
+	Flamingo::setFirstScene("mapa");
 }
 
 void ChangeScene::update(float t_deltaTime)

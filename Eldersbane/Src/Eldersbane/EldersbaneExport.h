@@ -10,4 +10,8 @@
 #define ELDERSBANEEXPORT_API __declspec(dllimport)
 #endif
 
-extern "C" ELDERSBANEEXPORT_API bool InitJuego(void);
+namespace Flamingo {
+	class FlamingoCore;
+}
+
+extern "C" ELDERSBANEEXPORT_API bool InitJuego(Flamingo::FlamingoCore* t_core);

@@ -27,7 +27,6 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 		// Choco con un enemigo --> recibo daño
 		takeDamage(1); // To do : ponerle una cantidad de daño al enemy
 	}
-
 }
 
 void Eldersbane::PlayerHealth::takeDamage(int t_amount) 
