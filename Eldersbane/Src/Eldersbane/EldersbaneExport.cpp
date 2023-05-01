@@ -23,8 +23,7 @@ bool InitJuego(void)
 	auto f_core = Flamingo::FlamingoCore::instance();
 	// Inicializar primera escena
 	std::string first_scene = "menu";
-	//Flamingo::addScene(first_scene);
-	//Flamingo::setFirstScene(first_scene);
+	f_core->addSceneToLoad("mapa");
 	f_core->addSceneToLoad(first_scene);
 	f_core->setFirstScene(first_scene);
 
