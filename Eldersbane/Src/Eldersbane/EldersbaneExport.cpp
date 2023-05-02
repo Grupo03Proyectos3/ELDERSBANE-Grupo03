@@ -29,10 +29,10 @@ bool InitJuego(void)
 	f_core->setFirstScene("mapa");
 
 	// pasarle la lista de componentes del juego
-	f_core->addGameScript("ChangeScene", new ChangeScene());
+	f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
 	f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
 	//setGameComponents(); // -> no lo encuentra :(
-	Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new ChangeScene());
+    Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
 	Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
 	//t_core->addGameScript("ChangeScene", new ChangeScene());	
 
