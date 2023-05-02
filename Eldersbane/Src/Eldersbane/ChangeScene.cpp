@@ -23,8 +23,13 @@ namespace Eldersbane
 
     void ChangeScene::setFirstScene()
     {
-        std::string mapa = "mapa";
-        Flamingo::FlamingoCore::getSceneManager()->setSceneActive(mapa);
+
+        if (Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getName() == "mapa")
+            Flamingo::FlamingoCore::getSceneManager()->setSceneActive("menu");
+        else
+            Flamingo::FlamingoCore::getSceneManager()->setSceneActive("mapa");
+
+        std::cout << "CAMBIANDO DE ESCENA" << std::endl;
     }
 
     void ChangeScene::start()

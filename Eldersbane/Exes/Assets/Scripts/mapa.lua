@@ -1,4 +1,4 @@
-entities = {"Sinbad", "Mapa", "CamaraPpal", "Luz", "Enemy", "Arbol", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime", "EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", 
+entities = {"ButtonGame", "Sinbad", "Mapa", "CamaraPpal", "Luz", "Enemy", "Arbol", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime", "EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", 
 "M7", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M16", "M17", "M18", "M19", "M20", "M21", "M22", "A81", "A82", "A83", "A84", "A85", "A86", "A87", "A88",
 "A89", "A810", "A811", "A812", "A813", "A814", "A815", "A816", "A817", "A818", "A819", "A820", "A821", "A822", "A823", "A824", "A825", "A21", "A22", "A23", "A24", "A25",
 "A26", "A27", "A28", "A29", "A210", "A211", "A212", "A213", "A214", "A215", "A216", "A217", "A218", "A219", "A220", "A221", "A222", "A223", "A224", "A225", "A226", "A227",
@@ -14,6 +14,32 @@ entities = {"Sinbad", "Mapa", "CamaraPpal", "Luz", "Enemy", "Arbol", "EspadaMeta
 "A6107", "A6108", "A6110", "A6111", "A6112", "A6113", "A6114", "A6115", "A6116", "A6117", "A6118", "A6120", "A6121", "A6122", "A6123", "A6124", "A6125","A6126", "A6127",
 "A6128", "A51", "A52", "A53", "A54", "A55", "A56", "A57", "A58", "A59", "A510", "A511", "A512", "A513", "A514", "A515", "A516"}
 
+ButtonGame = {
+    Name={
+        t_name="button"
+    },
+    Transform = {
+        positionX = "45.0",
+        positionY = "35.0",
+        positionZ = "0.0",
+        scaleX = "50.0",
+        scaleY = "40.0",
+        scaleZ = "0.0",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "0.0"
+    },
+    UIElement = {
+        t_type = "FlamingoDefaultUI/Button",
+        t_name = "button",
+        t_text = "MENU",
+        t_image = ""
+    },
+    Scripts = {
+        t_scriptName = "ChangeScene"
+    }
+}
 Sinbad = {
     Name={
         t_name="player"

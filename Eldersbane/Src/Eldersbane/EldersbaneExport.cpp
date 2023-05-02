@@ -1,15 +1,15 @@
 // EldersbaneExport.cpp : Define las funciones exportadas del archivo DLL.
 //
 
-#include "Windows.h"
 #include "EldersbaneExport.h"
+#include "Windows.h"
 #include <iostream>
 
-#include "FlamingoExport/FlamingoExport.h"
 #include "FlamingoExport/FlamingoCore.h"
+#include "FlamingoExport/FlamingoExport.h"
 
-#include "Lua/ScriptManager.h"
 #include "ECS/Manager.h"
+#include "Lua/ScriptManager.h"
 
 #include "ChangeScene.h"
 #include "PlayerHealth.h"
@@ -17,32 +17,31 @@
 
 bool InitJuego(void)
 {
-	//miMotor->DoSomething();
-	
-	std::cout << "juegoDado" << "\n";
+    // miMotor->DoSomething();
 
-	auto f_core = Flamingo::FlamingoCore::instance();
-	// Inicializar primera escena
-	std::string first_scene = "menu";
-	f_core->addSceneToLoad("mapa");
-	//f_core->addSceneToLoad(first_scene);
-	f_core->setFirstScene("mapa");
+    std::cout << "juegoDado"
+              << "\n";
 
-	// pasarle la lista de componentes del juego
-	f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
-	f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
-	//setGameComponents(); // -> no lo encuentra :(
+    auto f_core = Flamingo::FlamingoCore::instance();
+    // Inicializar primera escena
+    std::string first_scene = "menu";
+    f_core->addSceneToLoad("menu");
+    f_core->addSceneToLoad("mapa");
+    f_core->setFirstScene("menu");
+
+    // pasarle la lista de componentes del juego
+    f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
+    f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
+    // setGameComponents(); // -> no lo encuentra :(
     Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
-	Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
-	//t_core->addGameScript("ChangeScene", new ChangeScene());	
+    Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
+    // t_core->addGameScript("ChangeScene", new ChangeScene());
 
-
-
-	return true;
+    return true;
 }
 
-void setGameComponents() 
+void setGameComponents()
 {
-	//Flamingo::ScriptManager::instance()->addGameScript("changeScene", new ChangeScene());
-	//Flamingo::ScriptManager::instance()->addGameScript("playerHealth", new PlayerHealth());
+    // Flamingo::ScriptManager::instance()->addGameScript("changeScene", new ChangeScene());
+    // Flamingo::ScriptManager::instance()->addGameScript("playerHealth", new PlayerHealth());
 }
