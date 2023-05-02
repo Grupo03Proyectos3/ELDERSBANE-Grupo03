@@ -1,6 +1,6 @@
 #include "PlayerHealth.h"
-#include "ECS/Manager.h"
 #include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
+#include "ECS/Components.h"
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {
@@ -20,8 +20,7 @@ void Eldersbane::PlayerHealth::update(float t_deltaTime)
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
-	auto mngr = Flamingo::Manager::instance();
-	auto enemy_cmp = mngr->getComponent<Flamingo::EnemyAI>(t_other);
+	auto enemy_cmp = Flamingo::getComponent<Flamingo::EnemyAI>(t_other);
 
 	if (enemy_cmp != nullptr) {
 		// Choco con un enemigo --> recibo daño

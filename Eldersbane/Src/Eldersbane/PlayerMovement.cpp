@@ -1,7 +1,6 @@
 #include "PlayerMovement.h"
-#include <ECS/InputHandlerContainer.h>
-#include <ECS/Manager.h>
 #include <ECS/Components.h>
+#include <ECS/InputHandlerContainer.h>
 #include <FlamingoBase/SceneManager.h>
 #include <FlamingoExport/FlamingoCore.h>
 #include <FlamingoUtils/FlamingoKeys.h>
@@ -23,12 +22,9 @@ namespace Eldersbane
 
     void PlayerMovement::start()
     {
-        // QUITAR
-        auto m_mngr = Flamingo::FlamingoCore::getManager();
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
-        auto x = m_mngr->getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
+        auto x = Flamingo::getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
         x->setAnimation("my_animation", true, true);
-        // QUITAR
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
     }
 
@@ -79,6 +75,6 @@ namespace Eldersbane
         }
         m_transform->translate(traslation);
 
-       // std::cout << "dfsasdadfs\n";
+        // std::cout << "dfsasdadfs\n";
     }
 } // namespace Eldersbane

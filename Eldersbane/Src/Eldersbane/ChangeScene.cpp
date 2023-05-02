@@ -1,9 +1,10 @@
 #include "ChangeScene.h"
-#include "ECS/Manager.h"
+#include "ECS/Components.h"
 #include "FlamingoBase/Scene.h"
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
 #include "UI/UIElement.h"
+
 namespace Eldersbane
 {
     ChangeScene::ChangeScene()
@@ -36,12 +37,11 @@ namespace Eldersbane
 
     void ChangeScene::start()
     {
-        auto m_mngr = Flamingo::FlamingoCore::getManager();
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         Flamingo::Scene* m = m_sceneMngr->getSceneActive();
 
         auto d = m->getObject("button");
-        auto a = m_mngr->getComponent<Flamingo::UIElement>(d);
+        auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
 
         a->subsEvent(this);
     }
