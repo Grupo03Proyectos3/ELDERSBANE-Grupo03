@@ -25,9 +25,10 @@ namespace Eldersbane
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
 
-        auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
-        auto x = Flamingo::getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
-        x->setAnimation("my_animation", true, true);
+        m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
+        m_camera->setTarget(gameObject());
+        m_camera->setOffset({-500, 150, 000});       
+        //m_camera->FollowTarget();
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -57,17 +58,23 @@ namespace Eldersbane
 
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
-            std::cout << "ROTACION PLAYER\n";
-            rotacion = Flamingo::Input().getMouseMotionPos().first * 0.1;
-            m_transform->setRotation(m_transform->getRotation() + Flamingo::SQuaternion(rotacion, Flamingo::SVector3(0, 1, 0)));
+           
+            rotacion = Flamingo::Input().getMouseMotionPos().first;
+            //std::cout << "ROTACION PLAYER "<< rotacion <<" \n";
+            //m_transform->setRotation(m_transform->getRotation() + Flamingo::SQuaternion(rotacion, Flamingo::SVector3(0, 1, 0)));
         }
 
         if (traslation.lenght() > speed)
         {
-            traslation = traslation.normalized() * speed;
+            traslation = traslation.normalized() * speed;           
         }
+
+        traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
+        
         m_transform->translate(traslation);
 
+        //m_camera->FollowTarget();
         // std::cout << "dfsasdadfs\n";
+       
     }
 } // namespace Eldersbane
