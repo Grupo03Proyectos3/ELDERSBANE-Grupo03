@@ -14,6 +14,7 @@
 #include "ChangeScene.h"
 #include "PlayerHealth.h"
 #include "PlayerMovement.h"
+#include "Enemy.h"
 
 bool InitJuego(void)
 {
@@ -32,9 +33,13 @@ bool InitJuego(void)
     // pasarle la lista de componentes del juego
     f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
     f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
+    f_core->addGameScript("FlamingoEnemy", new Eldersbane::Enemy());
+
     // setGameComponents(); // -> no lo encuentra :(
     Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
     Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
+    Flamingo::ScriptManager::instance()->addGameScript("FlamingoEnemy", new Eldersbane::Enemy());
+
     // t_core->addGameScript("ChangeScene", new ChangeScene());
 
     return true;

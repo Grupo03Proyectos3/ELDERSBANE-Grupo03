@@ -169,7 +169,11 @@ Enemy = {
        t_node_y="0.0",
        t_node_z="0.0",
        t_mat_name= ""
-   }
+    }
+-- ,
+--     Scripts={
+--     t_scriptName="FlamingoEnemy"
+--     }
 }
 Arbol = {
     Name={
