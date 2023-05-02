@@ -1,6 +1,7 @@
 #pragma once
 #include "Lua\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
+#include <Render/Camera.h>
 namespace Eldersbane
 {
     class PlayerMovement : public Flamingo::BehaviourScript
@@ -14,8 +15,9 @@ namespace Eldersbane
         void update(float t_deltaTime) override;
 
       private:
-        float speed = 10.0f;
+        float speed = 75.0f;
         float sensitivity = 5.0f;
         Flamingo::Transform* m_transform;
+        Flamingo::Camera* m_camera;
     };
 } // namespace Eldersbane
