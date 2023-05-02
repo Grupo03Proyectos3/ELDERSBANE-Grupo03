@@ -25,8 +25,9 @@ namespace Eldersbane
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-        auto p = Flamingo::Manager::instance()->getHandler(Flamingo::_hdr_player);
-        m_tr_player = Flamingo::getComponent<Flamingo::Transform>(p);
+
+        auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
+        m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
         m_max_distance = 500.0f;
         m_time_last_dir = 0;
         m_time_last_move = 0;
