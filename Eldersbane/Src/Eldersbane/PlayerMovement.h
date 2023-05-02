@@ -19,5 +19,6 @@ namespace Eldersbane
         float sensitivity = 5.0f;
         Flamingo::Transform* m_transform;
         Flamingo::Camera* m_camera;
+        float percentRotate=0;
     };
 } // namespace Eldersbane

@@ -36,7 +36,7 @@ bool InitJuego(void)
     f_core->addGameScript("FlamingoEnemy", new Eldersbane::Enemy());
 
     // t_core->addGameScript("ChangeScene", new ChangeScene());
-
+   
     return true;
 }
 
