@@ -58,13 +58,13 @@ namespace Eldersbane
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
         {
             std::cout << "G PRESSED\n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=20*t_deltaTime), Flamingo::SVector3(0, 1, 0)));
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=5*t_deltaTime), Flamingo::SVector3(0, 1, 0)),Flamingo::WORLD);
         }
 
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
-            std::cout << "ROTACION PLAYER " << percentRotate << " \n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.01 * t_deltaTime), Flamingo::SVector3(0, 1, 0)));
+            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().first << " \n";
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.001 * t_deltaTime), Flamingo::SVector3(0, 1, 0)));
         }
 
         if (traslation.lenght() > speed)
