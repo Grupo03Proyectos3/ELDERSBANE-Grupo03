@@ -7,6 +7,8 @@ namespace Eldersbane
 {
     class Enemy : public Flamingo::BehaviourScript
     {
+      public:
+
         enum enemyType
         {
             // Enemigo Makoy Tipo 1
