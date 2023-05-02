@@ -10,8 +10,6 @@ namespace Eldersbane
         ~PlayerMovement();
         BehaviourScript* clone() override;
         void start() override;
-        void initValues() override;
-        void initComponent() override;
 
         void update(float t_deltaTime) override;
 

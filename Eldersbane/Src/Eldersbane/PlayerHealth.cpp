@@ -10,8 +10,9 @@ Eldersbane::PlayerHealth::~PlayerHealth()
 {
 }
 
-void Eldersbane::PlayerHealth::initValues()
+Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
 {
+    return new PlayerHealth();
 }
 
 void Eldersbane::PlayerHealth::update(float t_deltaTime)
@@ -44,16 +45,4 @@ void Eldersbane::PlayerHealth::killPlayer()
 {
 	// To do : what to do when i die
 	current_health = max_health;
-}
-
-void Eldersbane::PlayerHealth::onCollisionStay(Flamingo::GameObject* t_other)
-{
-}
-
-void Eldersbane::PlayerHealth::onCollisionExit(Flamingo::GameObject* t_other)
-{
-}
-
-void Eldersbane::PlayerHealth::initComponent()
-{
 }

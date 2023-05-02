@@ -16,17 +16,9 @@ namespace Eldersbane
     {
     }
 
-    void ChangeScene::initValues()
-    {
-    }
-
     Flamingo::BehaviourScript* ChangeScene::clone()
     {
         return new ChangeScene();
-    }
-
-    void ChangeScene::initComponent()
-    {
     }
 
     void ChangeScene::setFirstScene()
@@ -44,22 +36,6 @@ namespace Eldersbane
         auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
 
         a->subsEvent(this);
-    }
-
-    void ChangeScene::update(float t_deltaTime)
-    {
-    }
-
-    void ChangeScene::onCollisionEnter(Flamingo::GameObject* t_other)
-    {
-    }
-
-    void ChangeScene::onCollisionStay(Flamingo::GameObject* t_other)
-    {
-    }
-
-    void ChangeScene::onCollisionExit(Flamingo::GameObject* t_other)
-    {
     }
 
     void ChangeScene::clickFuntion()

@@ -22,19 +22,11 @@ namespace Eldersbane
 
     void PlayerMovement::start()
     {
+        m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
+
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         auto x = Flamingo::getComponent<Flamingo::Animator>(m_sceneMngr->getSceneActive()->getObject("dragon"));
         x->setAnimation("my_animation", true, true);
-        m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-    }
-
-    void PlayerMovement::initValues()
-    {
-    }
-
-    void PlayerMovement::initComponent()
-    {
-        m_mngr->getComponent<Flamingo::Transform>(m_ent);
     }
 
     void PlayerMovement::update(float t_deltaTime)
