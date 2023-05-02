@@ -1,4 +1,4 @@
-entities = {"Sinbad", "Mapa", "CamaraPpal", "Luz", "Enemy", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime", "EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", 
+entities = {"Sinbad", "Mapa", "CamaraPpal", "Luz", "Enemy", "Arbol", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime", "EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", 
 "M7", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M16", "M17", "M18", "M19", "M20", "M21", "M22", "A81", "A82", "A83", "A84", "A85", "A86", "A87", "A88",
 "A89", "A810", "A811", "A812", "A813", "A814", "A815", "A816", "A817", "A818", "A819", "A820", "A821", "A822", "A823", "A824", "A825", "A21", "A22", "A23", "A24", "A25",
 "A26", "A27", "A28", "A29", "A210", "A211", "A212", "A213", "A214", "A215", "A216", "A217", "A218", "A219", "A220", "A221", "A222", "A223", "A224", "A225", "A226", "A227",
@@ -147,6 +147,42 @@ Enemy = {
        t_node_z="0.0",
        t_mat_name= ""
    }
+}
+Arbol = {
+    Name={
+        t_name="dragon"
+    },
+    Transform = {
+        positionX = "1000.0",
+        positionY = "200.0",
+        positionZ = "0.0",
+        scaleX = "20",
+        scaleY = "20",
+        scaleZ = "20",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "dragon2.mesh",
+        t_entity_name= "dragon",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Animator={
+        t_name="dragon"
+    },
+    Scripts={
+        t_scriptName="PlayerMovement"
+    }
 }
 EspadaMetal = {
     Name={

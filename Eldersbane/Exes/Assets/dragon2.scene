@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.3 -->
-<!-- export_time: Mon, 01 May 2023 21:30:59 +0000 -->
-<!-- previous_export_time: Mon, 01 May 2023 21:29:33 +0000 -->
+<!-- export_time: Tue, 02 May 2023 09:34:56 +0000 -->
+<!-- previous_export_time: Tue, 02 May 2023 09:32:10 +0000 -->
 <scene author="sarai" formatVersion="1.1" >
   <nodes >
     <node name="Camera" >
@@ -45,7 +45,32 @@
       </node>
     </node>
   </nodes>
-  <externals />
+  <externals >
+    <item type="material" >
+      <file name="Dragon2/darkred.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/red.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/armr2.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/metal.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/Skin.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/white.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/negro.material" />
+    </item>
+    <item type="material" >
+      <file name="Dragon2/armor.material" />
+    </item>
+  </externals>
   <environment >
     <colourBackground b="0.050876" g="0.050876" r="0.050876" />
   </environment>
