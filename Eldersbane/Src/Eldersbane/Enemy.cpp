@@ -1,5 +1,6 @@
 ﻿#include "Enemy.h"
-#include "ECS/Components.h"
+#include "ECS/ManagerFunctions.h"
+
 #include "FlamingoBase/Scene.h"
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"

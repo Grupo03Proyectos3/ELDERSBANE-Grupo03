@@ -19,7 +19,7 @@ namespace Eldersbane
             BOSS
         };
         Enemy();
-        virtual ~Enemy(){};
+        virtual ~Enemy();
         Flamingo::BehaviourScript* clone() override;
         void start() override;
         void update(float t_delta_time) override;
