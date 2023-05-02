@@ -1,4 +1,4 @@
-entities = {"ButtonGame", "Title", "CamaraPpal", "Luz"}
+entities = {"ButtonGame","ExitGame", "Title", "CamaraPpal", "Luz"}
 
 ButtonGame = {
     Name={
@@ -8,8 +8,8 @@ ButtonGame = {
         positionX = "39.0",
         positionY = "55.0",
         positionZ = "0.0",
-        scaleX = "150.0",
-        scaleY = "120.0",
+        scaleX = "130.0",
+        scaleY = "100.0",
         scaleZ = "0.0",
         rotationX = "0.0",
         rotationY = "0.0",
@@ -24,6 +24,32 @@ ButtonGame = {
     },
     Scripts = {
         t_scriptName = "ChangeScene"
+    }
+}
+ExitGame = {
+    Name={
+        t_name="exitButton"
+    },
+    Transform = {
+        positionX = "39.0",
+        positionY = "75.0",
+        positionZ = "0.0",
+        scaleX = "130.0",
+        scaleY = "100.0",
+        scaleZ = "0.0",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "0.0"
+    },
+    UIElement = {
+        t_type = "FlamingoDefaultUI/Button",
+        t_name = "exitButton",
+        t_text = "EXIT",
+        t_image = ""
+    },
+    Scripts = {
+        t_scriptName = "ExitGame"
     }
 }
 Title = {

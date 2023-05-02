@@ -15,6 +15,7 @@
 #include "PlayerHealth.h"
 #include "PlayerMovement.h"
 #include "Enemy.h"
+#include "ExitGame.h"
 
 bool InitJuego(void)
 {
@@ -32,6 +33,7 @@ bool InitJuego(void)
 
     // pasarle la lista de componentes del juego
     f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
+    f_core->addGameScript("ExitGame", new Eldersbane::ExitGame());
     f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
     f_core->addGameScript("FlamingoEnemy", new Eldersbane::Enemy());
 
