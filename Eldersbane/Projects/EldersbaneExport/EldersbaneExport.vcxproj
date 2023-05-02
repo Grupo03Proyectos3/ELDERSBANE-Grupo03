@@ -197,9 +197,6 @@
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="EldersbaneExport.rc" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
