@@ -151,11 +151,11 @@ Arbol = {
     },
     Transform = {
         positionX = "1000.0",
-        positionY = "200.0",
+        positionY = "350.0",
         positionZ = "0.0",
-        scaleX = "20",
-        scaleY = "20",
-        scaleZ = "20",
+        scaleX = "1",
+        scaleY = "1",
+        scaleZ = "1",
         rotationX = "-1.0",
         rotationY = "0.0",
         rotationZ = "0.0",
@@ -167,7 +167,7 @@ Arbol = {
         t_static = "1"
     },
     MeshRenderer = {
-        t_model_name = "dragon2.mesh",
+        t_model_name = "dragon3.mesh",
         t_entity_name= "dragon",
         t_node_x="0",
         t_node_y="0",
