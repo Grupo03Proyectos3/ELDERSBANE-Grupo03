@@ -58,16 +58,14 @@ namespace Eldersbane
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
         {
             std::cout << "G PRESSED\n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=20), Flamingo::SVector3(0, 1, 0)));
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=20*t_deltaTime), Flamingo::SVector3(0, 1, 0)));
         }
 
-        //if (Flamingo::Input().mouseMotionEvent())
-        //{ // rotar al player
-        //   
-        //    rotacion = Flamingo::Input().getMouseMotionPos().first;
-        //    std::cout << "ROTACION PLAYER "<< rotacion <<" \n";
-        //    m_transform->setRotation(m_transform->getRotation() + Flamingo::SQuaternion(rotacion, Flamingo::SVector3(0, 1, 0)));
-        //}
+        if (Flamingo::Input().mouseMotionEvent())
+        { // rotar al player
+            std::cout << "ROTACION PLAYER " << percentRotate << " \n";
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.01 * t_deltaTime), Flamingo::SVector3(0, 1, 0)));
+        }
 
         if (traslation.lenght() > speed)
         {
@@ -76,7 +74,7 @@ namespace Eldersbane
 
         traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
         
-        m_transform->translate(traslation);
+        m_transform->translate(traslation,Flamingo::LOCAL);
 
         m_camera->FollowTarget();
        
