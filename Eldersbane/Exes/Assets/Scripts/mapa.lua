@@ -30,9 +30,6 @@ Sinbad = {
        rotationZ="0.0",
        rotationW="1.0"
    },
-   PlayerController = {
-       t_speed = "20"
-   },
    RigidBody = {
        t_mass = "20.0",
        t_trigger = "0",
