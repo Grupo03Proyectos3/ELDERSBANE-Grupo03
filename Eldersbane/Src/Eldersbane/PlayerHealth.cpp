@@ -1,6 +1,6 @@
 #include "PlayerHealth.h"
 #include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
-#include "ECS/Components.h"
+#include "ECS/ManagerFunctions.h"
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {
