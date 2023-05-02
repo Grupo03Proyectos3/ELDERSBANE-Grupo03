@@ -21,12 +21,12 @@ void Eldersbane::PlayerHealth::update(float t_deltaTime)
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
-	auto enemy_cmp = Flamingo::getComponent<Flamingo::EnemyAI>(t_other);
+	//auto enemy_cmp = Flamingo::getComponent<Flamingo::EnemyAI>(t_other);
 
-	if (enemy_cmp != nullptr) {
-		// Choco con un enemigo --> recibo daño
-		takeDamage(1); // To do : ponerle una cantidad de daño al enemy
-	}
+	//if (enemy_cmp != nullptr) {
+	//	// Choco con un enemigo --> recibo daño
+	//	takeDamage(1); // To do : ponerle una cantidad de daño al enemy
+	//}
 }
 
 void Eldersbane::PlayerHealth::takeDamage(int t_amount) 

@@ -5,6 +5,7 @@
 #include <FlamingoExport/FlamingoCore.h>
 #include <FlamingoUtils/FlamingoKeys.h>
 #include <Render/Animator.h>
+
 namespace Eldersbane
 {
     PlayerMovement::PlayerMovement()
