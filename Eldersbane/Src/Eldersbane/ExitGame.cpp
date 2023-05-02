@@ -17,7 +17,7 @@ namespace Eldersbane
 
     Flamingo::BehaviourScript* Eldersbane::ExitGame::clone()
     {
-        return new BehaviourScript;
+        return new ExitGame;
     }
 
     void Eldersbane::ExitGame::start()
@@ -38,6 +38,7 @@ namespace Eldersbane
 
     void Eldersbane::ExitGame::exitGame()
     {
-        std::cout << "salirjuego\n"; 
+        Flamingo::FlamingoCore::instance()->endRunning();
+        std::cout << "exit\n";
     }
 }
