@@ -149,9 +149,9 @@ Enemy = {
         t_name="enemy"
     },
    Transform = {
-       positionX= "200.0",
-       positionY="260.0",
-       positionZ="50.0",
+       positionX= "450.0",
+       positionY="360.0",
+       positionZ="-600.0",
        scaleX="150.0",
        scaleY="150",
        scaleZ="150.0",
@@ -173,10 +173,10 @@ Enemy = {
        t_node_z="0.0",
        t_mat_name= ""
     }
--- ,
---     Scripts={
---     t_scriptName="FlamingoEnemy"
---     }
+,
+    Scripts={
+    t_scriptName="FlamingoEnemy"
+    }
 }
 Arbol = {
     Name={
