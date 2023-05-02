@@ -37,7 +37,7 @@ bool InitJuego(void)
     f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
     f_core->addGameScript("ExitGame", new Eldersbane::ExitGame());
     f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
-    f_core->addGameScript("FlamingoEnemy", new Eldersbane::Enemy());
+    f_core->addGameScript("Enemy", new Eldersbane::Enemy());
     f_core->addGameScript("PickUp", new Eldersbane::PickUp());
     f_core->addGameScript("RedPotion", new Eldersbane::RedPotion());
     // t_core->addGameScript("ChangeScene", new ChangeScene());

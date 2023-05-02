@@ -176,7 +176,7 @@ Enemy = {
     }
 ,
     Scripts={
-    t_scriptName="FlamingoEnemy"
+    t_scriptName="Enemy"
     }
 }
 Arbol = {
