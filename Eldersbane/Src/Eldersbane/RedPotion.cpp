@@ -10,10 +10,15 @@ Eldersbane::RedPotion::~RedPotion()
 
 void Eldersbane::RedPotion::start()
 {
-    hearths = 3;
+    m_lives = 3;
 }
 
 Flamingo::BehaviourScript* Eldersbane::RedPotion::clone()
 {
     return new RedPotion();
+}
+
+int Eldersbane::RedPotion::getExtraLives()
+{
+    return m_lives;
 }

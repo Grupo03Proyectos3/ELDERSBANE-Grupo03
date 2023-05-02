@@ -2,7 +2,8 @@
 #include <FlamingoBase/SceneManager.h>
 #include <FlamingoExport/FlamingoCore.h>
 #include "ECS/ManagerFunctions.h"
-#include "RedPotion.h"
+#include "BluePotion.h"
+#include "GreenPotion.h"
 
 namespace Eldersbane
 {
@@ -19,10 +20,14 @@ namespace Eldersbane
 
     void PickUp::onCollisionEnter(Flamingo::GameObject* t_other)
     {
-        if (Flamingo::getComponent<Eldersbane::RedPotion>(t_other))
+        std::cout << "Colision del jugador"
+                  << "\n";
+       
+        if (Flamingo::getComponent<Eldersbane::GreenPotion>(t_other))
         {
-            std::cout << "Coge la pocion"
+            std::cout << "Coge la pocion VERDE"
                       << "\n";
         }
+        //Espadas y escudos a continuacion
     }
 }

@@ -12,6 +12,9 @@
     <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\PinkPotion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h" />
@@ -23,6 +26,9 @@
     <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
     <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

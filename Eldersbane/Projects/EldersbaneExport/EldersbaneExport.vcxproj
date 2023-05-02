@@ -174,24 +174,30 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h" />
     <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h" />
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h" />
     <ClInclude Include="..\..\Src\Eldersbane\Enemy.h" />
     <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PickUp.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
     <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Eldersbane.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Main.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\PinkPotion.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />

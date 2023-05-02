@@ -5,6 +5,7 @@
 #include <FlamingoExport/FlamingoCore.h>
 #include <FlamingoUtils/FlamingoKeys.h>
 #include <Render/Animator.h>
+#include "BluePotion.h"
 
 namespace Eldersbane
 {
@@ -78,5 +79,15 @@ namespace Eldersbane
 
         m_camera->FollowTarget();
        
+    }
+    void PlayerMovement::onCollisionEnter(Flamingo::GameObject* t_other)
+    {
+        auto bluePotion = Flamingo::getComponent<Eldersbane::BluePotion>(t_other);
+        if (bluePotion!=nullptr)
+        {
+            std::cout << "Coge la pocion AZUL"
+                      << "\n";
+            speed *= bluePotion->getSpeedMultiplier();
+        }
     }
 } // namespace Eldersbane

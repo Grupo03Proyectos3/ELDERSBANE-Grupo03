@@ -1,6 +1,8 @@
 #include "PlayerHealth.h"
 #include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
 #include "ECS/ManagerFunctions.h"
+#include "RedPotion.h"
+#include "PinkPotion.h"
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {
@@ -27,6 +29,24 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 	//	// Choco con un enemigo --> recibo daño
 	//	takeDamage(1); // To do : ponerle una cantidad de daño al enemy
 	//}
+    auto redPotion = Flamingo::getComponent<Eldersbane::RedPotion>(t_other);
+    if (redPotion!=nullptr)
+    {
+        std::cout << "Coge la pocion ROJA"
+                  << "\n";
+        current_health += redPotion->getExtraLives();
+        if (current_health > max_health)
+            current_health = max_health;
+    }
+    auto pinkPotion = Flamingo::getComponent<Eldersbane::PinkPotion>(t_other);
+    if (pinkPotion != nullptr)
+    {
+        std::cout << "Coge la pocion ROSA"
+                  << "\n";
+        current_health += pinkPotion->getExtraLives();
+        if (current_health > max_health)
+            current_health = max_health;
+    }
 }
 
 void Eldersbane::PlayerHealth::takeDamage(int t_amount) 

@@ -3,17 +3,16 @@
 
 namespace Eldersbane
 {
-    class RedPotion : public Flamingo::BehaviourScript
+    class GreenPotion : public Flamingo::BehaviourScript
     {
       public:
-        RedPotion();
-        ~RedPotion();
+        GreenPotion();
+        ~GreenPotion();
 
         void start() override;
         BehaviourScript* clone() override;
-        int getExtraLives();
 
       private:
-        int m_lives;
+        int m_damage_multiplier;
     };
-}
+} // namespace Eldersbane

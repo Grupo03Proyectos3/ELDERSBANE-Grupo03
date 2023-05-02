@@ -13,6 +13,7 @@ namespace Eldersbane
         void start() override;
 
         void update(float t_deltaTime) override;
+        void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
       private:
         float speed = 75.0f;
