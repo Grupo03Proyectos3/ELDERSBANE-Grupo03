@@ -178,8 +178,11 @@
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h" />
     <ClInclude Include="..\..\Src\Eldersbane\Enemy.h" />
     <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\PickUp.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp" />
@@ -188,9 +191,14 @@
     <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Main.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
     <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EldersbaneExport.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

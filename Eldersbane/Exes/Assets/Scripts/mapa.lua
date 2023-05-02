@@ -37,7 +37,7 @@ ButtonGame = {
         t_image = ""
     },
     Scripts = {
-        t_scriptName = "ChangeScene"
+        "ChangeScene"
     }
 }
 Mapa = {
@@ -118,7 +118,7 @@ Player = {
    Transform = {
        positionX = "450.0",
        positionY="300.0",
-       positionZ="0.0",
+       positionZ="-400.0",
        scaleX="25.0",
        scaleY="25.0",
        scaleZ="25.0",
@@ -141,8 +141,9 @@ Player = {
        t_mat_name= ""
    },
    Scripts={
-        t_scriptName="PlayerMovement"
-    }
+        "PlayerMovement",
+        "PickUp",
+    },
 }
 Enemy = {
     Name={
@@ -363,12 +364,12 @@ EscudoMadera = {
 }
 PocionRoja = {
     Name={
-        t_name="pocionr",
+        t_name="pocionRoja",
     },
     Transform = {
         positionX = "500.0",
-        positionY = "50.0",
-        positionZ = "200.0",
+        positionY = "300.0",
+        positionZ = "-300.0",
         scaleX = "20",
         scaleY = "20",
         scaleZ = "20",
@@ -379,17 +380,18 @@ PocionRoja = {
     },
     RigidBody = {
         t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
+        t_trigger = "1",
+        t_static = "0"
     },
     MeshRenderer = {
-        t_model_name = "PocionRosa.mesh",
-        t_entity_name= "pocionr",
+        t_model_name = "PocionRoja.mesh",
+        t_entity_name= "pocionRoja",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
         t_mat_name= ""
-    }
+    },
+    
 }
 M1 = {
     Name={
