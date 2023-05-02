@@ -13,9 +13,8 @@
 
 #include "ChangeScene.h"
 #include "PlayerHealth.h"
-//#include "Render/Animator.h"
-//#include "FlamingoBase/SceneManager.h"
 #include "PlayerMovement.h"
+
 bool InitJuego(void)
 {
 	//miMotor->DoSomething();
@@ -31,10 +30,10 @@ bool InitJuego(void)
 
 	// pasarle la lista de componentes del juego
 	f_core->addGameScript("ChangeScene", new ChangeScene());
-	f_core->addGameScript("PlayerMovement", new PlayerMovement());
+	f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
 	//setGameComponents(); // -> no lo encuentra :(
 	Flamingo::ScriptManager::instance()->addGameScript("ChangeScene", new ChangeScene());
-	Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new PlayerMovement());
+	Flamingo::ScriptManager::instance()->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
 	//t_core->addGameScript("ChangeScene", new ChangeScene());	
 
 
