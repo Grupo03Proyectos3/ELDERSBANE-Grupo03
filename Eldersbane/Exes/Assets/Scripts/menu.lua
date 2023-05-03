@@ -57,11 +57,11 @@ Title = {
         t_name="title"
     },
     Transform = {
-        positionX = "30.0",
-        positionY = "10.0",
+        positionX = "0.0",
+        positionY = "0.0",
         positionZ = "0.0",
-        scaleX = "300.0",
-        scaleY = "200.0",
+        scaleX = "800.0",
+        scaleY = "800.0",
         scaleZ = "0.0",
         rotationX = "0.0",
         rotationY = "0.0",
@@ -72,7 +72,7 @@ Title = {
         t_type = "FlamingoDefaultUI/StaticImage",
         t_name = "title",
         t_text = "ELDERSBANE",
-        t_image = "eldersbane.png"
+        t_image = "EldersbaneMenu.png"
     }
 }
 CamaraPpal={
