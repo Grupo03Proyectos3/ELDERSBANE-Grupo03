@@ -41,7 +41,7 @@ namespace Eldersbane
         int m_time_last_dir = 0;
         int m_time_last_move = 0;
         Flamingo::SVector3 m_velocity;
-        Flamingo::SVector3 direction;
+        Flamingo::SVector3 m_direction;
         bool m_wandering;
         bool m_attacking;
         bool m_colliding;

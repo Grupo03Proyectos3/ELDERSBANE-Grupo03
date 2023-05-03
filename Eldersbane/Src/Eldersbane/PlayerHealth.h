@@ -14,6 +14,7 @@ namespace Eldersbane {
 
         Flamingo::BehaviourScript* clone() override;
 
+		void start() override;
 		void update(float t_deltaTime) override;
 
 		void onCollisionEnter(Flamingo::GameObject* t_other) override;
@@ -24,8 +25,8 @@ namespace Eldersbane {
 		void killPlayer();
 
 	private:
-		int max_health;
-		int current_health;
+		int m_max_health;
+		int m_current_health;
 
 	};
 }

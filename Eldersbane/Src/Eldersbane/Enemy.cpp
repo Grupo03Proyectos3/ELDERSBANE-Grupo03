@@ -89,11 +89,11 @@ namespace Eldersbane
 
     void Enemy::followPlayer(Flamingo::SVector3 t_player_pos)
     {
-        direction =
+        m_direction =
             {t_player_pos.getX() - m_tr->getPosition().getX(),
              t_player_pos.getY() - m_tr->getPosition().getY(),
              t_player_pos.getY() - m_tr->getPosition().getZ()};
-        direction.normalize();
+        m_direction.normalize();
     }
 
     void Enemy::attack()
@@ -133,11 +133,11 @@ namespace Eldersbane
                 float z = ((float)rand() / RAND_MAX) * 2.0f - 1.0f;
 
                 // Crea un vector con estos valores y normal�zalo
-                direction = Flamingo::SVector3(x, y, z);
-                direction.normalize();
+                m_direction = Flamingo::SVector3(x, y, z);
+                m_direction.normalize();
 
                 // Asigna una velocidad constante a lo largo de esta direcci�n
-                m_velocity = direction * 0.2f;
+                m_velocity = m_direction * 0.2f;
 
                 // Reinicia el contador de tiempo
                 m_time_last_dir = 0;
@@ -155,7 +155,7 @@ namespace Eldersbane
         else if (!m_wandering && !m_attacking)
         {
             // Asigna una velocidad constante a lo largo de esta direcci�n
-            m_velocity = direction * 0.2f;
+            m_velocity = m_direction * 0.2f;
             m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time));
         }
     }
