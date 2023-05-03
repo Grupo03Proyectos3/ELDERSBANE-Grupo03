@@ -6,6 +6,8 @@
 #include <FlamingoUtils/FlamingoKeys.h>
 #include <Render/Animator.h>
 #include "BluePotion.h"
+#include <FlamingoUtils/SVector2.h>
+#include <cmath>
 
 namespace Eldersbane
 {
@@ -33,43 +35,49 @@ namespace Eldersbane
         //m_camera->FollowTarget();
         m_rb = Flamingo::getComponent<Flamingo::RigidBody>(this->gameObject());
         m_rb->setKinematic(true);
+
+        m_forward = {1, 0, 0};
+        m_right = {0, 0, 1};
     }
 
     void PlayerMovement::update(float t_deltaTime)
     {
-        //Flamingo::SVector3 traslation;
-        //double rotacion;
-        //if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
-        //{
-        //    std::cout << "A PRESSED\n";
-        //    traslation += Flamingo::SVector3(speed, 0, 0);
-        //}
-        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
-        //{
-        //    std::cout << "D PRESSED\n";
-        //    traslation -= Flamingo::SVector3(speed, 0, 0);
-        //}
-        //if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
-        //{
-        //    std::cout << "W PRESSED\n";
-        //    traslation += Flamingo::SVector3(0, 0, speed);
-        //}
-        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
-        //{
-        //    std::cout << "S PRESSED\n";
-        //    traslation -= Flamingo::SVector3(0, 0, speed);
-        //}
-        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
-        //{
-        //    std::cout << "G PRESSED\n";
-        //    m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=5*t_deltaTime), Flamingo::SVector3(0, 1, 0)),Flamingo::WORLD);
-        //}
+        Flamingo::SVector3 traslation = {0, 0, 0};
+        double rotacion;
 
-        //if (Flamingo::Input().mouseMotionEvent())
-        //{ // rotar al player
-        //    std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
-        //    m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first* sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
-        //}
+        //Rotacion del jugador
+        if (Flamingo::Input().mouseMotionEvent())
+        { // rotar al player
+            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
+            Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
+            m_transform->setRotation(quat);
+            //m_forward = quat.Rotate({0,1,0});
+            
+            m_forward = getOrientation(percentRotate);
+            m_right = getOrientation(percentRotate + 90);
+            std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';     
+        }
+
+        if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
+        {
+            std::cout << "A PRESSED\n";
+            traslation += m_right;
+        }
+        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
+        {
+            std::cout << "D PRESSED\n";
+            traslation -= m_right;
+        }
+        if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
+        {
+            std::cout << "W PRESSED\n";
+            traslation += m_forward;
+        }
+        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
+        {
+            std::cout << "S PRESSED\n";
+            traslation -= m_forward;
+        }
 
         //traslation = traslation.normalized() * speed * t_deltaTime;           
 
@@ -94,5 +102,15 @@ namespace Eldersbane
     float PlayerMovement::getRotSensitivity()
     {
         return sensitivity;
+    }
+
+    Flamingo::SVector3 PlayerMovement::getOrientation(float degree)
+    {
+        float x, z;
+        float rad = degree * 3.14159265 / 180;
+        x = std::sin(rad);
+        z = std::cos(rad);
+        float xRel = x / std::abs(x), zRel = z / std::abs(z);
+        return Flamingo::SVector3(x * x * xRel, 0, z * z * zRel);
     }
 } // namespace Eldersbane

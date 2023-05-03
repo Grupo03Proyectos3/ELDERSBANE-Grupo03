@@ -33,7 +33,7 @@ ButtonGame = {
         rotationW = "0.0"
     },
     UIElement = {
-        t_type = "FlamingoDefaultUI/Button",
+        t_type = "FlamingoDefaultUI/ImageButton",
         t_name = "button",
         t_text = "MENU",
         t_image = ""
