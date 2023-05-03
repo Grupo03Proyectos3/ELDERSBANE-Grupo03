@@ -22,6 +22,7 @@
 #include "BluePotion.h"
 #include "GreenPotion.h"
 #include "TargetCamera.h"
+#include "Sword.h"
 
 bool InitJuego(void)
 {
@@ -49,6 +50,7 @@ bool InitJuego(void)
     f_core->addGameScript("BluePotion", new Eldersbane::BluePotion());
     f_core->addGameScript("GreenPotion", new Eldersbane::GreenPotion());
     f_core->addGameScript("TargetCamera", new Eldersbane::TargetCamera());
+    f_core->addGameScript("Sword", new Eldersbane::Sword());
     // t_core->addGameScript("ChangeScene", new ChangeScene());
    
     return true;
