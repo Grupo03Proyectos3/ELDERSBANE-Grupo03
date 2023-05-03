@@ -26,5 +26,6 @@ namespace Eldersbane
         float percentRotate=0;
 
         Flamingo::RigidBody* m_rb;
+        Flamingo::SVector3 m_forward;
     };
 } // namespace Eldersbane
