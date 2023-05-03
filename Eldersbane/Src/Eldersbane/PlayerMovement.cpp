@@ -30,6 +30,8 @@ namespace Eldersbane
         //m_camera->setTarget(gameObject());
         //m_camera->setOffset({-700, -200, 0});       
         //m_camera->FollowTarget();
+        m_rb = Flamingo::getComponent<Flamingo::RigidBody>(this->gameObject());
+        m_rb->setKinematic(true);
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -68,14 +70,12 @@ namespace Eldersbane
             m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first* sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
         }
 
-        if (traslation.lenght() > speed)
-        {
-            traslation = traslation.normalized() * speed;           
-        }
+        traslation = traslation.normalized() * speed * t_deltaTime;           
 
         traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
         
         m_transform->translate(traslation,Flamingo::LOCAL);
+        //m_rb->setLinearVelocity(traslation);
 
         //m_camera->FollowTarget();
        

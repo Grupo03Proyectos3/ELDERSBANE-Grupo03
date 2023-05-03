@@ -2,6 +2,7 @@
 #include "Scripting\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
 #include <Render/Camera.h>
+#include <Physics/RigidBody.h>
 namespace Eldersbane
 {
     class PlayerMovement : public Flamingo::BehaviourScript
@@ -18,10 +19,12 @@ namespace Eldersbane
         float getRotSensitivity();
 
       private:
-        float speed = 75.0f;
+        float speed = 1.5f;
         float sensitivity = 0.03f;
         Flamingo::Transform* m_transform;
         Flamingo::Camera* m_camera;
         float percentRotate=0;
+
+        Flamingo::RigidBody* m_rb;
     };
 } // namespace Eldersbane

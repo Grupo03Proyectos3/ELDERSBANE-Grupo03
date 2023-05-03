@@ -22,11 +22,12 @@ void Eldersbane::TargetCamera::start()
     m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
     m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
     m_camera->setTarget(gameObject()); 
-    m_camera->setOffset({-500, -150, 0}); 
+    m_camera->setOffset({-700, -100, 0}); 
     m_camera->FollowTarget();
     m_followTarget = Flamingo::getComponent<Flamingo::Transform>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("player"));
 
-    m_offset = Flamingo::SVector3(-70, 50, 30);
+    m_offset = Flamingo::SVector3(250, -50, 50);
+    m_transform->setPosition(m_followTarget->getPosition() + m_offset);
     rotSpeed = Flamingo::getComponent<Eldersbane::PlayerMovement>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("player"))->getRotSensitivity();
 }
 
@@ -42,5 +43,12 @@ void Eldersbane::TargetCamera::update(float t_deltaTime)
 
 void Eldersbane::TargetCamera::followPlayer()
 {
-    m_transform->setPosition(m_followTarget->getPosition() + m_offset);
+    //m_transform->setPosition(m_followTarget->getPosition() + m_offset);
+
+    auto trpTarget = m_followTarget;
+    auto mtrp = m_transform;
+
+    Flamingo::SVector3 newOffset = trpTarget->getRotation().Rotate(m_offset);
+    mtrp->setPosition(trpTarget->getPosition() - newOffset);
+    mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
 }

@@ -130,7 +130,7 @@ Player = {
    RigidBody = {
        t_mass = "20.0",
        t_trigger = "0",
-       t_static = "1"
+       t_static = "0"
    },
    MeshRenderer = {
        t_model_name = "Sinbad.mesh",
@@ -154,9 +154,9 @@ TargetCamera = {
         positionX = "500.0",
         positionY = "350.0",
         positionZ = "200.0",
-        scaleX = "1.0",
-        scaleY = "1.0",
-        scaleZ = "1.0",
+        scaleX = "0.1",
+        scaleY = "0.1",
+        scaleZ = "0.1",
         rotationX = "0.0",
         rotationY = "0.0",
         rotationZ = "0.0",
@@ -164,6 +164,14 @@ TargetCamera = {
     },
     Scripts={
         "TargetCamera",
+    },
+    MeshRenderer = {
+       t_model_name = "cube.mesh",
+       t_entity_name= "targetcamera",
+       t_node_x=" 0.0",
+       t_node_y="0.0",
+       t_node_z="0.0",
+       t_mat_name= ""
     },
 }
 Enemy = {
