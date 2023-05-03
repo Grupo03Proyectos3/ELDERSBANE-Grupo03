@@ -1,4 +1,4 @@
-entities = {"ButtonGame","ExitGame", "Title", "CamaraPpal", "Luz"}
+entities = {"ButtonGame", "ExitGame", "Title", "CamaraPpal", "Luz"}
 
 ButtonGame = {
     Name={
@@ -19,8 +19,8 @@ ButtonGame = {
     UIElement = {
         t_type = "FlamingoDefaultUI/Button",
         t_name = "button",
-        t_text = "PLAY",
-        t_image = ""
+        t_text = "",
+        t_image = "Play.png"
     },
     Scripts = {
         t_scriptName = "ChangeScene"
@@ -45,8 +45,8 @@ ExitGame = {
     UIElement = {
         t_type = "FlamingoDefaultUI/Button",
         t_name = "exitButton",
-        t_text = "EXIT",
-        t_image = ""
+        t_text = "",
+        t_image = "Exit.png"
     },
     Scripts = {
         t_scriptName = "ExitGame"
