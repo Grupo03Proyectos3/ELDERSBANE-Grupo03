@@ -17,7 +17,7 @@ namespace Eldersbane
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
         float getRotSensitivity();
-
+        Flamingo::SVector3 getOrientation(float rad);
       private:
         float speed = 1.5f;
         float sensitivity = 0.03f;
@@ -27,5 +27,6 @@ namespace Eldersbane
 
         Flamingo::RigidBody* m_rb;
         Flamingo::SVector3 m_forward;
+        Flamingo::SVector3 m_right;
     };
 } // namespace Eldersbane

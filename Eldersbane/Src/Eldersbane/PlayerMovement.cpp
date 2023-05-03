@@ -36,6 +36,7 @@ namespace Eldersbane
         m_rb->setKinematic(true);
 
         m_forward = {1, 0, 0};
+        m_right = {0, 0, 1};
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -50,24 +51,21 @@ namespace Eldersbane
             Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
             m_transform->setRotation(quat);
             //m_forward = quat.Rotate({0,1,0});
-            float x, z;
-            float rad = percentRotate * 3.14159265 / 180;
-            x = std::sin(rad);
-            z = std::cos(rad);
-            float xRel = x / std::abs(x), zRel = z / std::abs(z);
-            m_forward = Flamingo::SVector3(x * x * xRel, 0, z*z * zRel);
-            std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';
+            
+            m_forward = getOrientation(percentRotate);
+            m_right = getOrientation(percentRotate + 90);
+            std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';     
         }
 
         if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
         {
             std::cout << "A PRESSED\n";
-            traslation += Flamingo::SVector3(speed, 0, 0);
+            traslation += m_right;
         }
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
         {
             std::cout << "D PRESSED\n";
-            traslation -= Flamingo::SVector3(speed, 0, 0);
+            traslation -= m_right;
         }
         if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
         {
@@ -77,14 +75,8 @@ namespace Eldersbane
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
         {
             std::cout << "S PRESSED\n";
-            traslation -= Flamingo::SVector3(0, 0, speed);
+            traslation -= m_forward;
         }
-        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
-        {
-            std::cout << "G PRESSED\n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=5*t_deltaTime), Flamingo::SVector3(0, 1, 0)),Flamingo::WORLD);
-        }
-
 
         traslation = traslation.normalized() * speed * t_deltaTime;           
 
@@ -109,5 +101,15 @@ namespace Eldersbane
     float PlayerMovement::getRotSensitivity()
     {
         return sensitivity;
+    }
+
+    Flamingo::SVector3 PlayerMovement::getOrientation(float degree)
+    {
+        float x, z;
+        float rad = degree * 3.14159265 / 180;
+        x = std::sin(rad);
+        z = std::cos(rad);
+        float xRel = x / std::abs(x), zRel = z / std::abs(z);
+        return Flamingo::SVector3(x * x * xRel, 0, z * z * zRel);
     }
 } // namespace Eldersbane
