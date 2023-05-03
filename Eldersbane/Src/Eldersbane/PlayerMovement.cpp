@@ -27,9 +27,9 @@ namespace Eldersbane
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
 
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
-        m_camera->setTarget(gameObject());
-        m_camera->setOffset({-700, -250, 0});       
-        m_camera->FollowTarget();
+        //m_camera->setTarget(gameObject());
+        //m_camera->setOffset({-700, -200, 0});       
+        //m_camera->FollowTarget();
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -65,7 +65,7 @@ namespace Eldersbane
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
             std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.001 * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first* sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
         }
 
         if (traslation.lenght() > speed)
@@ -77,7 +77,7 @@ namespace Eldersbane
         
         m_transform->translate(traslation,Flamingo::LOCAL);
 
-        m_camera->FollowTarget();
+        //m_camera->FollowTarget();
        
     }
     void PlayerMovement::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -89,5 +89,9 @@ namespace Eldersbane
                       << "\n";
             speed *= bluePotion->getSpeedMultiplier();
         }
+    }
+    float PlayerMovement::getRotSensitivity()
+    {
+        return sensitivity;
     }
 } // namespace Eldersbane

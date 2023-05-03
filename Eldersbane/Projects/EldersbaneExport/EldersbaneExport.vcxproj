@@ -185,6 +185,7 @@
     <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
     <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\TargetCamera.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +202,7 @@
     <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\TargetCamera.cpp" />
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
