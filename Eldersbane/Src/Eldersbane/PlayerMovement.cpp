@@ -64,8 +64,8 @@ namespace Eldersbane
 
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
-            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().first << " \n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.001 * t_deltaTime), Flamingo::SVector3(0, 1, 0)));
+            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
+            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first*0.001 * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
         }
 
         if (traslation.lenght() > speed)
