@@ -29,7 +29,7 @@ namespace Eldersbane
 
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
-        m_max_distance = 500.0f;
+        m_max_distance = 1500.0f;
         m_time_last_dir = 0;
         m_time_last_move = 0;
         m_velocity = Flamingo::SVector3(0, 0, 0);
@@ -89,10 +89,11 @@ namespace Eldersbane
 
     void Enemy::followPlayer(Flamingo::SVector3 t_player_pos)
     {
+        std::cout << "Te estoy siguiendo: X" << t_player_pos.getX() << " Y" << t_player_pos.getY() << "Z"<< t_player_pos.getZ() << std::endl;
         m_direction =
             {t_player_pos.getX() - m_tr->getPosition().getX(),
              t_player_pos.getY() - m_tr->getPosition().getY(),
-             t_player_pos.getY() - m_tr->getPosition().getZ()};
+             t_player_pos.getZ() - m_tr->getPosition().getZ()};
         m_direction.normalize();
     }
 
