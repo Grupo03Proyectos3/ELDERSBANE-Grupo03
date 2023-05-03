@@ -17,7 +17,7 @@ ButtonGame = {
         rotationW = "0.0"
     },
     UIElement = {
-        t_type = "FlamingoDefaultUI/Button",
+        t_type = "FlamingoDefaultUI/ImageButton",
         t_name = "button",
         t_text = "",
         t_image = "Play.png"
@@ -43,7 +43,7 @@ ExitGame = {
         rotationW = "0.0"
     },
     UIElement = {
-        t_type = "FlamingoDefaultUI/Button",
+        t_type = "FlamingoDefaultUI/ImageButton",
         t_name = "exitButton",
         t_text = "",
         t_image = "Exit.png"
