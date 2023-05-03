@@ -9,7 +9,7 @@
 #include "FlamingoExport/FlamingoExport.h"
 
 #include "ECS/Manager.h"
-#include "Lua/ScriptManager.h"
+#include "Scripting/ScriptManager.h"
 
 #include "ChangeScene.h"
 #include "PlayerHealth.h"

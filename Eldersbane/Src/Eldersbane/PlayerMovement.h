@@ -1,5 +1,5 @@
 #pragma once
-#include "Lua\BehaviourScript.h"
+#include "Scripting\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
 #include <Render/Camera.h>
 namespace Eldersbane

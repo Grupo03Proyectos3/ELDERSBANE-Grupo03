@@ -1,5 +1,5 @@
 #pragma once
-#include "Lua\BehaviourScript.h"
+#include "Scripting\BehaviourScript.h"
 
 //Script que lleva el player. Cuando choca con algun objeto hace si efecto
 namespace Eldersbane

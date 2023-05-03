@@ -1,5 +1,5 @@
 #pragma once
-#include "Lua\BehaviourScript.h"
+#include "Scripting\BehaviourScript.h"
 
 namespace Eldersbane
 {

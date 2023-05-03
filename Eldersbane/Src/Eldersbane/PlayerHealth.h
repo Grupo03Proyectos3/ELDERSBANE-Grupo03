@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __PLAYER_HEALTH_H__
 #define __PLAYER_HEALTH_H__
-#include "Lua/BehaviourScript.h"
+#include "Scripting/BehaviourScript.h"
 
 namespace Eldersbane {
 

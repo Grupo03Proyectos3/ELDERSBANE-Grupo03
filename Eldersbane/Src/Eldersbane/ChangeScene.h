@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __CHANGE_SCENE_H__
 #define __CHANGE_SCENE_H__
-#include "Lua/BehaviourScript.h"
+#include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
     class ChangeScene : public Flamingo::BehaviourScript

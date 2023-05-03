@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __EXIT_GAME_H__
 #define __EXIT_GAME_H__
-#include "Lua/BehaviourScript.h"
+#include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
     class ExitGame : public Flamingo::BehaviourScript

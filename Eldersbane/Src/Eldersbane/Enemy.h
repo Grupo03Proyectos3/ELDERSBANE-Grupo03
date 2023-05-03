@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __ENEMY_H__
 #define __ENEMY_H__
-#include "Lua/BehaviourScript.h"
+#include "Scripting/BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
 namespace Eldersbane
 {
