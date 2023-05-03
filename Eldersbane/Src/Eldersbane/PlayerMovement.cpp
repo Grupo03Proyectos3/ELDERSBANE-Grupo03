@@ -27,6 +27,7 @@ namespace Eldersbane
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
 
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
+        m_camera->lookAt({0, 0, 0}, Flamingo::WORLD);
         //m_camera->setTarget(gameObject());
         //m_camera->setOffset({-700, -200, 0});       
         //m_camera->FollowTarget();
@@ -36,48 +37,48 @@ namespace Eldersbane
 
     void PlayerMovement::update(float t_deltaTime)
     {
-        Flamingo::SVector3 traslation;
-        double rotacion;
-        if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
-        {
-            std::cout << "A PRESSED\n";
-            traslation += Flamingo::SVector3(speed, 0, 0);
-        }
-        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
-        {
-            std::cout << "D PRESSED\n";
-            traslation -= Flamingo::SVector3(speed, 0, 0);
-        }
-        if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
-        {
-            std::cout << "W PRESSED\n";
-            traslation += Flamingo::SVector3(0, 0, speed);
-        }
-        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
-        {
-            std::cout << "S PRESSED\n";
-            traslation -= Flamingo::SVector3(0, 0, speed);
-        }
-        else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
-        {
-            std::cout << "G PRESSED\n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=5*t_deltaTime), Flamingo::SVector3(0, 1, 0)),Flamingo::WORLD);
-        }
+        //Flamingo::SVector3 traslation;
+        //double rotacion;
+        //if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
+        //{
+        //    std::cout << "A PRESSED\n";
+        //    traslation += Flamingo::SVector3(speed, 0, 0);
+        //}
+        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
+        //{
+        //    std::cout << "D PRESSED\n";
+        //    traslation -= Flamingo::SVector3(speed, 0, 0);
+        //}
+        //if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
+        //{
+        //    std::cout << "W PRESSED\n";
+        //    traslation += Flamingo::SVector3(0, 0, speed);
+        //}
+        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
+        //{
+        //    std::cout << "S PRESSED\n";
+        //    traslation -= Flamingo::SVector3(0, 0, speed);
+        //}
+        //else if (Flamingo::Input().isKeyDown(Flamingo::FLM_g))
+        //{
+        //    std::cout << "G PRESSED\n";
+        //    m_transform->setRotation(Flamingo::SQuaternion((percentRotate+=5*t_deltaTime), Flamingo::SVector3(0, 1, 0)),Flamingo::WORLD);
+        //}
 
-        if (Flamingo::Input().mouseMotionEvent())
-        { // rotar al player
-            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
-            m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first* sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
-        }
+        //if (Flamingo::Input().mouseMotionEvent())
+        //{ // rotar al player
+        //    std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
+        //    m_transform->setRotation(Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first* sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0)));
+        //}
 
-        traslation = traslation.normalized() * speed * t_deltaTime;           
+        //traslation = traslation.normalized() * speed * t_deltaTime;           
 
-        traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
-        
-        m_transform->translate(traslation,Flamingo::LOCAL);
-        //m_rb->setLinearVelocity(traslation);
+        //traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
+        //
+        //m_transform->translate(traslation,Flamingo::LOCAL);
+        ////m_rb->setLinearVelocity(traslation);
 
-        //m_camera->FollowTarget();
+        ////m_camera->FollowTarget();
        
     }
     void PlayerMovement::onCollisionEnter(Flamingo::GameObject* t_other)

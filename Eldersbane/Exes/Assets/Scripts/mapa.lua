@@ -1,18 +1,20 @@
-entities = {"ButtonGame","Mapa", "CamaraPpal","Luz", "Player", "TargetCamera", "Enemy", "Arbol", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime01", "Slime02","Slime03","EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", 
-"Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06","Tronco07","M7", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M16", "M17", "M18", "M19", "M20", "M21", "M22", "A81", "A82", "A83", "A84", "A85", "A86", "A87", "A88",
-"A89", "A810", "A811", "A812", "A813", "A814", "A815", "A816", "A817", "A818", "A819", "A820", "A821", "A822", "A823", "A824", "A825", "A21", "A22", "A23", "A24", "A25",
-"A26", "A27", "A28", "A29", "A210", "A211", "A212", "A213", "A214", "A215", "A216", "A217", "A218", "A219", "A220", "A221", "A222", "A223", "A224", "A225", "A226", "A227",
-"A228", "A229", "A230", "A231", "A232", "A233", "A234", "A235", "A236", "A237", "A238", "A239", "A240", "A241", "A242", "A243", "A244", "A245", "A246", "A247", "A248",
-"A249", "A250", "A251", "A252", "A253", "A254", "A255", "A256", "A257", "A258", "A259", "A260", "A261", "A262", "A263", "A264", "A265", "A266", "A267", "A268", "A269",
-"A270", "A271", "A272", "A273", "A274", "A275", "A276", "A277", "A278", "A279", "A280", "A281", "A282", "A283", "A284", "A285", "A286", "A287", "A288", "A289", "A290",
-"A291", "A292", "A293", "A294", "A295", "A296", "A297", "A298", "A299", "A2100", "A2101", "A2102", "A2103", "A2104", "A2105", "A2106", "A2107", "A2108", "A2109", "A2110", "A2111",
-"A2112", "A61", "A62", "A63", "A64", "A65", "A66", "A67", "A68", "A69", "A610", "A611", "A612", "A613", "A614", "A615", "A616", "A617", "A618", "A619", "A620", "A621", "A622",
-"A623", "A624", "A625", "A626", "A627", "A628", "A629", "A630", "A631", "A632", "A633", "A634", "A635", "A636", "A637", "A638", "A639", "A640", "A641", "A642", "A643", 
-"A644", "A645", "A646", "A647", "A648", "A649", "A650", "A651", "A652", "A653", "A654", "A655", "A656", "A657","A658", "A659", "A660", "A661", "A662", "A663", "A664", "A665",
-"A666", "A667", "A668", "A669", "A670", "A671", "A672", "A673", "A674", "A675", "A676", "A677", "A678", "A679","A680", "A681", "A682", "A683", "A684","A685", "A686",
-"A687", "A688", "A689", "A690", "A691", "A692", "A693", "A694", "A695", "A696", "A697", "A698", "A699", "A6100", "A6101", "A6102", "A6103", "A6104", "A6105", "A6106",
-"A6107", "A6108", "A6110", "A6111", "A6112", "A6113", "A6114", "A6115", "A6116", "A6117", "A6118", "A6120", "A6121", "A6122", "A6123", "A6124", "A6125","A6126", "A6127",
-"A6128", "A51", "A52", "A53", "A54", "A55", "A56", "A57", "A58", "A59", "A510", "A511", "A512", "A513", "A514", "A515", "A516"}
+entities = {"ButtonGame","Mapa", "CamaraPpal","Luz", "Player", "TargetCamera", "GranArbol", "Enemy", "MakoyAzul01", "MakoyRojo01", "MakoyMorado01", "MakoyMorado02", 
+"MakoyMorado03", "MakoyMorado04","MakoyMorado05",
+"MakoyKing", "EspadaMetal", "EspadaMadera", "EspadaEspecial", "Slime01", "Slime02","Slime03","EscudoMadera", "PocionRoja", "M1", "M2", "M3", "M4", "M5", "M6", "Tronco01",
+"Tronco02","Tronco03","Tronco04","Tronco05","Tronco06","Tronco07","M7", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M16", "M17", "M18", "M19", "M20", "M21", 
+"M22", "A81", "A82","A84","A86", "A87", "A88","A89", "A811","A813", "A814", "A815", "A816", "A817", "A818", "A819",
+"A823", "A824", "A825", "A21", "A22", "A23", "A24", "A28", "A29", "A210", "A212", "A214", "A215", "A216", "A218", "A219", 
+"A220", "A221", "A223", "A224", "A225","A228", "A229", "A230", "A232", "A233", "A235", "A236", "A238", "A239", "A240", 
+"A242", "A243", "A244", "A245", "A246", "A248", "A249", "A250", "A251", "A253", "A255", "A256", "A258", "A260",
+"A264", "A266", "A267", "A268", "A273", "A275", "A280", "A281",
+"A283", "A284", "A286", "A287", "A288", "A290", "A291", "A292", "A293", "A294","A297", "A298", "A2100", "A2102", "A2103", 
+"A2105", "A2107", "A2108", "A2109", "A2111", "A62", "A63", "A64", "A66", "A67", "A69", "A610", "A611",
+"A613", "A615", "A616", "A617", "A619", "A620", "A622", "A623", "A624", "A625", "A626", "A628", "A629", "A631", "A632",
+"A634", "A637", "A638", "A640", "A642", "A643", "A646", "A648","A650", "A652", "A653",
+"A655", "A657","A658", "A661", "A662", "A663", "A664", "A666", "A667", "A668", "A669", "A670", "A671", "A673", "A675", 
+"A676", "A679","A681", "A682", "A683","A686", "A687", "A688", "A690", "A692", "A693", "A696", 
+"A698", "A699", "A6100", "A6102", "A6103", "A6104", "A6105", "A6106", "A6107", "A6110", "A6111", "A6114", "A6115", "A6116", 
+"A6117", "A6120", "A6121", "A6123", "A6124", "A6125", "A6127","A6128", "A51", "A52", "A53", "A54", "A55", "A56", "A57", "A58", "A59", "A510", "A511", "A512", "A513", "A514", "A515", "A516"}
 
 ButtonGame = {
     Name={
@@ -75,9 +77,9 @@ CamaraPpal={
         t_name="myCamera"
     }, --Para una vista cenital la posicion sera (0 48000 0)
     Transform = {
-        positionX = "500.0",
-        positionY = "500.0",
-        positionZ = "500.0",
+        positionX = "0.0",
+        positionY = "48000.0",
+        positionZ = "0.0",
         scaleX = "1.0",
         scaleY = "1.0",
         scaleZ = "1.0",
@@ -163,7 +165,7 @@ TargetCamera = {
         rotationW = "1.0"
     },
     Scripts={
-        "TargetCamera",
+--        "TargetCamera",
     },
     MeshRenderer = {
        t_model_name = "cube.mesh",
@@ -173,6 +175,36 @@ TargetCamera = {
        t_node_z="0.0",
        t_mat_name= ""
     },
+}
+GranArbol={
+    Name={
+        t_name="granarbol"
+    },
+   Transform = {
+       positionX = "300.0",
+       positionY="2000.0",
+       positionZ="-28000.0",
+       scaleX="1.0",
+       scaleY="1.0",
+       scaleZ="1.0",
+       rotationX="-1.0",
+       rotationY="0.0",
+       rotationZ="0.0",
+       rotationW="1.0"
+   },
+   RigidBody = {
+       t_mass = "20.0",
+       t_trigger = "0",
+       t_static = "1"
+   },
+   MeshRenderer = {
+       t_model_name = "Arbol10.mesh",
+       t_entity_name= "granarbol",
+       t_node_x="25.0",
+       t_node_y="25.0",
+       t_node_z="25.0",
+       t_mat_name= ""
+   },
 }
 Enemy = {
     Name={
@@ -207,17 +239,17 @@ Enemy = {
         "Enemy"
     }
 }
-Arbol = {
+MakoyAzul01 = {
     Name={
-        t_name="dragon"
+        t_name="ma1"
     },
     Transform = {
-        positionX = "1000.0",
-        positionY = "350.0",
-        positionZ = "0.0",
-        scaleX = "1",
-        scaleY = "1",
-        scaleZ = "1",
+        positionX = "300.0",
+        positionY = "300.0",
+        positionZ = "-400.0",
+        scaleX = "0.8",
+        scaleY = "0.8",
+        scaleZ = "0.8",
         rotationX = "-1.0",
         rotationY = "0.0",
         rotationZ = "0.0",
@@ -229,16 +261,247 @@ Arbol = {
         t_static = "1"
     },
     MeshRenderer = {
-        t_model_name = "dragon3.mesh",
-        t_entity_name= "dragon",
+        t_model_name = "makoyazul.mesh",
+        t_entity_name= "ma1",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
         t_mat_name= ""
-    },
-    Animator={
-        t_name="dragon"
     }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyRojo01 = {
+    Name={
+        t_name="mr1"
+    },
+    Transform = {
+        positionX = "800.0",
+        positionY = "300.0",
+        positionZ = "-400.0",
+        scaleX = "1.04",
+        scaleY = "1.04",
+        scaleZ = "1.04",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoyrojo.mesh",
+        t_entity_name= "mr1",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyMorado01 = {
+    Name={
+        t_name="mm1"
+    },
+    Transform = {
+        positionX = "300.0",
+        positionY = "300.0",
+        positionZ = "-25000.0",
+        scaleX = "1.44",
+        scaleY = "1.44",
+        scaleZ = "1.44",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoymorado.mesh",
+        t_entity_name= "mm1",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyMorado02 = {
+    Name={
+        t_name="mm2"
+    },
+    Transform = {
+        positionX = "650.0",
+        positionY = "300.0",
+        positionZ = "-25200.0",
+        scaleX = "1.44",
+        scaleY = "1.44",
+        scaleZ = "1.44",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoymorado.mesh",
+        t_entity_name= "mm2",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyMorado03 = {
+    Name={
+        t_name="mm3"
+    },
+    Transform = {
+        positionX = "900.0",
+        positionY = "300.0",
+        positionZ = "-25700.0",
+        scaleX = "1.44",
+        scaleY = "1.44",
+        scaleZ = "1.44",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoymorado.mesh",
+        t_entity_name= "mm3",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyMorado04 = {
+    Name={
+        t_name="mm4"
+    },
+    Transform = {
+        positionX = "-100.0",
+        positionY = "300.0",
+        positionZ = "-25500.0",
+        scaleX = "1.44",
+        scaleY = "1.44",
+        scaleZ = "1.44",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoymorado.mesh",
+        t_entity_name= "mm4",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyMorado05 = {
+    Name={
+        t_name="mm5"
+    },
+    Transform = {
+        positionX = "-46400.0",
+        positionY = "200.0",
+        positionZ = "-1100.0",
+        scaleX = "1.44",
+        scaleY = "1.44",
+        scaleZ = "1.44",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoymorado.mesh",
+        t_entity_name= "mm5",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
+}
+MakoyKing = {
+    Name={
+        t_name="mk"
+    },
+    Transform = {
+        positionX = "600.0",
+        positionY = "300.0",
+        positionZ = "-26000.0",
+        scaleX = "2",
+        scaleY = "2",
+        scaleZ = "2",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "makoyking.mesh",
+        t_entity_name= "mk",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    }
+--    Animator={
+--        t_name="dragon"
+--    }
 }
 EspadaMetal = {
     Name={
@@ -305,15 +568,15 @@ EspadaEspecial = {
         t_name="espadae",
     },
     Transform = {
-        positionX = "-300.0",
-        positionY = "50.0",
-        positionZ = "0.0",
+        positionX = "-47200.0",
+        positionY = "300.0",
+        positionZ = "-1000.0",
         scaleX = "10",
         scaleY = "10",
         scaleZ = "10",
-        rotationX = "0.0",
+        rotationX = "1.0",
         rotationY = "0.0",
-        rotationZ = "0.0",
+        rotationZ = "0.5",
         rotationW = "1.0"
     },
     RigidBody = {
@@ -1444,36 +1707,6 @@ A82 = {
         t_mat_name= ""
     }
 }
-A83 = {
-    Name={
-        t_name="a83"
-    },
-    Transform = {
-        positionX = "-46500.0",
-        positionY = "560.0",
-        positionZ = "10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a83",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A84 = {
     Name={
         t_name="a84"
@@ -1498,36 +1731,6 @@ A84 = {
     MeshRenderer = {
         t_model_name = "Arbol08.mesh",
         t_entity_name= "a84",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A85 = {
-    Name={
-        t_name="a85"
-    },
-    Transform = {
-        positionX = "-49000.0",
-        positionY = "560.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a85",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -1654,36 +1857,6 @@ A89 = {
         t_mat_name= ""
     }
 }
-A810 = {
-    Name={
-        t_name="a810"
-    },
-    Transform = {
-        positionX = "-41000.0",
-        positionY = "560.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a810",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A811 = {
     Name={
         t_name="a811"
@@ -1708,36 +1881,6 @@ A811 = {
     MeshRenderer = {
         t_model_name = "Arbol08.mesh",
         t_entity_name= "a811",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A812 = {
-    Name={
-        t_name="a812"
-    },
-    Transform = {
-        positionX = "-48000.0",
-        positionY = "560.0",
-        positionZ = "15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a812",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -1954,96 +2097,6 @@ A819 = {
         t_mat_name= ""
     }
 }
-A820 = {
-    Name={
-        t_name="a820"
-    },
-    Transform = {
-        positionX = "-46000.0",
-        positionY = "560.0",
-        positionZ = "-14500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a820",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A821 = {
-    Name={
-        t_name="a821"
-    },
-    Transform = {
-        positionX = "-53000.0",
-        positionY = "560.0",
-        positionZ = "-13000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a821",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A822 = {
-    Name={
-        t_name="a822"
-    },
-    Transform = {
-        positionX = "-42000.0",
-        positionY = "560.0",
-        positionZ = "-12000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol08.mesh",
-        t_entity_name= "a822",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A823 = {
     Name={
         t_name="a823"
@@ -2254,96 +2307,6 @@ A24 = {
         t_mat_name= ""
     }
 }
-A25 = {
-    Name={
-        t_name="a25"
-    },
-    Transform = {
-        positionX = "-32000.0",
-        positionY = "390.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a25",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A26 = {
-    Name={
-        t_name="a26"
-    },
-    Transform = {
-        positionX = "-32000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a26",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A27 = {
-    Name={
-        t_name="a27"
-    },
-    Transform = {
-        positionX = "-28000.0",
-        positionY = "390.0",
-        positionZ = "0.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a27",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A28 = {
     Name={
         t_name="a28"
@@ -2368,36 +2331,6 @@ A28 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a28",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A24 = {
-    Name={
-        t_name="a24"
-    },
-    Transform = {
-        positionX = "-28000.0",
-        positionY = "390.0",
-        positionZ = "-5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a24",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -2464,36 +2397,6 @@ A210 = {
         t_mat_name= ""
     }
 }
-A211 = {
-    Name={
-        t_name="a211"
-    },
-    Transform = {
-        positionX = "-28000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a211",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A212 = {
     Name={
         t_name="a212"
@@ -2518,36 +2421,6 @@ A212 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a212",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A213 = {
-    Name={
-        t_name="a213"
-    },
-    Transform = {
-        positionX = "-24000.0",
-        positionY = "390.0",
-        positionZ = "5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a213",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -2638,36 +2511,6 @@ A216 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a216",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A217 = {
-    Name={
-        t_name="a217"
-    },
-    Transform = {
-        positionX = "-24000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a217",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -2794,36 +2637,6 @@ A221 = {
         t_mat_name= ""
     }
 }
-A222 = {
-    Name={
-        t_name="a222"
-    },
-    Transform = {
-        positionX = "-20000.0",
-        positionY = "390.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a222",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A223 = {
     Name={
         t_name="a223"
@@ -2908,66 +2721,6 @@ A225 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a225",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A226 = {
-    Name={
-        t_name="a226"
-    },
-    Transform = {
-        positionX = "-20000.0",
-        positionY = "390.0",
-        positionZ = "-23000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a226",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A227 = {
-    Name={
-        t_name="a227"
-    },
-    Transform = {
-        positionX = "-16000.0",
-        positionY = "390.0",
-        positionZ = "0.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a227",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -3064,36 +2817,6 @@ A230 = {
         t_mat_name= ""
     }
 }
-A231 = {
-    Name={
-        t_name="a231"
-    },
-    Transform = {
-        positionX = "-16000.0",
-        positionY = "390.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a231",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A232 = {
     Name={
         t_name="a232"
@@ -3154,36 +2877,6 @@ A233 = {
         t_mat_name= ""
     }
 }
-A234 = {
-    Name={
-        t_name="a234"
-    },
-    Transform = {
-        positionX = "-16000.0",
-        positionY = "390.0",
-        positionZ = "-23000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a234",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A235 = {
     Name={
         t_name="a235"
@@ -3238,36 +2931,6 @@ A236 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a236",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A237 = {
-    Name={
-        t_name="a237"
-    },
-    Transform = {
-        positionX = "-12000.0",
-        positionY = "390.0",
-        positionZ = "-5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a237",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -3358,36 +3021,6 @@ A240 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a240",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A241 = {
-    Name={
-        t_name="a241"
-    },
-    Transform = {
-        positionX = "-12000.0",
-        positionY = "390.0",
-        positionZ = "-26000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a241",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -3544,36 +3177,6 @@ A246 = {
         t_mat_name= ""
     }
 }
-A247 = {
-    Name={
-        t_name="a247"
-    },
-    Transform = {
-        positionX = "-8000.0",
-        positionY = "390.0",
-        positionZ = "-26000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a247",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A248 = {
     Name={
         t_name="a248"
@@ -3694,36 +3297,6 @@ A251 = {
         t_mat_name= ""
     }
 }
-A252 = {
-    Name={
-        t_name="a252"
-    },
-    Transform = {
-        positionX = "0.0",
-        positionY = "390.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a252",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A253 = {
     Name={
         t_name="a253"
@@ -3748,36 +3321,6 @@ A253 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a253",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A254 = {
-    Name={
-        t_name="a254"
-    },
-    Transform = {
-        positionX = "0.0",
-        positionY = "390.0",
-        positionZ = "-26000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a254",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -3844,36 +3387,6 @@ A256 = {
         t_mat_name= ""
     }
 }
-A257 = {
-    Name={
-        t_name="a257"
-    },
-    Transform = {
-        positionX = "4000.0",
-        positionY = "390.0",
-        positionZ = "5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a257",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A258 = {
     Name={
         t_name="a258"
@@ -3898,36 +3411,6 @@ A258 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a258",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A259 = {
-    Name={
-        t_name="a259"
-    },
-    Transform = {
-        positionX = "4000.0",
-        positionY = "390.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a259",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -3964,96 +3447,6 @@ A260 = {
         t_mat_name= ""
     }
 }
-A261 = {
-    Name={
-        t_name="a261"
-    },
-    Transform = {
-        positionX = "4000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a261",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A262 = {
-    Name={
-        t_name="a262"
-    },
-    Transform = {
-        positionX = "4000.0",
-        positionY = "390.0",
-        positionZ = "-26000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a262",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A263 = {
-    Name={
-        t_name="a263"
-    },
-    Transform = {
-        positionX = "4000.0",
-        positionY = "390.0",
-        positionZ = "-23000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a263",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A264 = {
     Name={
         t_name="a264"
@@ -4078,36 +3471,6 @@ A264 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a264",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A265 = {
-    Name={
-        t_name="a265"
-    },
-    Transform = {
-        positionX = "8000.0",
-        positionY = "390.0",
-        positionZ = "0.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a265",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -4204,126 +3567,6 @@ A268 = {
         t_mat_name= ""
     }
 }
-A269 = {
-    Name={
-        t_name="a269"
-    },
-    Transform = {
-        positionX = "8000.0",
-        positionY = "390.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a269",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A270 = {
-    Name={
-        t_name="a270"
-    },
-    Transform = {
-        positionX = "8000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a270",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A271 = {
-    Name={
-        t_name="a271"
-    },
-    Transform = {
-        positionX = "8000.0",
-        positionY = "390.0",
-        positionZ = "-26000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a271",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A272 = {
-    Name={
-        t_name="a272"
-    },
-    Transform = {
-        positionX = "8000.0",
-        positionY = "390.0",
-        positionZ = "-23000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a272",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A273 = {
     Name={
         t_name="a273"
@@ -4354,36 +3597,6 @@ A273 = {
         t_mat_name= ""
     }
 }
-A274 = {
-    Name={
-        t_name="a274"
-    },
-    Transform = {
-        positionX = "12000.0",
-        positionY = "390.0",
-        positionZ = "5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a274",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A275 = {
     Name={
         t_name="a275"
@@ -4408,126 +3621,6 @@ A275 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a275",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A276 = {
-    Name={
-        t_name="a276"
-    },
-    Transform = {
-        positionX = "12000.0",
-        positionY = "390.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a276",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A277 = {
-    Name={
-        t_name="a277"
-    },
-    Transform = {
-        positionX = "12000.0",
-        positionY = "390.0",
-        positionZ = "-15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a277",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A278 = {
-    Name={
-        t_name="a278"
-    },
-    Transform = {
-        positionX = "12000.0",
-        positionY = "390.0",
-        positionZ = "-19000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a278",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A279 = {
-    Name={
-        t_name="a279"
-    },
-    Transform = {
-        positionX = "12000.0",
-        positionY = "390.0",
-        positionZ = "25000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a279",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -4594,36 +3687,6 @@ A281 = {
         t_mat_name= ""
     }
 }
-A282 = {
-    Name={
-        t_name="a282"
-    },
-    Transform = {
-        positionX = "16000.0",
-        positionY = "390.0",
-        positionZ = "0.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a282",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A283 = {
     Name={
         t_name="a283"
@@ -4678,36 +3741,6 @@ A284 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a284",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A285 = {
-    Name={
-        t_name="a285"
-    },
-    Transform = {
-        positionX = "16000.0",
-        positionY = "390.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a285",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -4798,36 +3831,6 @@ A288 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a288",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A289 = {
-    Name={
-        t_name="a289"
-    },
-    Transform = {
-        positionX = "16000.0",
-        positionY = "390.0",
-        positionZ = "20000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a289",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -4984,66 +3987,6 @@ A294 = {
         t_mat_name= ""
     }
 }
-A295 = {
-    Name={
-        t_name="a295"
-    },
-    Transform = {
-        positionX = "20000.0",
-        positionY = "390.0",
-        positionZ = "15000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a295",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A296 = {
-    Name={
-        t_name="a296"
-    },
-    Transform = {
-        positionX = "20000.0",
-        positionY = "390.0",
-        positionZ = "25000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a296",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A297 = {
     Name={
         t_name="a297"
@@ -5104,36 +4047,6 @@ A298 = {
         t_mat_name= ""
     }
 }
-A299 = {
-    Name={
-        t_name="a299"
-    },
-    Transform = {
-        positionX = "24000.0",
-        positionY = "390.0",
-        positionZ = "5000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a299",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A2100 = {
     Name={
         t_name="a2100"
@@ -5158,36 +4071,6 @@ A2100 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a2100",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A2101 = {
-    Name={
-        t_name="a2101"
-    },
-    Transform = {
-        positionX = "24000.0",
-        positionY = "390.0",
-        positionZ = "-10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a2101",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -5254,36 +4137,6 @@ A2103 = {
         t_mat_name= ""
     }
 }
-A2104 = {
-    Name={
-        t_name="a2104"
-    },
-    Transform = {
-        positionX = "24000.0",
-        positionY = "390.0",
-        positionZ = "25000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a2104",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A2105 = {
     Name={
         t_name="a2105"
@@ -5308,36 +4161,6 @@ A2105 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a2105",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A2106 = {
-    Name={
-        t_name="a2106"
-    },
-    Transform = {
-        positionX = "28000.0",
-        positionY = "390.0",
-        positionZ = "0.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a2106",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -5434,36 +4257,6 @@ A2109 = {
         t_mat_name= ""
     }
 }
-A2110 = {
-    Name={
-        t_name="a110"
-    },
-    Transform = {
-        positionX = "28000.0",
-        positionY = "390.0",
-        positionZ = "10000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a110",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A2111 = {
     Name={
         t_name="a2111"
@@ -5488,66 +4281,6 @@ A2111 = {
     MeshRenderer = {
         t_model_name = "Arbol02.mesh",
         t_entity_name= "a111",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A2112 = {
-    Name={
-        t_name="a2112"
-    },
-    Transform = {
-        positionX = "28000.0",
-        positionY = "390.0",
-        positionZ = "20000.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol02.mesh",
-        t_entity_name= "a2112",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A61 = {
-    Name={
-        t_name="a61"
-    },
-    Transform = {
-        positionX = "-30000.0",
-        positionY = "390.0",
-        positionZ = "2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a61",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -5644,36 +4377,6 @@ A64 = {
         t_mat_name= ""
     }
 }
-A65 = {
-    Name={
-        t_name="a65"
-    },
-    Transform = {
-        positionX = "-30000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a65",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A66 = {
     Name={
         t_name="a66"
@@ -5728,36 +4431,6 @@ A67 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a67",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A68 = {
-    Name={
-        t_name="a68"
-    },
-    Transform = {
-        positionX = "-26000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a68",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -5854,36 +4527,6 @@ A611 = {
         t_mat_name= ""
     }
 }
-A612 = {
-    Name={
-        t_name="a612"
-    },
-    Transform = {
-        positionX = "-26000.0",
-        positionY = "390.0",
-        positionZ = "-17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a612",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A613 = {
     Name={
         t_name="a613"
@@ -5908,36 +4551,6 @@ A613 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a613",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A614 = {
-    Name={
-        t_name="a614"
-    },
-    Transform = {
-        positionX = "-22000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a614",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6034,36 +4647,6 @@ A617 = {
         t_mat_name= ""
     }
 }
-A618 = {
-    Name={
-        t_name="a618"
-    },
-    Transform = {
-        positionX = "-22000.0",
-        positionY = "390.0",
-        positionZ = "-17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a618",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A619 = {
     Name={
         t_name="a619"
@@ -6118,36 +4701,6 @@ A620 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a620",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A621 = {
-    Name={
-        t_name="a621"
-    },
-    Transform = {
-        positionX = "-18000.0",
-        positionY = "390.0",
-        positionZ = "2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a621",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6304,36 +4857,6 @@ A626 = {
         t_mat_name= ""
     }
 }
-A627 = {
-    Name={
-        t_name="a627"
-    },
-    Transform = {
-        positionX = "-18000.0",
-        positionY = "390.0",
-        positionZ = "12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a627",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A628 = {
     Name={
         t_name="a628"
@@ -6388,36 +4911,6 @@ A629 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a629",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A630 = {
-    Name={
-        t_name="a630"
-    },
-    Transform = {
-        positionX = "-14000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a630",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6484,36 +4977,6 @@ A632 = {
         t_mat_name= ""
     }
 }
-A633 = {
-    Name={
-        t_name="a633"
-    },
-    Transform = {
-        positionX = "-14000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a633",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A634 = {
     Name={
         t_name="a634"
@@ -6538,66 +5001,6 @@ A634 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a634",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A635 = {
-    Name={
-        t_name="a635"
-    },
-    Transform = {
-        positionX = "-14000.0",
-        positionY = "390.0",
-        positionZ = "-22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a635",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A636 = {
-    Name={
-        t_name="a636"
-    },
-    Transform = {
-        positionX = "-10000.0",
-        positionY = "390.0",
-        positionZ = "2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a636",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6664,36 +5067,6 @@ A638 = {
         t_mat_name= ""
     }
 }
-A639 = {
-    Name={
-        t_name="a639"
-    },
-    Transform = {
-        positionX = "-10000.0",
-        positionY = "390.0",
-        positionZ = "-7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a639",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A640 = {
     Name={
         t_name="a640"
@@ -6718,36 +5091,6 @@ A640 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a640",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A641 = {
-    Name={
-        t_name="a641"
-    },
-    Transform = {
-        positionX = "-10000.0",
-        positionY = "390.0",
-        positionZ = "-17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a641",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6814,66 +5157,6 @@ A643 = {
         t_mat_name= ""
     }
 }
-A644 = {
-    Name={
-        t_name="a644"
-    },
-    Transform = {
-        positionX = "-6000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a644",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A645 = {
-    Name={
-        t_name="a645"
-    },
-    Transform = {
-        positionX = "-6000.0",
-        positionY = "390.0",
-        positionZ = "-2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a645",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A646 = {
     Name={
         t_name="a646"
@@ -6898,36 +5181,6 @@ A646 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a646",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A647 = {
-    Name={
-        t_name="a647"
-    },
-    Transform = {
-        positionX = "-6000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a647",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -6964,36 +5217,6 @@ A648 = {
         t_mat_name= ""
     }
 }
-A649 = {
-    Name={
-        t_name="a649"
-    },
-    Transform = {
-        positionX = "-6000.0",
-        positionY = "390.0",
-        positionZ = "-22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a649",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A650 = {
     Name={
         t_name="a650"
@@ -7018,36 +5241,6 @@ A650 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a650",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A651 = {
-    Name={
-        t_name="a651"
-    },
-    Transform = {
-        positionX = "-2000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a651",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -7114,36 +5307,6 @@ A653 = {
         t_mat_name= ""
     }
 }
-A654 = {
-    Name={
-        t_name="a654"
-    },
-    Transform = {
-        positionX = "-2000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a654",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A655 = {
     Name={
         t_name="a655"
@@ -7168,36 +5331,6 @@ A655 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a655",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A656 = {
-    Name={
-        t_name="a656"
-    },
-    Transform = {
-        positionX = "-2000.0",
-        positionY = "390.0",
-        positionZ = "-22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a656",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -7288,66 +5421,6 @@ A659 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a659",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A659 = {
-    Name={
-        t_name="a659"
-    },
-    Transform = {
-        positionX = "2000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a659",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A660 = {
-    Name={
-        t_name="a660"
-    },
-    Transform = {
-        positionX = "2000.0",
-        positionY = "390.0",
-        positionZ = "-2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a660",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -7468,36 +5541,6 @@ A664 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a664",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A665 = {
-    Name={
-        t_name="a665"
-    },
-    Transform = {
-        positionX = "2000.0",
-        positionY = "390.0",
-        positionZ = "-27500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a665",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -7684,36 +5727,6 @@ A671 = {
         t_mat_name= ""
     }
 }
-A672 = {
-    Name={
-        t_name="a662"
-    },
-    Transform = {
-        positionX = "6000.0",
-        positionY = "390.0",
-        positionZ = "-22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a672",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A673 = {
     Name={
         t_name="a673"
@@ -7738,36 +5751,6 @@ A673 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a673",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A674 = {
-    Name={
-        t_name="a674"
-    },
-    Transform = {
-        positionX = "10000.0",
-        positionY = "390.0",
-        positionZ = "2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a674",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -7834,66 +5817,6 @@ A676 = {
         t_mat_name= ""
     }
 }
-A677 = {
-    Name={
-        t_name="a677"
-    },
-    Transform = {
-        positionX = "10000.0",
-        positionY = "390.0",
-        positionZ = "-7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a677",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A678 = {
-    Name={
-        t_name="a678"
-    },
-    Transform = {
-        positionX = "10000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a678",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A679 = {
     Name={
         t_name="a679"
@@ -7918,36 +5841,6 @@ A679 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a679",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A680 = {
-    Name={
-        t_name="a680"
-    },
-    Transform = {
-        positionX = "10000.0",
-        positionY = "390.0",
-        positionZ = "-22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a680",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -8044,36 +5937,6 @@ A683 = {
         t_mat_name= ""
     }
 }
-A685 = {
-    Name={
-        t_name="a685"
-    },
-    Transform = {
-        positionX = "14000.0",
-        positionY = "390.0",
-        positionZ = "-7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a685",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A686 = {
     Name={
         t_name="a686"
@@ -8164,36 +6027,6 @@ A688 = {
         t_mat_name= ""
     }
 }
-A689 = {
-    Name={
-        t_name="a689"
-    },
-    Transform = {
-        positionX = "14000.0",
-        positionY = "390.0",
-        positionZ = "12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a689",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A690 = {
     Name={
         t_name="a690"
@@ -8218,36 +6051,6 @@ A690 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a690",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A691 = {
-    Name={
-        t_name="a691"
-    },
-    Transform = {
-        positionX = "14000.0",
-        positionY = "390.0",
-        positionZ = "22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a691",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -8314,66 +6117,6 @@ A693 = {
         t_mat_name= ""
     }
 }
-A694 = {
-    Name={
-        t_name="a694"
-    },
-    Transform = {
-        positionX = "18000.0",
-        positionY = "390.0",
-        positionZ = "7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a694",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A695 = {
-    Name={
-        t_name="a695"
-    },
-    Transform = {
-        positionX = "18000.0",
-        positionY = "390.0",
-        positionZ = "-2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a695",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A696 = {
     Name={
         t_name="a696"
@@ -8398,36 +6141,6 @@ A696 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a696",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A697 = {
-    Name={
-        t_name="a697"
-    },
-    Transform = {
-        positionX = "18000.0",
-        positionY = "390.0",
-        positionZ = "-12500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a697",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -8518,36 +6231,6 @@ A6100 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a6100",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A6101 = {
-    Name={
-        t_name="a6101"
-    },
-    Transform = {
-        positionX = "18000.0",
-        positionY = "390.0",
-        positionZ = "17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6101",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -8734,36 +6417,6 @@ A6107 = {
         t_mat_name= ""
     }
 }
-A6108 = {
-    Name={
-        t_name="a6108"
-    },
-    Transform = {
-        positionX = "22000.0",
-        positionY = "390.0",
-        positionZ = "-17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6108",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A6110 = {
     Name={
         t_name="a6110"
@@ -8818,96 +6471,6 @@ A6111 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a6111",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A6112 = {
-    Name={
-        t_name="a6112"
-    },
-    Transform = {
-        positionX = "22000.0",
-        positionY = "390.0",
-        positionZ = "22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6112",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A684 = {
-    Name={
-        t_name="a684"
-    },
-    Transform = {
-        positionX = "22000.0",
-        positionY = "390.0",
-        positionZ = "22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a684",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A6113 = {
-    Name={
-        t_name="a6113"
-    },
-    Transform = {
-        positionX = "26000.0",
-        positionY = "390.0",
-        positionZ = "2500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6113",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -9034,36 +6597,6 @@ A6117 = {
         t_mat_name= ""
     }
 }
-A6118 = {
-    Name={
-        t_name="a6118"
-    },
-    Transform = {
-        positionX = "26000.0",
-        positionY = "390.0",
-        positionZ = "-17500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6118",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
 A6120 = {
     Name={
         t_name="a6120"
@@ -9118,36 +6651,6 @@ A6121 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a6121",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A6122 = {
-    Name={
-        t_name="a6122"
-    },
-    Transform = {
-        positionX = "26000.0",
-        positionY = "390.0",
-        positionZ = "22500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6122",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
@@ -9238,36 +6741,6 @@ A6125 = {
     MeshRenderer = {
         t_model_name = "Arbol06.mesh",
         t_entity_name= "a6125",
-        t_node_x="0",
-        t_node_y="0",
-        t_node_z="0",
-        t_mat_name= ""
-    }
-}
-A6126 = {
-    Name={
-        t_name="a6126"
-    },
-    Transform = {
-        positionX = "30000.0",
-        positionY = "390.0",
-        positionZ = "-7500.0",
-        scaleX = "0.2",
-        scaleY = "0.2",
-        scaleZ = "0.2",
-        rotationX = "-1.0",
-        rotationY = "0.0",
-        rotationZ = "0.0",
-        rotationW = "1.0"
-    },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
-    MeshRenderer = {
-        t_model_name = "Arbol06.mesh",
-        t_entity_name= "a6126",
         t_node_x="0",
         t_node_y="0",
         t_node_z="0",
