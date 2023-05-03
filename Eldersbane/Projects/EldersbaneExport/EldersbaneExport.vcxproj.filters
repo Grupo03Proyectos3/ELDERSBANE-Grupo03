@@ -1,36 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\Eldersbane.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\Main.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\PinkPotion.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Eldersbane.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PinkPotion.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\Enemy.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\PickUp.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\Enemy.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PickUp.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{05506e0f-8356-4c54-90bf-9f9ac8e77f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{a51aeb13-04fd-4918-b90b-c5840080ca92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{527fc8bc-608b-44a2-97b4-3911bc5ffc99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint">
+      <Filter>Archivos de recursos</Filter>
+    </None>
   </ItemGroup>
 </Project>
