@@ -16,6 +16,7 @@ namespace Eldersbane
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
         void setActive(bool active);
+        bool isActive();
       private:
         bool m_active;
     };

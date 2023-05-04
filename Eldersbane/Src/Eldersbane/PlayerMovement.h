@@ -3,6 +3,9 @@
 #include <FlamingoBase/Transform.h>
 #include <Render/Camera.h>
 #include <Physics/RigidBody.h>
+#include "Sword.h"
+#include <Render/Animator.h>
+
 namespace Eldersbane
 {
     class PlayerMovement : public Flamingo::BehaviourScript
@@ -23,6 +26,8 @@ namespace Eldersbane
         float sensitivity = 0.03f;
         Flamingo::Transform* m_transform;
         Flamingo::Camera* m_camera;
+        Flamingo::Animator* m_animator;
+        Eldersbane::Sword* m_sword;
         float percentRotate=0;
 
         Flamingo::RigidBody* m_rb;
@@ -30,5 +35,7 @@ namespace Eldersbane
         Flamingo::SVector3 m_right;
 
         float initialY;
+
+        bool controlAnim;
     };
 } // namespace Eldersbane

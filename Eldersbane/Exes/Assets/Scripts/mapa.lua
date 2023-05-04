@@ -110,15 +110,15 @@ Luz={
 }
 SwordCollider={
     Name={
-        t_name ="SwordCollider"
+        t_name ="sword"
     },
     Transform = {
         positionX = "450.0",
         positionY="400.0",
         positionZ="-400.0",
-        scaleX="25.0",
-        scaleY="25.0",
-        scaleZ="25.0",
+        scaleX="1.0",
+        scaleY="1.0",
+        scaleZ="1.0",
         rotationX="0.0",
         rotationY="-2.0",
         rotationZ="0.0",
@@ -144,11 +144,11 @@ Player = {
        positionX = "450.0",
        positionY="400.0",
        positionZ="-400.0",
-       scaleX="25.0",
-       scaleY="25.0",
-       scaleZ="25.0",
+       scaleX="1.0",
+       scaleY="1.0",
+       scaleZ="1.0",
        rotationX="0.0",
-       rotationY="-2.0",
+       rotationY="0.0",
        rotationZ="0.0",
        rotationW="1.0"
    },
@@ -158,18 +158,21 @@ Player = {
        t_static = "0"
    },
    MeshRenderer = {
-       t_model_name = "Sinbad.mesh",
+       t_model_name = "Dabnis.mesh",
        t_entity_name= "player",
        t_node_x="25.0",
        t_node_y="25.0",
        t_node_z="25.0",
        t_mat_name= ""
    },
+    Animator={
+        t_name="Player"
+    },
    Scripts={
         "PlayerMovement",
         "PickUp",
         "PlayerHealth",
-    },
+    }
 }
 TargetCamera = {
     Name={

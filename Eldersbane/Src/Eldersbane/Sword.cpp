@@ -37,4 +37,9 @@ namespace Eldersbane
         m_active = active;
     }
 
+    bool Sword::isActive()
+    {
+        return m_active;
+    }
+
 } // namespace Eldersbane

@@ -4,10 +4,11 @@
 #include <FlamingoBase/SceneManager.h>
 #include <FlamingoExport/FlamingoCore.h>
 #include <FlamingoUtils/FlamingoKeys.h>
-#include <Render/Animator.h>
+
 #include "BluePotion.h"
 #include <FlamingoUtils/SVector2.h>
 #include <cmath>
+
 
 namespace Eldersbane
 {
@@ -27,18 +28,19 @@ namespace Eldersbane
     void PlayerMovement::start()
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-
+        m_animator = Flamingo::getComponent<Flamingo::Animator>(this->gameObject());
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
+        m_sword = Flamingo::getComponent<Eldersbane::Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
         //m_camera->lookAt({0, 0, 0}, Flamingo::WORLD);
         m_camera->setTarget(gameObject());
         m_camera->setOffset({-700, -200, 0});       
         m_camera->FollowTarget();
         m_rb = Flamingo::getComponent<Flamingo::RigidBody>(this->gameObject());
         m_rb->setKinematic(true);
-
+        m_animator->setAnimation("Correr", true, true);
         m_forward = {1, 0, 0};
         m_right = {0, 0, 1};
-
+        controlAnim = false;
         m_transform->setPosition({m_transform->getPosition().getX(), 500, m_transform->getPosition().getZ()});
     }
 
@@ -46,7 +48,18 @@ namespace Eldersbane
     {
         Flamingo::SVector3 traslation = {0, 0, 0};
         double rotacion;
-
+        if (m_sword->isActive())
+        {
+            controlAnim = true;
+            m_animator->setAnimation("Correr", false, false);
+            m_animator->setAnimation("Atacar", true, false);
+        }
+        else if (controlAnim)
+        {
+            controlAnim = false;
+            m_animator->setAnimation("Atacar", false, false);
+            m_animator->setAnimation("Correr", true, true);
+        }
         //Rotacion del jugador
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
