@@ -7,7 +7,6 @@
 #include "RedPotion.h"
 #include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
 #include "FlamingoBase/SceneManager.h"
-
 Eldersbane::PlayerHealth::PlayerHealth()
 {
 }
@@ -61,9 +60,9 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
-        // Choco con un enemigo --> recibo daño
+        // Choco con un enemigo --> recibo daï¿½o
         std::cout << "Badnis PIERDE VIDA " << m_current_health - 1 << "\n";
-        takeDamage(1); // To do : ponerle una cantidad de daño al enemy
+        takeDamage(1); // To do : ponerle una cantidad de daï¿½o al enemy
     }
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other))

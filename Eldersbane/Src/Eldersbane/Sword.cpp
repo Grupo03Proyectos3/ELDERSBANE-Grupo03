@@ -4,6 +4,7 @@
 #include "FlamingoBase/Scene.h"
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
+#include "Enemy.h"
 
 
 namespace Eldersbane
@@ -23,15 +24,13 @@ namespace Eldersbane
     }
 
     void Sword::start(){
-        active = false;
+        m_active = false;
     }
 
-    void Sword::onCollisionEnter(Flamingo::GameObject* t_other)
-    {
-    }
-
-    void Sword::onCollisionExit(Flamingo::GameObject* t_other)
-    {
+    void Sword::onCollisionEnter(Flamingo::GameObject* t_other){
+        if (Flamingo::getComponent<Enemy>(t_other)){
+            std::cout << "QUITAR VIDA A BICHO\n";
+        }
     }
 
     void Sword::setActive(bool active){

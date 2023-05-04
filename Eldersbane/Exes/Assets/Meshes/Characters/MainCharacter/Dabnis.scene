@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.3 -->
-<!-- export_time: Thu, 04 May 2023 13:29:16 +0000 -->
-<!-- previous_export_time: Thu, 04 May 2023 11:36:39 +0000 -->
+<!-- export_time: Thu, 04 May 2023 15:54:01 +0000 -->
+<!-- previous_export_time: Thu, 04 May 2023 15:53:07 +0000 -->
 <scene author="sarai" formatVersion="1.1" >
   <nodes >
-    <node name="Camera" >
-      <position x="7.358891" y="-6.925791" z="4.958309" />
-      <rotation qw="0.780483" qx="0.483536" qy="0.208704" qz="0.336872" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <userData >
-        <property data='&lt;bpy id prop: owner="OBCamera", name="als", address=0x000001C554F2EAC8&gt;' name="als" type="IDPropertyGroup" />
-      </userData>
-      <camera fov="0.356186" name="Camera" projectionType="perspective" >
-        <clipping far="100.000000" near="0.100000" />
-      </camera>
-    </node>
     <node name="Armature" >
       <position x="0.000000" y="0.000000" z="0.000000" />
       <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
       <scale x="0.010000" y="0.010000" z="0.010000" />
       <userData >
-        <property data='&lt;bpy id prop: owner="OBArmature", name="als", address=0x000001C555667568&gt;' name="als" type="IDPropertyGroup" />
+        <property data='&lt;bpy id prop: owner="OBArmature", name="als", address=0x000001C555667608&gt;' name="als" type="IDPropertyGroup" />
       </userData>
       <node name="Dabnis" >
-        <position x="0.000000" y="-0.000000" z="-0.000000" />
-        <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+        <position x="0.000000" y="-0.000000" z="0.000000" />
+        <rotation qw="0.707107" qx="-0.707107" qy="-0.000000" qz="-0.000000" />
         <scale x="1.000000" y="1.000000" z="1.000000" />
         <userData >
           <property data="map1" name="currentUVSet" type="str" />
-          <property data='&lt;bpy id prop: owner="OBDabnis", name="als", address=0x000001C55A4CC908&gt;' name="als" type="IDPropertyGroup" />
+          <property data='&lt;bpy id prop: owner="OBDabnis", name="als", address=0x000001C555664B88&gt;' name="als" type="IDPropertyGroup" />
         </userData>
         <entity meshFile="Dabnis.mesh" name="Dabnis" >
           <userData />
