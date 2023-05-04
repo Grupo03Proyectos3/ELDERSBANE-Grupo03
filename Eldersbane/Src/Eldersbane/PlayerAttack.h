@@ -4,6 +4,7 @@
 #include <Physics/RigidBody.h>
 #include "Sword.h"
 #include "PlayerMovement.h"
+#include <Audio/AudioSource.h>
 
 namespace Eldersbane
 {
@@ -23,5 +24,6 @@ namespace Eldersbane
         Flamingo::Transform* m_Swordtransform;
         PlayerMovement* playerMovement;
         int frames;
+        Flamingo::AudioSource* m_audio_ataque;
     };
 } // namespace Eldersbane

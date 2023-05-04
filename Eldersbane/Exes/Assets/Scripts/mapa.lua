@@ -231,9 +231,9 @@ Player = {
         "PlayerAttack"
     },    
     AudioSource = {
-        t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",
-        t_songName = "MenuTheme",
-        t_music = "true"
+        t_routeSong = "Assets/Audio/Attack.mp3",
+        t_songName = "Ataque",
+        t_music = "false"
     }
 }
 TargetCamera = {
