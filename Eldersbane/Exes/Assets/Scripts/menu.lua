@@ -98,7 +98,10 @@ CamaraPpal={
     },
     Camera={
         t_name="myCamera",
-        t_entity_name="myCamera2"
+        t_entity_name="myCamera2",
+        t_color_x="0.0",
+        t_color_y="0.0",
+        t_color_z="0.0"
     }
 }
 Luz={
