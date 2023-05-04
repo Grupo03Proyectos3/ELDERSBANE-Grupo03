@@ -29,9 +29,12 @@ namespace Eldersbane
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
         m_animator = Flamingo::getComponent<Flamingo::Animator>(this->gameObject());
+
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
-        m_sword = Flamingo::getComponent<Eldersbane::Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
-        //m_camera->lookAt({0, 0, 0}, Flamingo::WORLD);
+        auto sword_obj = Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword");
+        if (sword_obj != nullptr)
+            m_sword = Flamingo::getComponent<Eldersbane::Sword>(sword_obj); // m_camera->lookAt({0, 0, 0}, Flamingo::WORLD);
+
         m_camera->setTarget(gameObject());
         m_camera->setOffset({-700, -200, 0});       
         m_camera->FollowTarget();
@@ -48,7 +51,7 @@ namespace Eldersbane
     {
         Flamingo::SVector3 traslation = {0, 0, 0};
         double rotacion;
-        if (m_sword->gameObject()->getActive())
+        if (m_sword != nullptr && m_sword->gameObject()->getActive())
         {
             controlAnim = true;
             m_animator->setAnimation("Correr", false, false);
