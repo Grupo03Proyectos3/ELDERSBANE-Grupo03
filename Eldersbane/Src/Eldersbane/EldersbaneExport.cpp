@@ -35,9 +35,9 @@ bool InitJuego(void)
     auto f_core = Flamingo::FlamingoCore::instance();
     // Inicializar primera escena
     std::string first_scene = "menu";
-    //f_core->addSceneToLoad("menu");
+    f_core->addSceneToLoad("menu");
     f_core->addSceneToLoad("mapa");
-    f_core->setFirstScene("mapa");
+    f_core->setFirstScene("menu");
 
     // pasarle la lista de componentes del juego
     f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
