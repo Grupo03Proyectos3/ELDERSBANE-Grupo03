@@ -22,12 +22,8 @@ namespace Eldersbane
         return new Sword();
     }
 
-    void Sword::start()
-    {
-    }
-
-    void Sword::update(float t_delta_time)
-    {
+    void Sword::start(){
+        active = false;
     }
 
     void Sword::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -36,6 +32,10 @@ namespace Eldersbane
 
     void Sword::onCollisionExit(Flamingo::GameObject* t_other)
     {
+    }
+
+    void Sword::setActive(bool active){
+        m_active = active;
     }
 
 } // namespace Eldersbane

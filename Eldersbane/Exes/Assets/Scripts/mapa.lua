@@ -1,4 +1,4 @@
-entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Player","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Player","TargetCamera","SwordCollider","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -165,6 +165,34 @@ TargetCamera = {
     MeshRenderer = {
        t_model_name = "cube.mesh",
        t_entity_name= "targetcamera",
+       t_node_x=" 0.0",
+       t_node_y="0.0",
+       t_node_z="0.0",
+       t_mat_name= ""
+    },
+}
+SwordCollider={
+    Name={
+        t_name ="SwordCollider"
+    },
+    Transform = {
+        positionX = "450.0",
+        positionY="400.0",
+        positionZ="-400.0",
+        scaleX="25.0",
+        scaleY="25.0",
+        scaleZ="25.0",
+        rotationX="0.0",
+        rotationY="-2.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    Scripts={
+        "Sword",
+    },
+    MeshRenderer = {
+       t_model_name = "cube.mesh",
+       t_entity_name= "sword",
        t_node_x=" 0.0",
        t_node_y="0.0",
        t_node_z="0.0",
