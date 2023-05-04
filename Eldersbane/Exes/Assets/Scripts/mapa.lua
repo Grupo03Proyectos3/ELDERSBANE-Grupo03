@@ -172,6 +172,7 @@ Player = {
         "PlayerMovement",
         "PickUp",
         "PlayerHealth",
+        "PlayerAttack"
     }
 }
 TargetCamera = {

@@ -24,7 +24,7 @@ namespace Eldersbane
     }
 
     void Sword::start(){
-        m_active = false;
+        
     }
 
     void Sword::onCollisionEnter(Flamingo::GameObject* t_other){
@@ -32,14 +32,4 @@ namespace Eldersbane
             std::cout << "QUITAR VIDA A BICHO\n";
         }
     }
-
-    void Sword::setActive(bool active){
-        m_active = active;
-    }
-
-    bool Sword::isActive()
-    {
-        return m_active;
-    }
-
 } // namespace Eldersbane

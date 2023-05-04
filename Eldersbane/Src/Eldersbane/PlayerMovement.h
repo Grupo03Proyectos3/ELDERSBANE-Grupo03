@@ -21,6 +21,7 @@ namespace Eldersbane
 
         float getRotSensitivity();
         Flamingo::SVector3 getOrientation(float rad);
+        Flamingo::SVector3 getForward();
       private:
         float speed = 1.5f;
         float sensitivity = 0.03f;

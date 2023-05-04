@@ -16,17 +16,38 @@ namespace Eldersbane{
         return new PlayerAttack();
     }
 
-    void PlayerAttack::start(){
-        m_sword = Flamingo::getComponent<Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("SwordCollider"));
+
+    void PlayerAttack::start()
+    {
+        m_sword = Flamingo::getComponent<Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
+        m_Swordtransform = Flamingo::getComponent<Flamingo::Transform>(m_sword->gameObject());
+        m_transform = Flamingo::getComponent<Flamingo::Transform>(gameObject());
+        playerMovement = Flamingo::getComponent<PlayerMovement>(gameObject());
+
+        m_sword->gameObject()->setActive(false);
+       
     }
 
-    void PlayerAttack::update(float t_deltaTime){
-        if (Flamingo::Input().mouseButtonEvent() && Flamingo::Input().getMouseButtonState(Flamingo::LEFT)){
-            m_sword->setActive(true);
+    void PlayerAttack::update(float t_deltaTime)
+    {
+        Flamingo::SVector3 offset = {200, 0, 0};
+        m_Swordtransform->setPosition(m_transform->getPosition() + offset);
+
+        auto trpTarget = m_transform;
+        auto mtrp = m_Swordtransform;
+
+        Flamingo::SVector3 newOffset = trpTarget->getRotation().Rotate(offset);
+        mtrp->setPosition(trpTarget->getPosition() - newOffset);
+        mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
+    
+
+        if (Flamingo::Input().mouseButtonEvent() && Flamingo::Input().getMouseButtonState(Flamingo::LEFT))
+        {
+            m_sword->gameObject()->setActive(true);
         }
     }
-    Flamingo::SVector3 PlayerAttack::getOrientation(float rad)
+    void PlayerAttack::desactivarColliderEspada()
     {
-        return Flamingo::SVector3();
+        m_sword->gameObject()->setActive(false);
     }
 } // namespace Eldersbane

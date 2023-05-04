@@ -14,11 +14,6 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         void start() override;
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
-
-        void setActive(bool active);
-        bool isActive();
-      private:
-        bool m_active;
     };
 } // namespace Eldersbane
 #endif

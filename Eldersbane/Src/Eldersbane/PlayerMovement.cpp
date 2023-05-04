@@ -48,7 +48,7 @@ namespace Eldersbane
     {
         Flamingo::SVector3 traslation = {0, 0, 0};
         double rotacion;
-        if (m_sword->isActive())
+        if (m_sword->gameObject()->getActive())
         {
             controlAnim = true;
             m_animator->setAnimation("Correr", false, false);
@@ -127,5 +127,8 @@ namespace Eldersbane
         z = std::cos(rad);
         float xRel = x / std::abs(x), zRel = z / std::abs(z);
         return Flamingo::SVector3(x * x * xRel, 0, z * z * zRel);
+    }
+    Flamingo::SVector3 PlayerMovement::getForward() {
+        return m_forward;
     }
 } // namespace Eldersbane
