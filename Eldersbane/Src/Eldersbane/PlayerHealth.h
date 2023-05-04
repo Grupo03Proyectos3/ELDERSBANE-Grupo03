@@ -16,7 +16,6 @@ namespace Eldersbane {
         Flamingo::BehaviourScript* clone() override;
 
 		void start() override;
-		void update(float t_deltaTime) override;
 
 		void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
