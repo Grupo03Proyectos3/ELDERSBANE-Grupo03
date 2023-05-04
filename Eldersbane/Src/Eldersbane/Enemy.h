@@ -3,23 +3,17 @@
 #define __ENEMY_H__
 #include "Scripting/BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
+#include "BlueEnemy.h"
+#include "RedEnemy.h"
+#include "PurpleEnemy.h"
+#include "BlackEnemy.h"
+
 namespace Eldersbane
 {
     class Enemy : public Flamingo::BehaviourScript
     {
       public:
 
-        enum enemyType
-        {
-            // Enemigo Makoy Tipo 1
-            SMALL,
-            // Enemigo Makoy Tipo 2
-            MEDIUM,
-            // Enemigo Makoy Tipo 3
-            BIG,
-            // Jefe Makoy
-            BOSS
-        };
         Enemy();
         virtual ~Enemy();
         Flamingo::BehaviourScript* clone() override;
@@ -30,11 +24,11 @@ namespace Eldersbane
         void checkDistance(Flamingo::SVector3 t_player_pos);
         void followPlayer(Flamingo::SVector3 t_player_pos);
         void attack();
-        void getDamage(int t_damage);
+        void getDamage();
         bool isAlive(); 
         void enemyMovement(float t_delta_time);
-
-      private:
+       
+      protected:
         Flamingo::Transform* m_tr;
         Flamingo::Transform* m_tr_player;
         float m_max_distance;
@@ -46,8 +40,7 @@ namespace Eldersbane
         bool m_attacking;
         bool m_colliding;
         int m_lives;
-
-       
+        int m_damage;
     };
 } // namespace Eldersbane
 #endif

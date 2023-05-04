@@ -25,6 +25,10 @@
 #include "Sword.h"
 #include "PlayerAttack.h"
 #include "MenuMusic.h"
+#include "BlueEnemy.h"
+#include "RedEnemy.h"
+#include "PurpleEnemy.h"
+#include "BlackEnemy.h"
 
 bool InitJuego(void)
 {
@@ -55,6 +59,10 @@ bool InitJuego(void)
     f_core->addGameScript("Sword", new Eldersbane::Sword());
     f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
     f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
+    f_core->addGameScript("BlueEnemy", new Eldersbane::BlueEnemy());
+    f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
+    f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
+    f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
     // t_core->addGameScript("ChangeScene", new ChangeScene());
    
     return true;

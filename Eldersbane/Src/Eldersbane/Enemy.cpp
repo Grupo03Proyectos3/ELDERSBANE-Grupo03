@@ -26,6 +26,18 @@ namespace Eldersbane
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
+        auto b = Flamingo::getComponent<Eldersbane::BlueEnemy>(this->gameObject());
+        auto r = Flamingo::getComponent<Eldersbane::RedEnemy>(this->gameObject());
+        auto p = Flamingo::getComponent<Eldersbane::PurpleEnemy>(this->gameObject());
+        auto k = Flamingo::getComponent<Eldersbane::BlackEnemy>(this->gameObject());
+        if (b != nullptr)
+            m_damage = b->getDamage();
+        else if (r != nullptr)
+            m_damage = r->getDamage();
+        else if (p != nullptr)
+            m_damage = p->getDamage();
+        else if (k != nullptr)
+            m_damage = k->getDamage();
 
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
@@ -52,9 +64,9 @@ namespace Eldersbane
         if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
         {
             std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
-            m_lives--;
+            //m_lives--;
             m_attacking = true;
-            // getDamage(1);
+            getDamage();
         }
     }
 
@@ -62,9 +74,7 @@ namespace Eldersbane
     {
         if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
         {
-            
             m_attacking = false;
-   
         }
     }
 
@@ -100,14 +110,15 @@ namespace Eldersbane
 
     void Enemy::attack()
     {
-        // std::cout << "ATAQUE" << std::endl;
+        /* std::cout << "ATAQUE" << std::endl;
+        getDamage();*/
     }
 
-    void Enemy::getDamage(int t_damage)
+    void Enemy::getDamage()
     {
         if (isAlive())
         {
-            m_lives--;
+            m_lives-=m_damage;
         }
         else
         {

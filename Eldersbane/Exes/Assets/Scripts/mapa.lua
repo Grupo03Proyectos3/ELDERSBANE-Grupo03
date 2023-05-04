@@ -324,7 +324,7 @@ MakoyAzul01 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
     }
 --    Animator={
 --        t_name="dragon"

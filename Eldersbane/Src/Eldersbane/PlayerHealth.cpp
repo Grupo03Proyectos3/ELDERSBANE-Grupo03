@@ -27,7 +27,7 @@ Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
 void Eldersbane::PlayerHealth::start()
 {
     m_max_health = 5;
-    m_current_health = 5;
+    m_current_health = m_max_health;
 
     m_die_scene = "LoseGame";
 
