@@ -20,9 +20,6 @@ namespace Eldersbane
 
     void PickUp::onCollisionEnter(Flamingo::GameObject* t_other)
     {
-        std::cout << "Colision del jugador"
-                  << "\n";
-       
         if (Flamingo::getComponent<Eldersbane::GreenPotion>(t_other))
         {
             std::cout << "Coge la pocion VERDE"

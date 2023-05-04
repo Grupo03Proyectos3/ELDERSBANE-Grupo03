@@ -44,7 +44,7 @@ namespace Eldersbane{
         if (!m_sword->gameObject()->getActive() && Flamingo::Input().mouseButtonEvent()/* && Flamingo::Input().getMouseButtonState(Flamingo::LEFT)*/)
         {
             m_sword->gameObject()->setActive(true);
-            std::cout << "\n\n\nATAQUE ACTIVADOO\n\n\n";
+            std::cout << "ATAQUE ACTIVADOO\n";
         }
         else if (m_sword->gameObject()->getActive())
         {
@@ -52,7 +52,7 @@ namespace Eldersbane{
             if (frames >= 64)
             {
                 m_sword->gameObject()->setActive(false);
-                std::cout << "\n\n\nATAQUE DESACTIVADOO\n\n\n";
+                std::cout << "ATAQUE DESACTIVADOO\n";
                 frames = 0;
             }
         }

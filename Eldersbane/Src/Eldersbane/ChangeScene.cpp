@@ -27,9 +27,9 @@ namespace Eldersbane
     {
 
         if (Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getName() == "mapa")
-            Flamingo::FlamingoCore::getSceneManager()->setSceneActive("menu");
+            Flamingo::FlamingoCore::getSceneManager()->startScene("menu");
         else
-            Flamingo::FlamingoCore::getSceneManager()->setSceneActive("mapa");
+            Flamingo::FlamingoCore::getSceneManager()->startScene("mapa");
 
         std::cout << "CAMBIANDO DE ESCENA" << std::endl;
     }

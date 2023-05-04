@@ -18,7 +18,7 @@ void Eldersbane::GoToLose::start()
     auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
     Flamingo::Scene* m = m_sceneMngr->getSceneActive();
 
-    auto d = m->getObject("button");
+    auto d = this->gameObject();
     auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
 
     a->subsEvent(this);
