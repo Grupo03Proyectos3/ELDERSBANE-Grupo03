@@ -23,7 +23,8 @@ ButtonGame = {
         t_image = "Play.png"
     },
     Scripts = {
-        t_scriptName = "ChangeScene"
+        "ChangeScene",
+        "MenuMusic"
     },
     AudioSource = {
         t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",

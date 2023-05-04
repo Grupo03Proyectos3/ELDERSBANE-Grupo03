@@ -7,6 +7,7 @@
 #include "Audio/AudioSource.h"
 #include "PinkPotion.h"
 #include "RedPotion.h"
+#include <Audio/AudioSource.h>
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {
@@ -66,13 +67,6 @@ void Eldersbane::PlayerHealth::start()
     }
 
     setUIToHealth();
-    auto p = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
-    if (p != nullptr)
-    {
-        p->playAudio();
-        p->setVolume(3.0);
-    }
-      
 }
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
