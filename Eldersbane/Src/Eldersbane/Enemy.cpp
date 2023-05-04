@@ -51,7 +51,7 @@ namespace Eldersbane
     {
         if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
         {
-            std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
+           // std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
             m_lives--;
             m_attacking = true;
             // getDamage(1);

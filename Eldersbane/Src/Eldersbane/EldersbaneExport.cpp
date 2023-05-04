@@ -25,6 +25,10 @@
 #include "Sword.h"
 #include "PlayerAttack.h"
 #include "MenuMusic.h"
+#include "GoToLose.h"
+#include "GoToWin.h"
+#include "GoToMenu.h"
+#include "GoToGame.h"
 
 bool InitJuego(void)
 {
@@ -37,6 +41,7 @@ bool InitJuego(void)
     // Inicializar primera escena
     std::string first_scene = "menu";
     f_core->addSceneToLoad("menu");
+    f_core->addSceneToLoad("LoseGame");
     f_core->addSceneToLoad("mapa");
     f_core->setFirstScene("menu");
 
@@ -55,6 +60,10 @@ bool InitJuego(void)
     f_core->addGameScript("Sword", new Eldersbane::Sword());
     f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
     f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
+    f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
+    f_core->addGameScript("GoToLose", new Eldersbane::GoToLose());
+    f_core->addGameScript("GoToGame", new Eldersbane::GoToGame());
+    f_core->addGameScript("GoToMenu", new Eldersbane::GoToMenu());
     // t_core->addGameScript("ChangeScene", new ChangeScene());
    
     return true;
