@@ -41,9 +41,20 @@ namespace Eldersbane{
         mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
     
 
-        if (Flamingo::Input().mouseButtonEvent() && Flamingo::Input().getMouseButtonState(Flamingo::LEFT))
+        if (!m_sword->gameObject()->getActive() && Flamingo::Input().mouseButtonEvent()/* && Flamingo::Input().getMouseButtonState(Flamingo::LEFT)*/)
         {
             m_sword->gameObject()->setActive(true);
+            std::cout << "\n\n\nATAQUE ACTIVADOO\n\n\n";
+        }
+        else if (m_sword->gameObject()->getActive())
+        {
+            frames++;
+            if (frames >= 64)
+            {
+                m_sword->gameObject()->setActive(false);
+                std::cout << "\n\n\nATAQUE DESACTIVADOO\n\n\n";
+                frames = 0;
+            }
         }
     }
     void PlayerAttack::desactivarColliderEspada()

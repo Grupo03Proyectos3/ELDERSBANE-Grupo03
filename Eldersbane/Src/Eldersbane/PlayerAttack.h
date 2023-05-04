@@ -18,12 +18,10 @@ namespace Eldersbane
 
         void desactivarColliderEspada();
       private:
-        float percentRotate = 0;
         Sword* m_sword;
         Flamingo::Transform* m_transform;
         Flamingo::Transform* m_Swordtransform;
         PlayerMovement* playerMovement;
-        Flamingo::SVector3 m_forward;
-        Flamingo::SVector3 m_right;
+        int frames;
     };
 } // namespace Eldersbane

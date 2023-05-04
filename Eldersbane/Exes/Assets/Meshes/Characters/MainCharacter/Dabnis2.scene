@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- exporter: blender2ogre 0.8.3 -->
+<!-- export_time: Thu, 04 May 2023 21:11:55 +0000 -->
+<!-- previous_export_time: Thu, 04 May 2023 21:10:33 +0000 -->
+<scene author="sarai" formatVersion="1.1" >
+  <nodes >
+    <node name="Armature" >
+      <position x="0.000000" y="0.000000" z="0.000000" />
+      <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
+      <scale x="1.000000" y="1.000000" z="1.000000" />
+      <userData >
+        <property data='&lt;bpy id prop: owner="OBArmature", name="als", address=0x000001C50EDC3748&gt;' name="als" type="IDPropertyGroup" />
+      </userData>
+      <node name="Body05" >
+        <position x="-0.001497" y="-0.028531" z="0.713736" />
+        <rotation qw="0.707107" qx="0.707107" qy="0.000000" qz="0.000000" />
+        <scale x="1.000000" y="1.000000" z="1.000000" />
+        <userData >
+          <property data="map1" name="currentUVSet" type="str" />
+          <property data='&lt;bpy id prop: owner="OBBody05", name="als", address=0x000001C50EDC0EA8&gt;' name="als" type="IDPropertyGroup" />
+        </userData>
+        <entity meshFile="Dabnis2.mesh" name="Body05" >
+          <userData />
+        </entity>
+      </node>
+    </node>
+  </nodes>
+  <externals >
+    <item type="material" >
+      <file name="Dabnis/Hair.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Metal.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Blue.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Green.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Brown.material" />
+    </item>
+    <item type="material" >
+      <file name="Debnis/Pants.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Black.material" />
+    </item>
+    <item type="material" >
+      <file name="Dabnis/Skin.material" />
+    </item>
+  </externals>
+  <environment >
+    <colourBackground b="0.050876" g="0.050876" r="0.050876" />
+  </environment>
+</scene>

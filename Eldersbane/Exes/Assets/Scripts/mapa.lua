@@ -127,14 +127,7 @@ SwordCollider={
     Scripts={
         "Sword",
     },
-    MeshRenderer = {
-       t_model_name = "cube.mesh",
-       t_entity_name= "sword",
-       t_node_x=" 0.0",
-       t_node_y="0.0",
-       t_node_z="0.0",
-       t_mat_name= ""
-    },
+   
 }
 Player = {
     Name={
@@ -144,9 +137,9 @@ Player = {
        positionX = "450.0",
        positionY="400.0",
        positionZ="-400.0",
-       scaleX="1.0",
-       scaleY="1.0",
-       scaleZ="1.0",
+       scaleX="50.0",
+       scaleY="50.0",
+       scaleZ="50.0",
        rotationX="0.0",
        rotationY="0.0",
        rotationZ="0.0",
@@ -158,7 +151,7 @@ Player = {
        t_static = "0"
    },
    MeshRenderer = {
-       t_model_name = "Dabnis.mesh",
+       t_model_name = "Dabnis2.mesh",
        t_entity_name= "player",
        t_node_x="25.0",
        t_node_y="25.0",

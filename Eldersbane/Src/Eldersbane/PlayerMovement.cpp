@@ -40,7 +40,7 @@ namespace Eldersbane
         m_camera->FollowTarget();
         m_rb = Flamingo::getComponent<Flamingo::RigidBody>(this->gameObject());
         m_rb->setKinematic(true);
-        m_animator->setAnimation("Correr", true, true);
+        m_animator->setAnimation("Atacar", true, true);
         m_forward = {1, 0, 0};
         m_right = {0, 0, 1};
         controlAnim = false;
@@ -51,17 +51,19 @@ namespace Eldersbane
     {
         Flamingo::SVector3 traslation = {0, 0, 0};
         double rotacion;
-        if (m_sword != nullptr && m_sword->gameObject()->getActive())
+        if (m_sword != nullptr && m_sword->gameObject()->getActive()/* && !controlAnim*/)
         {
             controlAnim = true;
             m_animator->setAnimation("Correr", false, false);
-            m_animator->setAnimation("Atacar", true, false);
+            m_animator->setAnimation("Atacar", true, true);
+            std::cout << "ATACAR\n";
         }
-        else if (controlAnim)
+        else if ((m_sword != nullptr && !m_sword->gameObject()->getActive()) /*&& controlAnim*/)
         {
             controlAnim = false;
             m_animator->setAnimation("Atacar", false, false);
             m_animator->setAnimation("Correr", true, true);
+            std::cout << "CORRER\n";
         }
         //Rotacion del jugador
         if (Flamingo::Input().mouseMotionEvent())
