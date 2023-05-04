@@ -73,8 +73,6 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
-        // Choco con un enemigo --> recibo da�o
-        std::cout << "Badnis PIERDE VIDA " << m_current_health - 1 << "\n";
         takeDamage(1); // To do : ponerle una cantidad de da�o al enemy
     }
 

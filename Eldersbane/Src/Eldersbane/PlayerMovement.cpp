@@ -63,7 +63,6 @@ namespace Eldersbane
             controlAnim = false;
             m_animator->setAnimation("Atacar", false, false);
             m_animator->setAnimation("Correr", true, true);
-            std::cout << "CORRER\n";
         }
         //Rotacion del jugador
         if (Flamingo::Input().mouseMotionEvent())
