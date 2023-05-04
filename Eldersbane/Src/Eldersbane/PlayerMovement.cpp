@@ -38,6 +38,8 @@ namespace Eldersbane
 
         m_forward = {1, 0, 0};
         m_right = {0, 0, 1};
+
+        m_transform->setPosition({m_transform->getPosition().getX(), 500, m_transform->getPosition().getZ()});
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -48,34 +50,34 @@ namespace Eldersbane
         //Rotacion del jugador
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
-            std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
+            //std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
             Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
             m_transform->setRotation(quat);
             //m_forward = quat.Rotate({0,1,0});
             
             m_forward = getOrientation(percentRotate);
             m_right = getOrientation(percentRotate + 90);
-            std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';     
+           // std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';     
         }
 
         if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
         {
-            std::cout << "A PRESSED\n";
+           // std::cout << "A PRESSED\n";
             traslation += m_right;
         }
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_d))
         {
-            std::cout << "D PRESSED\n";
+            //std::cout << "D PRESSED\n";
             traslation -= m_right;
         }
         if (Flamingo::Input().isKeyDown(Flamingo::FLM_w))
         {
-            std::cout << "W PRESSED\n";
+            //std::cout << "W PRESSED\n";
             traslation += m_forward;
         }
         else if (Flamingo::Input().isKeyDown(Flamingo::FLM_s))
         {
-            std::cout << "S PRESSED\n";
+            //std::cout << "S PRESSED\n";
             traslation -= m_forward;
         }
 
@@ -83,7 +85,7 @@ namespace Eldersbane
 
         traslation = Flamingo::SVector3(traslation.getX(), 0, traslation.getZ());
         
-        m_transform->translate(traslation,Flamingo::LOCAL);
+        m_transform->translate(traslation, Flamingo::LOCAL);
         //m_rb->setLinearVelocity(traslation);
 
         m_camera->FollowTarget();

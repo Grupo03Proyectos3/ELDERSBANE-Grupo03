@@ -43,7 +43,7 @@ void Eldersbane::TargetCamera::update(float t_deltaTime)
 
 void Eldersbane::TargetCamera::followPlayer()
 {
-    //m_transform->setPosition(m_followTarget->getPosition() + m_offset);
+    m_transform->setPosition(m_followTarget->getPosition() + m_offset);
 
     auto trpTarget = m_followTarget;
     auto mtrp = m_transform;

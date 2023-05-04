@@ -28,5 +28,7 @@ namespace Eldersbane
         Flamingo::RigidBody* m_rb;
         Flamingo::SVector3 m_forward;
         Flamingo::SVector3 m_right;
+
+        float initialY;
     };
 } // namespace Eldersbane

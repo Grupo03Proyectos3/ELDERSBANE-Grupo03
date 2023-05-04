@@ -52,6 +52,7 @@ namespace Eldersbane
         if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
         {
             std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
+            m_lives--;
             m_attacking = true;
             // getDamage(1);
         }
@@ -89,7 +90,7 @@ namespace Eldersbane
 
     void Enemy::followPlayer(Flamingo::SVector3 t_player_pos)
     {
-        std::cout << "Te estoy siguiendo: X" << t_player_pos.getX() << " Y" << t_player_pos.getY() << "Z"<< t_player_pos.getZ() << std::endl;
+       // std::cout << "Te estoy siguiendo: X" << t_player_pos.getX() << " Y" << t_player_pos.getY() << "Z"<< t_player_pos.getZ() << std::endl;
         m_direction =
             {t_player_pos.getX() - m_tr->getPosition().getX(),
              t_player_pos.getY() - m_tr->getPosition().getY(),
