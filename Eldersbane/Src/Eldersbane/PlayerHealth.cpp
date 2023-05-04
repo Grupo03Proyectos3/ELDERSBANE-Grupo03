@@ -6,7 +6,7 @@
 #include "PinkPotion.h"
 #include "RedPotion.h"
 #include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
-
+#include "FlamingoBase/SceneManager.h"
 Eldersbane::PlayerHealth::PlayerHealth()
 {
 }
@@ -32,7 +32,7 @@ void Eldersbane::PlayerHealth::start()
 
     for (int i = 0; i < m_max_health; ++i)
     {
-        auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
+      /*  auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
 
             auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
         trans->setScale({50.0, 50.0, 0.0});
@@ -42,7 +42,7 @@ void Eldersbane::PlayerHealth::start()
         auto cmp = Flamingo::addComponent<Flamingo::UIElement>(heart_container);
         m_heart_containers.push_back(cmp);
         cmp->initValues("FlamingoDefaultUI/StaticImage", "heartContainer" + std::to_string(i), "", "FullHeart.png");
-        cmp->initComponent();
+        cmp->initComponent();*/
 
     
     }

@@ -14,12 +14,9 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         void start() override;
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
-        void onCollisionExit(Flamingo::GameObject* t_other) override;
 
         void setActive(bool active);
       private:
-        Flamingo::Transform* m_tr;
-        Flamingo::RigidBody* m_rigidBody;
         bool m_active;
     };
 } // namespace Eldersbane

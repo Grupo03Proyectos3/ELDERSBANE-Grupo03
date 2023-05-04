@@ -2,6 +2,7 @@
 #include "Scripting\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
 #include <Physics/RigidBody.h>
+#include "Sword.h"
 
 namespace Eldersbane
 {
@@ -14,16 +15,12 @@ namespace Eldersbane
 
         void update(float t_deltaTime) override;
 
-        float getRotSensitivity();
         Flamingo::SVector3 getOrientation(float rad);
 
       private:
-        float speed = 1.5f;
-        float sensitivity = 0.03f;
-        Flamingo::Transform* m_transform;
         float percentRotate = 0;
-
-        Flamingo::RigidBody* m_rb;
+        Sword* m_sword;
+        Flamingo::Transform* m_transform;       
         Flamingo::SVector3 m_forward;
         Flamingo::SVector3 m_right;
     };
