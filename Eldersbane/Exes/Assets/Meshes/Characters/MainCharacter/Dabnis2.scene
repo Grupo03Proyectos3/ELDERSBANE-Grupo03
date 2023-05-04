@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.8.3 -->
-<!-- export_time: Thu, 04 May 2023 15:42:21 +0000 -->
-<!-- previous_export_time: Thu, 04 May 2023 15:09:41 +0000 -->
+<!-- export_time: Thu, 04 May 2023 15:50:36 +0000 -->
+<!-- previous_export_time: Thu, 04 May 2023 15:49:43 +0000 -->
 <scene author="sarai" formatVersion="1.1" >
   <nodes >
     <node name="Armature" >
@@ -19,7 +19,7 @@
           <property data="map1" name="currentUVSet" type="str" />
           <property data='&lt;bpy id prop: owner="OBDabnis", name="als", address=0x000001C555664B88&gt;' name="als" type="IDPropertyGroup" />
         </userData>
-        <entity meshFile="Dabnis.mesh" name="Dabnis" >
+        <entity meshFile="Dabnis2.mesh" name="Dabnis" >
           <userData />
         </entity>
       </node>
