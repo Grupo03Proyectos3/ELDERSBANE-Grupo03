@@ -1,4 +1,4 @@
-entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","SwordCollider","Player","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -96,9 +96,9 @@ Luz={
         t_name="mylight"
     },
     Transform = {
-        positionX = "1000.0",
-        positionY = "600.0",
-        positionZ = "200.0",
+        positionX = "0.0",
+        positionY = "10000.0",
+        positionZ = "50000.0",
         scaleX = "1.0",
         scaleY = "1.0",
         scaleZ = "1.0",
@@ -116,8 +116,28 @@ Luz2={
         t_name="mylight2"
     },
     Transform = {
-        positionX = "500.0",
-        positionY = "300.0",
+        positionX = "0.0",
+        positionY = "10000.0",
+        positionZ = "-50000.0",
+        scaleX = "1.0",
+        scaleY = "1.0",
+        scaleZ = "1.0",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    Light={
+        t_name="myLight12"
+    }
+}
+Luz3={
+    Name={
+        t_name="mylight2"
+    },
+    Transform = {
+        positionX = "50000.0",
+        positionY = "10000.0",
         positionZ = "500.0",
         scaleX = "1.0",
         scaleY = "1.0",
@@ -129,6 +149,26 @@ Luz2={
     },
     Light={
         t_name="myLight13"
+    }
+}
+Luz4={
+    Name={
+        t_name="mylight2"
+    },
+    Transform = {
+        positionX = "-50000.0",
+        positionY = "10000.0",
+        positionZ = "500.0",
+        scaleX = "1.0",
+        scaleY = "1.0",
+        scaleZ = "1.0",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    Light={
+        t_name="myLight14"
     }
 }
 SwordCollider={
