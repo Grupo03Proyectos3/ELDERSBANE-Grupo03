@@ -45,7 +45,7 @@ namespace Eldersbane
             audio->playAudio();  
             audio->setVolume(2.0);
         } 
-        auto d = m->getObject("button");
+        auto d = this->gameObject();
         auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
 
         a->subsEvent(this);
