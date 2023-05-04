@@ -52,6 +52,10 @@
     <ClCompile Include="..\..\Src\Eldersbane\PlayerAttack.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GoToGame.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GoToLose.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GoToMenu.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GoToWin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h">
@@ -99,6 +103,10 @@
     <ClInclude Include="..\..\Src\Eldersbane\PlayerAttack.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GoToGame.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GoToLose.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GoToMenu.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GoToWin.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Archivos de encabezado">

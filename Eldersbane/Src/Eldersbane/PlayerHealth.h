@@ -38,6 +38,7 @@ namespace Eldersbane {
         std::string m_empty_name;
         std::string m_empty_img;
 
+		std::string m_die_scene;
 	};
 }
 
