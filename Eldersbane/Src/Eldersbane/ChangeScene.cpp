@@ -4,6 +4,8 @@
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
 #include "UI/UIElement.h"
+#include "Audio/AudioSource.h"
+#include "Audio/AudioSystem.h"
 
 namespace Eldersbane
 {
@@ -37,6 +39,12 @@ namespace Eldersbane
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         Flamingo::Scene* m = m_sceneMngr->getSceneActive();
 
+        auto audio = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
+        if(audio)
+        {
+            audio->playAudio();  
+            audio->setVolume(2.0);
+        } 
         auto d = m->getObject("button");
         auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
 
@@ -45,6 +53,11 @@ namespace Eldersbane
 
     void ChangeScene::clickFuntion()
     {
+        auto audio = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
+        if (audio)
+        {
+            audio->stopAudio();
+        } 
         setFirstScene();
     }
 } // namespace Eldersbane

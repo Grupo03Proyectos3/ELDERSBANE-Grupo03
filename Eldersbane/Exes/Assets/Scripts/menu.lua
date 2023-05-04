@@ -10,11 +10,11 @@ ButtonGame = {
         positionZ = "0.0",
         scaleX = "130.0",
         scaleY = "100.0",
-        scaleZ = "0.0",
+        scaleZ = "1.0",
         rotationX = "0.0",
         rotationY = "0.0",
         rotationZ = "0.0",
-        rotationW = "0.0"
+        rotationW = "1.0"
     },
     UIElement = {
         t_type = "FlamingoDefaultUI/ImageButton",
@@ -24,7 +24,12 @@ ButtonGame = {
     },
     Scripts = {
         t_scriptName = "ChangeScene"
-    }
+    },
+    AudioSource = {
+        t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",
+        t_songName = "MenuTheme",
+        t_music = "true",
+    },
 }
 ExitGame = {
     Name={
@@ -36,7 +41,7 @@ ExitGame = {
         positionZ = "0.0",
         scaleX = "130.0",
         scaleY = "100.0",
-        scaleZ = "0.0",
+        scaleZ = "1.0",
         rotationX = "0.0",
         rotationY = "0.0",
         rotationZ = "0.0",
@@ -62,7 +67,7 @@ Title = {
         positionZ = "0.0",
         scaleX = "800.0",
         scaleY = "800.0",
-        scaleZ = "0.0",
+        scaleZ = "1.0",
         rotationX = "0.0",
         rotationY = "0.0",
         rotationZ = "0.0",
