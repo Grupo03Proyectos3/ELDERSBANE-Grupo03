@@ -1,19 +1,20 @@
 #include "PlayerHealth.h"
 #include "ECS/ManagerFunctions.h"
 #include "ECS/ecs_defs.h"
-#include "FlamingoExport/FlamingoCore.h"
 #include "Enemy.h"
+#include "FlamingoBase/SceneManager.h"
+#include "FlamingoExport/FlamingoCore.h"
 #include "PinkPotion.h"
 #include "RedPotion.h"
-#include "Render/EnemyAI.h" // TO DO -> cambiar al script definitivo del enemigo
-#include "FlamingoBase/SceneManager.h"
+
 Eldersbane::PlayerHealth::PlayerHealth()
 {
 }
 
 Eldersbane::PlayerHealth::~PlayerHealth()
 {
-    m_heart_containers.clear();
+    m_full_containers.clear();
+    m_empty_containers.clear();
 }
 
 Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
@@ -24,36 +25,44 @@ Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
 void Eldersbane::PlayerHealth::start()
 {
     m_max_health = 5;
-    m_current_health = 3;
+    m_current_health = 5;
 
-    m_img_name = "heartContainer";
+    m_full_name = "fullContainer";
     m_full_img = "FullHeart.png";
+    m_empty_name = "emptyContainer";
     m_empty_img = "EmptyHeart.png";
 
     for (int i = 0; i < m_max_health; ++i)
     {
         auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
 
-            auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
+        auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
         trans->setScale({50.0, 50.0, 1.0});
-        trans->setPosition({0.0 + 10 * i, 0.0, 0.0});
+        trans->setPosition({0.0 + 8 * i, 0.0, 0.0});
 
-        heart_container->setName("heartContainer" + std::to_string(i));
+        heart_container->setName(m_full_name + std::to_string(i));
         auto cmp = Flamingo::addComponent<Flamingo::UIElement>(heart_container);
-        m_heart_containers.push_back(cmp);
-        cmp->initValues("FlamingoDefaultUI/StaticImage", "heartContainer" + std::to_string(i), "", "FullHeart.png");
+        m_full_containers.push_back(cmp);
+        cmp->initValues("FlamingoDefaultUI/StaticImage", m_full_name + std::to_string(i), "", m_full_img);
         cmp->initComponent();
-
-    
     }
-    
-      auto scene_mngr = Flamingo::FlamingoCore::instance()->getSceneManager();
-    auto x = scene_mngr->getSceneActive();
 
-}
+    for (int i = 0; i < m_max_health; ++i)
+    {
+        auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
 
-void Eldersbane::PlayerHealth::update(float t_deltaTime)
-{
+        auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
+        trans->setScale({50.0, 50.0, 1.0});
+        trans->setPosition({0.0 + 8 * i, 0.0, 0.0});
+
+        heart_container->setName(m_empty_name + std::to_string(i));
+        auto cmp = Flamingo::addComponent<Flamingo::UIElement>(heart_container);
+        m_empty_containers.push_back(cmp);
+        cmp->initValues("FlamingoDefaultUI/StaticImage", m_empty_name + std::to_string(i), "", m_empty_img);
+        cmp->initComponent();
+    }
+
+    setUIToHealth();
 }
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -111,21 +120,24 @@ void Eldersbane::PlayerHealth::healDamage(int t_amount)
 
 void Eldersbane::PlayerHealth::setUIToHealth()
 {
-    for (int i = 0; i < m_heart_containers.size(); ++i)
+    for (int i = 0; i < m_full_containers.size(); ++i)
     {
         if (i < m_current_health)
         {
-            m_heart_containers[i]->setImage("Image", m_img_name + std::to_string(i), m_full_img);
+            m_full_containers[i]->setAlpha(1.0);
+            m_empty_containers[i]->setAlpha(0.0);
         }
         else
         {
-            m_heart_containers[i]->setImage("Image", m_img_name + std::to_string(i), m_empty_img);
+            m_full_containers[i]->setAlpha(0.0);
+            m_empty_containers[i]->setAlpha(1.0);
         }
     }
 }
 
 void Eldersbane::PlayerHealth::killPlayer()
 {
-    // To do : what to do when i die
     m_current_health = m_max_health;
+
+
 }

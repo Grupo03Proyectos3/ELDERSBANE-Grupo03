@@ -32,9 +32,11 @@ namespace Eldersbane {
 		int m_max_health;
 		int m_current_health;
 
-		std::vector<Flamingo::UIElement*> m_heart_containers;
-        std::string m_img_name;
+		std::vector<Flamingo::UIElement*> m_full_containers;
+        std::vector<Flamingo::UIElement*> m_empty_containers;
+        std::string m_full_name;
         std::string m_full_img;
+        std::string m_empty_name;
         std::string m_empty_img;
 
 	};
