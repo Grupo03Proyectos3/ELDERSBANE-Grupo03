@@ -28,8 +28,8 @@ ButtonGame = {
     AudioSource = {
         t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",
         t_songName = "MenuTheme",
-        t_music = "true",
-    },
+        t_music = "true"
+    }
 }
 ExitGame = {
     Name={

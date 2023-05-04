@@ -189,6 +189,11 @@ Player = {
         "PickUp",
         "PlayerHealth",
         "PlayerAttack"
+    },    
+    AudioSource = {
+        t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",
+        t_songName = "MenuTheme",
+        t_music = "true"
     }
 }
 TargetCamera = {
