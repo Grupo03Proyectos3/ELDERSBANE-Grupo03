@@ -32,17 +32,17 @@ void Eldersbane::PlayerHealth::start()
 
     for (int i = 0; i < m_max_health; ++i)
     {
-      /*  auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
+        auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
 
             auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
-        trans->setScale({50.0, 50.0, 0.0});
-        trans->setPosition({0.0 + 50.0 * i, 0.0, 0.0});
+        trans->setScale({50.0, 50.0, 1.0});
+        trans->setPosition({0.0 + 10 * i, 0.0, 0.0});
 
         heart_container->setName("heartContainer" + std::to_string(i));
         auto cmp = Flamingo::addComponent<Flamingo::UIElement>(heart_container);
         m_heart_containers.push_back(cmp);
         cmp->initValues("FlamingoDefaultUI/StaticImage", "heartContainer" + std::to_string(i), "", "FullHeart.png");
-        cmp->initComponent();*/
+        cmp->initComponent();
 
     
     }
@@ -60,9 +60,9 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
-        // Choco con un enemigo --> recibo daño
+        // Choco con un enemigo --> recibo daï¿½o
         std::cout << "Badnis PIERDE VIDA " << m_current_health - 1 << "\n";
-        takeDamage(1); // To do : ponerle una cantidad de daño al enemy
+        takeDamage(1); // To do : ponerle una cantidad de daï¿½o al enemy
     }
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other))
