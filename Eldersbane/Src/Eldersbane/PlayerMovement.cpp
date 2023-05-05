@@ -6,6 +6,7 @@
 #include <FlamingoUtils/FlamingoKeys.h>
 
 #include "BluePotion.h"
+#include "RedPotion.h"
 #include <FlamingoUtils/SVector2.h>
 #include <cmath>
 
@@ -29,7 +30,7 @@ namespace Eldersbane
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
         m_animator = Flamingo::getComponent<Flamingo::Animator>(this->gameObject());
-
+        percentRotate = 0;
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
         auto sword_obj = Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword");
         if (sword_obj != nullptr)
@@ -45,6 +46,9 @@ namespace Eldersbane
         m_right = {0, 0, 1};
         controlAnim = false;
         m_transform->setPosition({m_transform->getPosition().getX(), m_transform->getPosition().getY(), m_transform->getPosition().getZ()});
+        
+        m_forward = getOrientation(percentRotate);
+        m_right = getOrientation(percentRotate + 90);
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -67,13 +71,7 @@ namespace Eldersbane
         if (Flamingo::Input().mouseMotionEvent())
         { // rotar al player
             //std::cout << "ROTACION PLAYER " << Flamingo::Input().getMouseMotionPos().second << " \n";
-            Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
-            m_transform->setRotation(quat);
-            //m_forward = quat.Rotate({0,1,0});
-            
-            m_forward = getOrientation(percentRotate);
-            m_right = getOrientation(percentRotate + 90);
-           // std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';     
+            lookAtMouse(t_deltaTime);
         }
 
         if (Flamingo::Input().isKeyDown(Flamingo::FLM_a))
@@ -109,8 +107,8 @@ namespace Eldersbane
     }
     void PlayerMovement::onCollisionEnter(Flamingo::GameObject* t_other)
     {
-        auto bluePotion = Flamingo::getComponent<Eldersbane::BluePotion>(t_other);
-        if (bluePotion!=nullptr)
+       
+        if (auto bluePotion = Flamingo::getComponent<Eldersbane::BluePotion>(t_other))
         {
             std::cout << "Coge la pocion AZUL"
                       << "\n";
@@ -128,10 +126,25 @@ namespace Eldersbane
         float rad = degree * 3.14159265 / 180;
         x = std::sin(rad);
         z = std::cos(rad);
+        if (x == 0)
+            x = 0.01;
+        if (z == 0)
+            z = 0.01;
         float xRel = x / std::abs(x), zRel = z / std::abs(z);
         return Flamingo::SVector3(x * x * xRel, 0, z * z * zRel);
     }
     Flamingo::SVector3 PlayerMovement::getForward() {
         return m_forward;
+    }
+
+    void PlayerMovement::lookAtMouse(float t_deltaTime)
+    {
+        Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
+        m_transform->setRotation(quat);
+        // m_forward = quat.Rotate({0,1,0});
+
+        m_forward = getOrientation(percentRotate);
+        m_right = getOrientation(percentRotate + 90);
+        // std::cout << "Forward:x= " << m_forward.getX() << "Forward:y= " << m_forward.getY() << "Forward:z= " << m_forward.getZ() << '\n';
     }
 } // namespace Eldersbane
