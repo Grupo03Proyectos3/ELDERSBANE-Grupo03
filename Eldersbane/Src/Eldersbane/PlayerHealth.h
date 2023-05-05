@@ -4,6 +4,7 @@
 #include "Scripting/BehaviourScript.h"
 #include "UI/UIElement.h"
 #include "Audio/AudioSource.h"
+#include "FlamingoUtils/Timer.h"
 
 namespace Eldersbane {
 
@@ -42,6 +43,10 @@ namespace Eldersbane {
 		std::string m_die_scene;
 
 		Flamingo::AudioSource* m_player_get_damage;
+
+        Flamingo::Timer* m_invencibility;
+		//Tiempo en milisegundos
+        unsigned int m_invencibility_time;
 	};
 }
 

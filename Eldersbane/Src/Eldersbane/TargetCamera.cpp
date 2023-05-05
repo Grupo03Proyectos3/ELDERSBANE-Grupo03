@@ -3,6 +3,7 @@
 #include <FlamingoExport/FlamingoCore.h>
 #include <ECS/InputHandlerContainer.h>
 #include "PlayerMovement.h"
+#include <cmath>
 
 Eldersbane::TargetCamera::TargetCamera()
 {
@@ -47,6 +48,9 @@ void Eldersbane::TargetCamera::followPlayer()
 
     auto trpTarget = m_followTarget;
     auto mtrp = m_transform;
+
+    if (std::isnan(mtrp->getPosition().getX()) || std::isnan(mtrp->getPosition().getZ()))
+        return;
 
     Flamingo::SVector3 newOffset = trpTarget->getRotation().Rotate(m_offset);
     mtrp->setPosition(trpTarget->getPosition() - newOffset);

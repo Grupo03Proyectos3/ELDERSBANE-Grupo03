@@ -2,6 +2,8 @@
 
 Eldersbane::BlueEnemy::BlueEnemy()
 {
+    m_damage = 1;
+    m_lives = 2;
 }
 
 Eldersbane::BlueEnemy::~BlueEnemy()
@@ -11,12 +13,6 @@ Eldersbane::BlueEnemy::~BlueEnemy()
 Flamingo::BehaviourScript* Eldersbane::BlueEnemy::clone()
 {
     return new BlueEnemy();
-}
-
-void Eldersbane::BlueEnemy::start()
-{
-    m_damage = 1;
-    m_lives = 1;
 }
 
 int Eldersbane::BlueEnemy::getDamage()
