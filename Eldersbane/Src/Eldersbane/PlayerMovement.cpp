@@ -44,7 +44,7 @@ namespace Eldersbane
         m_forward = {1, 0, 0};
         m_right = {0, 0, 1};
         controlAnim = false;
-        m_transform->setPosition({m_transform->getPosition().getX(), 500, m_transform->getPosition().getZ()});
+        m_transform->setPosition({m_transform->getPosition().getX(), m_transform->getPosition().getY(), m_transform->getPosition().getZ()});
     }
 
     void PlayerMovement::update(float t_deltaTime)
