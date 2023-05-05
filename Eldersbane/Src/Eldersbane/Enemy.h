@@ -27,6 +27,7 @@ namespace Eldersbane
         void reciveDamage(int damage);
         bool isAlive(); 
         void enemyMovement(float t_delta_time);
+        void dyingAnimation();
        
       protected:
         void lookAtWhereIAmMoving();
@@ -44,6 +45,13 @@ namespace Eldersbane
         int m_lives;
         int m_damage;
         float m_speed;
+
+        float m_reductionPercent;
+
+        //Die
+        bool m_dyingAnimation;
+        int m_currentDyingSteps;
+        int m_totalDyingSteps;
 
         Eldersbane::BlueEnemy* m_blue_enemy;
         Eldersbane::RedEnemy* m_red_enemy;

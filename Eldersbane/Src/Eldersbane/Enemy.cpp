@@ -67,13 +67,18 @@ namespace Eldersbane
             anim->setAnimation("my_animation", true, true);
 
         m_speed = 1.5;
+        m_dyingAnimation = false;
+        m_currentDyingSteps = 0;
+        m_totalDyingSteps = 30;
     }
 
     void Enemy::update(float t_delta_time)
     {
         checkDistance(m_tr_player->getPosition());
-        if (!m_attacking)
+        if (!m_attacking && ! m_dyingAnimation)
             enemyMovement(t_delta_time);
+        if (m_dyingAnimation)
+            dyingAnimation();
     }
 
     void Enemy::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -134,7 +139,8 @@ namespace Eldersbane
     {
         m_lives -= damage;
         if (m_lives <= 0){
-            gameObject()->setActive(false);
+            m_dyingAnimation = true;
+            m_reductionPercent = m_tr->getScale().getX()/m_totalDyingSteps;
         }
     }
 
@@ -184,6 +190,21 @@ namespace Eldersbane
         }
 
         lookAtWhereIAmMoving();
+    }
+
+    void Enemy::dyingAnimation()
+    {
+        if (m_currentDyingSteps >= m_totalDyingSteps)
+        {
+            gameObject()->setAlive(false);
+        }
+        else
+        {
+            m_currentDyingSteps++;
+           
+            m_tr->setScale(m_tr->getScale() - 
+                Flamingo::SVector3(m_reductionPercent, m_reductionPercent, m_reductionPercent));
+        }
     }
 
     void Enemy::lookAtWhereIAmMoving()
