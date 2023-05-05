@@ -39,7 +39,7 @@ void Eldersbane::PlayerHealth::start()
     m_player_get_damage = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioPlayerGetDamage"));
     for (int i = 0; i < m_max_health; ++i)
     {
-        auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
+        auto heart_container = Flamingo::createGameObject(m_full_name + std::to_string(i), {Flamingo::GROUP_UI});
 
         auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
         trans->setScale({50.0, 50.0, 1.0});
@@ -54,7 +54,7 @@ void Eldersbane::PlayerHealth::start()
 
     for (int i = 0; i < m_max_health; ++i)
     {
-        auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
+        auto heart_container = Flamingo::createGameObject(m_empty_name + std::to_string(i), {Flamingo::GROUP_UI});
 
         auto trans = Flamingo::getComponent<Flamingo::Transform>(heart_container);
         trans->setScale({50.0, 50.0, 1.0});
