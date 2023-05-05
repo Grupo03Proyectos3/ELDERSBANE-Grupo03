@@ -21,6 +21,7 @@ void Eldersbane::GoToWin::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::getComponent<Eldersbane::PlayerHealth>(t_other))
     {
+        Flamingo::FlamingoCore::getSceneManager()->reloadScenePetition();
         Flamingo::FlamingoCore::getSceneManager()->startScene(m_scene);
     }
 }
