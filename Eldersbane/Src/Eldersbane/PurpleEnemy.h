@@ -13,9 +13,11 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         void start() override;
         int getDamage();
+        int getLives();
 
       private:
-        int m_damage;
+        int m_damage = 3;
+        int m_lives;
     };
 } // namespace Eldersbane
 #endif

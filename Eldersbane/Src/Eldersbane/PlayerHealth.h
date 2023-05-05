@@ -3,6 +3,7 @@
 #define __PLAYER_HEALTH_H__
 #include "Scripting/BehaviourScript.h"
 #include "UI/UIElement.h"
+#include "Audio/AudioSource.h"
 
 namespace Eldersbane {
 
@@ -39,6 +40,8 @@ namespace Eldersbane {
         std::string m_empty_img;
 
 		std::string m_die_scene;
+
+		Flamingo::AudioSource* m_player_get_damage;
 	};
 }
 

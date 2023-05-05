@@ -24,7 +24,7 @@ namespace Eldersbane
         void checkDistance(Flamingo::SVector3 t_player_pos);
         void followPlayer(Flamingo::SVector3 t_player_pos);
         void attack();
-        void getDamage();
+        int getDamage();
         bool isAlive(); 
         void enemyMovement(float t_delta_time);
        
@@ -41,6 +41,11 @@ namespace Eldersbane
         bool m_colliding;
         int m_lives;
         int m_damage;
+
+        Eldersbane::BlueEnemy* m_blue_enemy;
+        Eldersbane::RedEnemy* m_red_enemy;
+        Eldersbane::BlackEnemy* m_black_enemy;
+        Eldersbane::PurpleEnemy* m_purple_enemy;
     };
 } // namespace Eldersbane
 #endif
