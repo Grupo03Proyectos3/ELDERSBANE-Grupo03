@@ -40,6 +40,5 @@ namespace Eldersbane
     void Eldersbane::ExitGame::exitGame()
     {
         Flamingo::FlamingoCore::instance()->endRunning();
-        std::cout << "exit\n";
     }
 }

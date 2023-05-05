@@ -5,6 +5,10 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// La clase de enemigo más fuerte. El mayor desafío para el jugador.
+    /// Posee variables para obtener sus atributos
+    /// </summary>
     class BlackEnemy : public Flamingo::BehaviourScript
     {
       public:

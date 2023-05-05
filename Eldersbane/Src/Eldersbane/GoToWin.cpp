@@ -14,7 +14,7 @@ Flamingo::BehaviourScript* Eldersbane::GoToWin::clone()
 
 void Eldersbane::GoToWin::start()
 {
-    m_scene = "WinGame"; // To Do : añadir escena de ganar
+    m_scene = "WinGame"; 
 }
 
 void Eldersbane::GoToWin::update(float t_deltaTime)

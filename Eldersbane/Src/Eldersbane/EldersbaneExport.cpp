@@ -36,11 +36,6 @@
 
 bool InitJuego(void)
 {
-    // miMotor->DoSomething();
-
-    std::cout << "juegoDado"
-              << "\n";
-
     auto f_core = Flamingo::FlamingoCore::instance();
     // Inicializar primera escena
     std::string first_scene = "menu";

@@ -3,6 +3,9 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Almacena la información de daño extra que debe añadir al jugador. No esta en uso.
+    /// </summary>
     class GreenPotion : public Flamingo::BehaviourScript
     {
       public:

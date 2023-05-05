@@ -46,7 +46,6 @@ namespace Eldersbane{
         if (!m_sword->gameObject()->getActive() && Flamingo::Input().getMouseButtonState(Flamingo::LEFT))
         {
             m_sword->gameObject()->setActive(true);
-            std::cout << "\n\n\nATAQUE ACTIVADOO\n\n\n";
             if (m_audio_ataque)
             {
                 m_audio_ataque->playAudio();
@@ -59,7 +58,6 @@ namespace Eldersbane{
             if (m_attackTimer->getElapsedTime() >= m_cooldownAttack)
             {
                 m_sword->gameObject()->setActive(false);
-                std::cout << "ATAQUE DESACTIVADOO\n";
                 frames = 0;
                 m_attackTimer->reset();
             }

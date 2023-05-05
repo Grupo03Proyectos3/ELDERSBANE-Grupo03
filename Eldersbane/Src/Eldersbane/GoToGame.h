@@ -4,6 +4,9 @@
 #include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
+    /// <summary>
+    /// Al pulsar en el botón asignado, esta clase hace que se cargue la escena de Mapa.
+    /// </summary>
     class GoToGame : public Flamingo::BehaviourScript
     {
       public:

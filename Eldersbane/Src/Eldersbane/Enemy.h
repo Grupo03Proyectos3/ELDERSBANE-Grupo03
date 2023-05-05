@@ -10,6 +10,11 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Clase enemigo que implementa la lógica necesaria para tener enemigos en el mapa.
+    /// Usa los métodos de colisiones de entrada y salida así como otros que permiten desarrollar su
+    /// función contra el jugador.
+    /// </summary>
     class Enemy : public Flamingo::BehaviourScript
     {
       public:

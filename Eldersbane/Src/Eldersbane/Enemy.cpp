@@ -85,10 +85,7 @@ namespace Eldersbane
     {
         if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
         {
-            std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
-            //m_lives--;
             m_attacking = true;
-            //getDamage();
         }
     }
 
@@ -103,7 +100,6 @@ namespace Eldersbane
     void Enemy::checkDistance(Flamingo::SVector3 t_player_pos)
     {
         double distancia = Flamingo::SVector3::distance(m_tr->getPosition(), t_player_pos);
-        // std::cout << distancia << std::endl;
         if (distancia >= m_max_distance)
         {
             m_attacking = false;
@@ -122,7 +118,6 @@ namespace Eldersbane
 
     void Enemy::followPlayer(Flamingo::SVector3 t_player_pos)
     {
-       // std::cout << "Te estoy siguiendo: X" << t_player_pos.getX() << " Y" << t_player_pos.getY() << "Z"<< t_player_pos.getZ() << std::endl;
         m_direction =
             {t_player_pos.getX() - m_tr->getPosition().getX(),
              t_player_pos.getY() - m_tr->getPosition().getY(),
@@ -152,7 +147,6 @@ namespace Eldersbane
     void Enemy::enemyMovement(float t_delta_time)
     {
         m_time_last_dir += t_delta_time;
-        // std::cout << m_timeSinceLastDirectionChange << std::endl;
         if (m_wandering && !m_attacking)
         {
             //  Si ha pasado suficiente tiempo, cambia la direccion del enemigo

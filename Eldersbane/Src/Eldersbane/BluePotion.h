@@ -4,6 +4,11 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Almacena la información del multiplicador de velocidad que debe dar
+    /// al jugador.
+    /// Se recoge en el PlayerMovement
+    /// </summary>
     class BluePotion : public Flamingo::BehaviourScript
     {
       public:

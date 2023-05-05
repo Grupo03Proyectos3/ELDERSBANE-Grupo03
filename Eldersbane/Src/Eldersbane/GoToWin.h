@@ -4,6 +4,9 @@
 #include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
+    /// <summary>
+    /// Al colisionar, esta clase hace que se cargue la escena de Victoria.
+    /// </summary>
     class GoToWin : public Flamingo::BehaviourScript
     {
       public:

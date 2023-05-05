@@ -7,7 +7,10 @@
 #include "FlamingoUtils/Timer.h"
 
 namespace Eldersbane {
-
+	/// <summary>
+	/// Clase que controla la vida del jugador y el perder en caso de quedarse 
+	/// sin vida. A su vez gestiona la UI visual de las vidas.
+	/// </summary>
 	class PlayerHealth : public Flamingo::BehaviourScript
 	{
 	public:

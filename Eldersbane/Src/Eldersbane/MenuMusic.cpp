@@ -23,7 +23,6 @@ void Eldersbane::MenuMusic::start()
     {
         audio->playAudio();
         audio->setVolume(2.0);
-        std::cout << "reproduciendo música\n";
     }
 
 }

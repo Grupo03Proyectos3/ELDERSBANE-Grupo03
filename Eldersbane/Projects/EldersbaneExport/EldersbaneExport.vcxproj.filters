@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -16,111 +10,149 @@
     <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\..\Src\Eldersbane\BluePotion.cpp">
+      <Filter>Archivos de origen\PowerUps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp">
+      <Filter>Archivos de origen\PowerUps</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\PinkPotion.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\PowerUps</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="..\..\Src\Eldersbane\PickUp.cpp">
+      <Filter>Archivos de origen\PowerUps</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\TargetCamera.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\PowerUps</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\Sword.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerMovement.cpp">
+      <Filter>Archivos de origen\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PlayerHealth.cpp">
+      <Filter>Archivos de origen\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\PlayerAttack.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Player</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\GoToGame.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\GoToLose.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\GoToMenu.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\GoToWin.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\TargetCamera.cpp">
+      <Filter>Archivos de origen\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GoToGame.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GoToLose.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GoToMenu.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\GoToWin.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\BlackEnemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\BlueEnemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\PurpleEnemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\RedEnemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\ChangeScene.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Src\Eldersbane\MenuMusic.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Control</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Src\Eldersbane\BlackEnemy.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\BlueEnemy.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\PurpleEnemy.cpp" />
-    <ClCompile Include="..\..\Src\Eldersbane\RedEnemy.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp">
+      <Filter>Archivos de origen\Control</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\Enemy.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\PickUp.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\Src\Eldersbane\Enemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\TargetCamera.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\Src\Eldersbane\PurpleEnemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\Sword.h">
-      <Filter>Archivos de encabezado</Filter>
+    <ClInclude Include="..\..\Src\Eldersbane\RedEnemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\BlackEnemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\BlueEnemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerHealth.h">
+      <Filter>Archivos de encabezado\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Src\Eldersbane\PlayerAttack.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Player</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\GoToGame.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\GoToLose.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\GoToMenu.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\GoToWin.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\PlayerMovement.h">
+      <Filter>Archivos de encabezado\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\Sword.h">
+      <Filter>Archivos de encabezado\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\TargetCamera.h">
+      <Filter>Archivos de encabezado\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PinkPotion.h">
+      <Filter>Archivos de encabezado\PowerUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h">
+      <Filter>Archivos de encabezado\PowerUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\PickUp.h">
+      <Filter>Archivos de encabezado\PowerUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h">
+      <Filter>Archivos de encabezado\PowerUps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\BluePotion.h">
+      <Filter>Archivos de encabezado\PowerUps</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Src\Eldersbane\MenuMusic.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Control</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Src\Eldersbane\BlackEnemy.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\BlueEnemy.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\PurpleEnemy.h" />
-    <ClInclude Include="..\..\Src\Eldersbane\RedEnemy.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\ChangeScene.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GoToGame.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GoToLose.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GoToWin.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\GoToMenu.h">
+      <Filter>Archivos de encabezado\Control</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Archivos de encabezado">
@@ -131,6 +163,30 @@
     </Filter>
     <Filter Include="Archivos de recursos">
       <UniqueIdentifier>{527fc8bc-608b-44a2-97b4-3911bc5ffc99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Enemies">
+      <UniqueIdentifier>{4150a7fb-10bb-4744-911f-9f4383c65fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Player">
+      <UniqueIdentifier>{aa991664-4bf7-40bd-815f-7c48c7afb342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\PowerUps">
+      <UniqueIdentifier>{58ae3d46-2ce0-4b70-8054-1572db91048e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Control">
+      <UniqueIdentifier>{f4f27c0e-24e8-46e6-b57d-f57b9250ad9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Enemies">
+      <UniqueIdentifier>{20a25f35-5f7e-426d-979f-791d1043c18b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Control">
+      <UniqueIdentifier>{27655ec3-3be0-4bbe-9d7d-66a1b9b3f67e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\PowerUps">
+      <UniqueIdentifier>{11ab91e6-0d69-4519-9067-e14d986cfb83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Player">
+      <UniqueIdentifier>{04f992ff-1e2b-45de-85fe-66f4966240b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,10 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Es el encargado de activar los ataques de la espada y 
+    /// su relación con el player y su movimiento.
+    /// </summary>
     class PlayerAttack : public Flamingo::BehaviourScript{
       public:
         PlayerAttack();

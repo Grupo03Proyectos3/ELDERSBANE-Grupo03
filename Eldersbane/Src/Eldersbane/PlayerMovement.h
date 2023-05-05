@@ -8,6 +8,10 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Clase que se encarga del movimiento del jugador y
+    /// todo lo relacionado con ello.
+    /// </summary>
     class PlayerMovement : public Flamingo::BehaviourScript
     {
       public:

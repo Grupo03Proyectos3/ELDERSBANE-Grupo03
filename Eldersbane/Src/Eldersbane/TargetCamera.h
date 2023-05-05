@@ -3,6 +3,10 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// Clase que crea un punto en la pantalla que sirve como cursor en medio de la
+    /// pantalla a la vez que sirve para cálculos de cámaras. 
+    /// </summary>
     class TargetCamera : public Flamingo::BehaviourScript
     {
       public:

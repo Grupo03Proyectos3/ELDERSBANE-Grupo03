@@ -6,6 +6,9 @@
 #include <Physics/RigidBody.h>
 namespace Eldersbane
 {
+    /// <summary>
+    /// Clase que representa una espada y realiza daño a los enemigos al atacar.
+    /// </summary>
     class Sword : public Flamingo::BehaviourScript
     {
       public:

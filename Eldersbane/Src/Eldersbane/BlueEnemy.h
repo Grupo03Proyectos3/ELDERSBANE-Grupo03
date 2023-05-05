@@ -5,6 +5,10 @@
 
 namespace Eldersbane
 {
+    /// <summary>
+    /// La clase de enemigo más débil.
+    /// Posee variables para obtener sus atributos
+    /// </summary>
     class BlueEnemy : public Flamingo::BehaviourScript
     {
       public:
