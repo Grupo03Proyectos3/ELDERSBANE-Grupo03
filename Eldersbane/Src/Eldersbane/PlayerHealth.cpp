@@ -74,7 +74,7 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
-        takeDamage(1); // To do : ponerle una cantidad de da�o al enemy
+        takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage()); // To do : ponerle una cantidad de da�o al enemy
     }
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other))
@@ -100,6 +100,7 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 void Eldersbane::PlayerHealth::takeDamage(int t_amount)
 {
     // To Do : ajuste de vida en la UI
+    std::cout << "Damage real: " << t_amount << "\n";
     if (m_current_health > 0)
     {
         m_current_health = std::max(m_current_health - t_amount, 0);

@@ -347,6 +347,7 @@ MakoyAzul01 = {
     },
     Scripts={
         "Enemy",
+        "BlueEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -382,7 +383,8 @@ MakoyAzul02 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "BlueEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -418,7 +420,8 @@ MakoyAzul03 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "BlueEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -454,7 +457,8 @@ MakoyAzul04 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "BlueEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -490,7 +494,8 @@ MakoyAzul05 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "BlueEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -526,7 +531,8 @@ MakoyRojo01 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "RedEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -562,7 +568,8 @@ MakoyRojo02 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "RedEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -598,7 +605,8 @@ MakoyRojo03 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "RedEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -634,7 +642,8 @@ MakoyRojo04 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "RedEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -670,7 +679,8 @@ MakoyMorado01 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "PurpleEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -706,7 +716,8 @@ MakoyMorado02 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "PurpleEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -742,7 +753,8 @@ MakoyMorado03 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "PurpleEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -778,7 +790,8 @@ MakoyMorado04 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "PurpleEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -814,7 +827,8 @@ MakoyMorado05 = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "PurpleEnemy"
     }
 --    Animator={
 --        t_name="dragon"
@@ -850,7 +864,8 @@ MakoyKing = {
         t_mat_name= ""
     },
     Scripts={
-        "Enemy"
+        "Enemy",
+        "BlackEnemy"
     }
 --    Animator={
 --        t_name="dragon"

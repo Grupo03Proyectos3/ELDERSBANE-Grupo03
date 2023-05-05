@@ -25,19 +25,7 @@ namespace Eldersbane
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-        auto b = Flamingo::getComponent<Eldersbane::BlueEnemy>(this->gameObject());
-        auto r = Flamingo::getComponent<Eldersbane::RedEnemy>(this->gameObject());
-        auto p = Flamingo::getComponent<Eldersbane::PurpleEnemy>(this->gameObject());
-        auto k = Flamingo::getComponent<Eldersbane::BlackEnemy>(this->gameObject());
-        if (b != nullptr)
-            m_damage = b->getDamage();
-        else if (r != nullptr)
-            m_damage = r->getDamage();
-        else if (p != nullptr)
-            m_damage = p->getDamage();
-        else if (k != nullptr)
-            m_damage = k->getDamage();
-
+        
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
         m_max_distance = 1500.0f;
@@ -47,14 +35,27 @@ namespace Eldersbane
         m_wandering = true;
         m_attacking = false;
         m_lives = 2;
+
+        m_blue_enemy = Flamingo::getComponent<Eldersbane::BlueEnemy>(this->gameObject());
+        m_red_enemy = Flamingo::getComponent<Eldersbane::RedEnemy>(this->gameObject());
+        m_purple_enemy = Flamingo::getComponent<Eldersbane::PurpleEnemy>(this->gameObject());
+        m_black_enemy = Flamingo::getComponent<Eldersbane::BlackEnemy>(this->gameObject());
+        if (m_blue_enemy != nullptr)
+            m_damage = m_blue_enemy->getDamage();
+        else if (m_red_enemy != nullptr)
+            m_damage = m_red_enemy->getDamage();
+        else if (m_purple_enemy != nullptr)
+            m_damage = m_purple_enemy->getDamage();
+        else if (m_black_enemy != nullptr)
+            m_damage = m_black_enemy->getDamage();
     }
 
     void Enemy::update(float t_delta_time)
     {
         checkDistance(m_tr_player->getPosition());
-        if (m_attacking)
-            attack();
-        else
+        if (!m_attacking)
+           /* attack();
+        else*/
             enemyMovement(t_delta_time);
     }
 
@@ -65,7 +66,8 @@ namespace Eldersbane
             std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
             //m_lives--;
             m_attacking = true;
-            getDamage();
+            attack();
+            //getDamage();
         }
     }
 
@@ -109,21 +111,21 @@ namespace Eldersbane
 
     void Enemy::attack()
     {
-        /* std::cout << "ATAQUE" << std::endl;
-        getDamage();*/
-    }
-
-    void Enemy::getDamage()
-    {
+        //std::cout << "DAÑO: " << m_damage << "\n";
         if (isAlive())
         {
-            m_lives-=m_damage;
+            m_lives -=1;
         }
         else
         {
             m_ent->setActive(false);
             m_ent->setAlive(false);
         }
+    }
+
+    int Enemy::getDamage()
+    {
+        return m_damage;
     }
 
     bool Enemy::isAlive()
