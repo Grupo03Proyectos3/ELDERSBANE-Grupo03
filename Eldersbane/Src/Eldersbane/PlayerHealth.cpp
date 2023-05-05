@@ -83,8 +83,7 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
         std::cout << "Coge la pocion ROJA"
                   << "\n";
         healDamage(redPotion->getExtraLives());
-        //t_other->setActive(false);
-        //t_other->setAlive(false);
+        t_other->setAlive(false);
     }
     if (Flamingo::hasComponent<Eldersbane::PinkPotion>(t_other))
     {
@@ -92,8 +91,7 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
         std::cout << "Coge la pocion ROSA"
                   << "\n";
         healDamage(pinkPotion->getExtraLives());
-        //t_other->setActive(false);
-        //t_other->setAlive(false);
+        t_other->setAlive(false);
     }
 }
 

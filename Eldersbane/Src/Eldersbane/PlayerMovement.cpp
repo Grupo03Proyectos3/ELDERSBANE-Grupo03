@@ -113,6 +113,7 @@ namespace Eldersbane
             std::cout << "Coge la pocion AZUL"
                       << "\n";
             speed *= bluePotion->getSpeedMultiplier();
+            t_other->setAlive(false);
         }
     }
     float PlayerMovement::getRotSensitivity()

@@ -10,7 +10,7 @@ Eldersbane::BluePotion::~BluePotion()
 
 void Eldersbane::BluePotion::start()
 {
-    m_speed_multiplier = 1;
+    m_speed_multiplier = 2;
 }
 
 Flamingo::BehaviourScript* Eldersbane::BluePotion::clone()

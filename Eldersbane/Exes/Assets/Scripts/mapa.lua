@@ -1,6 +1,6 @@
 entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
-"EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
+"EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
 "A816","A817","A818","A819","Slime04","Slime05","Slime06","Slime07","Slime08","A823","A824","A825","A21","A22", "A23", "A28", "A29","A212","A214","A215","A216","A218",
 "A219","SlimeKing","Waldo","A220","A221","A223","A224","A225","A229","A230","A232","A233","A235","A236","A238","A239","A240","A242","A243","A244","A245","A246","A248",
@@ -1335,7 +1335,7 @@ PocionRoja = {
     Transform = {
         positionX = "500.0",
         positionY = "300.0",
-        positionZ = "-300.0",
+        positionZ = "300.0",
         scaleX = "20",
         scaleY = "20",
         scaleZ = "20",
@@ -1359,6 +1359,73 @@ PocionRoja = {
     },
     Scripts={
         "RedPotion"
+    }
+}
+
+PocionRosa = {
+    Name={
+        t_name="pocionRosa",
+    },
+    Transform = {
+        positionX = "1500.0",
+        positionY = "300.0",
+        positionZ = "-500.0",
+        scaleX = "20",
+        scaleY = "20",
+        scaleZ = "20",
+        rotationX = "1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "PocionRosa.mesh",
+        t_entity_name= "pocionRosa",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Scripts={
+        "PinkPotion"
+    }
+}
+PocionAzul = {
+    Name={
+        t_name="pocionAzul",
+    },
+    Transform = {
+        positionX = "-1500.0",
+        positionY = "300.0",
+        positionZ = "-200.0",
+        scaleX = "20",
+        scaleY = "20",
+        scaleZ = "20",
+        rotationX = "1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+    MeshRenderer = {
+        t_model_name = "PocionAzul.mesh",
+        t_entity_name= "pocionAzul",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Scripts={
+        "BluePotion"
     }
 }
 Tronco01 = {
