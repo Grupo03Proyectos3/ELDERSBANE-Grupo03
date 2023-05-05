@@ -27,7 +27,7 @@ namespace Eldersbane{
         m_sword->gameObject()->setActive(false);
         m_audio_ataque = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
         m_attackTimer = new Flamingo::Timer();
-        m_cooldownAttack = 1400;
+        m_cooldownAttack = 2000;
     }
 
     void PlayerAttack::update(float t_deltaTime)

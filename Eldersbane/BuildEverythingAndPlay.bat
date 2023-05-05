@@ -29,4 +29,4 @@ XCOPY /y /s /i .\Motor-Grupo3\Exes .\Exes\
 :: Ejecutar .exe del motor
 @echo off
 cd .\Exes\
-call Motor_d.exe
+call Motor.exe
