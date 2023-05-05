@@ -29,7 +29,7 @@ namespace Eldersbane
 
     void Sword::onCollisionEnter(Flamingo::GameObject* t_other){
         if (auto e = Flamingo::getComponent<Enemy>(t_other)){
-            e->reciveDamage(9);
+            e->recieveDamage(9);
         }
     }
 } // namespace Eldersbane

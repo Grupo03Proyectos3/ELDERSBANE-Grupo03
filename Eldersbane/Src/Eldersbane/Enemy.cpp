@@ -135,9 +135,9 @@ namespace Eldersbane
         return m_damage;
     }
 
-    void Enemy::reciveDamage(int damage)
+    void Enemy::recieveDamage(int t_damage)
     {
-        m_lives -= damage;
+        m_lives -= t_damage;
         if (m_lives <= 0){
             m_dyingAnimation = true;
             m_reductionPercent = m_tr->getScale().getX()/m_totalDyingSteps;
