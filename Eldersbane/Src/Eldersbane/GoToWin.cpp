@@ -5,6 +5,7 @@
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
 #include "UI/UIElement.h"
+#include "PlayerHealth.h"
 
 Flamingo::BehaviourScript* Eldersbane::GoToWin::clone()
 {
@@ -13,18 +14,13 @@ Flamingo::BehaviourScript* Eldersbane::GoToWin::clone()
 
 void Eldersbane::GoToWin::start()
 {
-    m_scene = "menu"; // To Do : añadir escena de ganar
-
-    auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
-    Flamingo::Scene* m = m_sceneMngr->getSceneActive();
-
-    auto d = this->gameObject();
-    auto a = Flamingo::getComponent<Flamingo::UIElement>(d);
-
-    a->subsEvent(this);
+    m_scene = "WinGame"; // To Do : añadir escena de ganar
 }
 
-void Eldersbane::GoToWin::clickFuntion()
+void Eldersbane::GoToWin::onCollisionEnter(Flamingo::GameObject* t_other)
 {
-    Flamingo::FlamingoCore::getSceneManager()->setSceneActive(m_scene);
+    if (Flamingo::getComponent<Eldersbane::PlayerHealth>(t_other))
+    {
+        Flamingo::FlamingoCore::getSceneManager()->startScene(m_scene);
+    }
 }

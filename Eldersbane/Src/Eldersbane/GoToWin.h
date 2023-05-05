@@ -13,7 +13,7 @@ namespace Eldersbane
 
         void start() override;
 
-        void clickFuntion() override;
+        void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
       private:
         std::string m_scene;

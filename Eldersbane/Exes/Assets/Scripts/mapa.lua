@@ -162,7 +162,7 @@ Luz2={
 }
 Luz3={
     Name={
-        t_name="mylight2"
+        t_name="mylight3"
     },
     Transform = {
         positionX = "50000.0",
@@ -182,7 +182,7 @@ Luz3={
 }
 Luz4={
     Name={
-        t_name="mylight2"
+        t_name="mylight4"
     },
     Transform = {
         positionX = "-50000.0",
@@ -1237,7 +1237,7 @@ Waldo = {
     Transform = {
         positionX = "300.0",
         positionY = "330.0",
-        positionZ = "-27100.0",
+        positionZ = "-26100.0",
         scaleX = "150",
         scaleY = "150",
         scaleZ = "150",
@@ -1258,7 +1258,10 @@ Waldo = {
         t_node_y="0",
         t_node_z="0",
         t_mat_name= ""
-    }
+    },
+    Scripts={
+        "GoToWin"
+    },
 }
 SlimeKing = {
     Name={
