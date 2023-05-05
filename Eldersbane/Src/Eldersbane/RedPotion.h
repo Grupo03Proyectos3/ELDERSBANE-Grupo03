@@ -12,6 +12,7 @@ namespace Eldersbane
         void start() override;
         BehaviourScript* clone() override;
         int getExtraLives();
+        void onCollisionExit(Flamingo::GameObject* t_other) override;
 
       private:
         int m_lives;

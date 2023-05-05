@@ -77,23 +77,23 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
         takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage()); // To do : ponerle una cantidad de da�o al enemy
     }
 
-    if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other))
+    if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other!=nullptr)
     {
         auto redPotion = Flamingo::getComponent<Eldersbane::RedPotion>(t_other);
         std::cout << "Coge la pocion ROJA"
                   << "\n";
-        m_current_health += redPotion->getExtraLives();
-        if (m_current_health > m_max_health)
-            m_current_health = m_max_health;
+        healDamage(redPotion->getExtraLives());
+        //t_other->setActive(false);
+        //t_other->setAlive(false);
     }
     if (Flamingo::hasComponent<Eldersbane::PinkPotion>(t_other))
     {
         auto pinkPotion = Flamingo::getComponent<Eldersbane::PinkPotion>(t_other);
         std::cout << "Coge la pocion ROSA"
                   << "\n";
-        m_current_health += pinkPotion->getExtraLives();
-        if (m_current_health > m_max_health)
-            m_current_health = m_max_health;
+        healDamage(pinkPotion->getExtraLives());
+        //t_other->setActive(false);
+        //t_other->setAlive(false);
     }
 }
 
