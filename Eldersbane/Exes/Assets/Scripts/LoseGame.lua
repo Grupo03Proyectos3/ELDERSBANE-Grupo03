@@ -1,6 +1,6 @@
-entities = {"PlayGame", "MenuGame", "Back", "CamaraPpal", "Luz"}
+entities = {"PlayGame1", "MenuGame1", "Back1", "CamaraPpal1", "Luz1"}
 
-MenuGame = {
+MenuGame1 = {
     Name={
         t_name="menuButtonLose"
     },
@@ -26,7 +26,7 @@ MenuGame = {
         "GoToMenu"
     }
 }
-Back = {
+Back1 = {
     Name={
         t_name="end"
     },
@@ -50,7 +50,7 @@ Back = {
     }
 }
 
-PlayGame = {
+PlayGame1 = {
     Name={
         t_name="playButtonLose"
     },
@@ -76,7 +76,7 @@ PlayGame = {
        "GoToGame"
     }
 }
-CamaraPpal={
+CamaraPpal1={
     Name={
         t_name="myCameraend"
     }, --Para una vista cenital la posicion sera (0 48000 0)
@@ -100,7 +100,7 @@ CamaraPpal={
         t_color_z="0.7"
     }
 }
-Luz={
+Luz1={
     Name={
         t_name="mylightEnd"
     },

@@ -13,10 +13,13 @@ namespace Eldersbane
 
         void start() override;
 
+        void update(float t_deltaTime) override;
+
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
       private:
         std::string m_scene;
+        bool m_done = false;
     };
 } // namespace Eldersbane
 #endif

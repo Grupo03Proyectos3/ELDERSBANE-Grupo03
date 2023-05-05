@@ -1,8 +1,8 @@
-﻿#include "ECS/ManagerFunctions.h"
+﻿#include "GoToLose.h"
+#include "ECS/ManagerFunctions.h"
 #include "FlamingoBase/Scene.h"
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
-#include "GoToLose.h"
 #include "UI/UIElement.h"
 #include <FlamingoExport/FlamingoCore.h>
 
@@ -26,5 +26,7 @@ void Eldersbane::GoToLose::start()
 
 void Eldersbane::GoToLose::clickFuntion()
 {
-    Flamingo::FlamingoCore::getSceneManager()->setSceneActive(m_scene);
+    auto sM = Flamingo::FlamingoCore::getSceneManager();
+    sM->reloadScenePetition();
+    sM->startScene(m_scene);
 }

@@ -44,7 +44,7 @@ Back = {
     },
     UIElement = {
         t_type = "FlamingoDefaultUI/StaticImage",
-        t_name = "end",
+        t_name = "win",
         t_text = "",
         t_image = "EldersbaneWinGame.png"
     }

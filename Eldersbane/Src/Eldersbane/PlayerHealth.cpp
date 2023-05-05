@@ -29,7 +29,7 @@ void Eldersbane::PlayerHealth::start()
     m_max_health = 5;
     m_current_health = m_max_health;
 
-    m_die_scene = "LoseGame";
+    m_die_scene = "WinGame";
 
     m_full_name = "fullContainer";
     m_full_img = "FullHeart.png";
@@ -148,5 +148,5 @@ void Eldersbane::PlayerHealth::killPlayer()
 
     auto sM = Flamingo::FlamingoCore::getSceneManager();
     sM->reloadScenePetition();
-    sM->startScene(m_die_scene);
+    sM->startScene("LoseGame");
 }
