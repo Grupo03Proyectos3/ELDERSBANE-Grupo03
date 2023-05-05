@@ -5,6 +5,7 @@
 #include "Sword.h"
 #include "PlayerMovement.h"
 #include <Audio/AudioSource.h>
+#include <FlamingoUtils/Timer.h>
 
 namespace Eldersbane
 {
@@ -25,5 +26,8 @@ namespace Eldersbane
         PlayerMovement* playerMovement;
         int frames;
         Flamingo::AudioSource* m_audio_ataque;
+        
+        Flamingo::Timer* m_attackTimer;
+        unsigned int m_cooldownAttack;
     };
 } // namespace Eldersbane

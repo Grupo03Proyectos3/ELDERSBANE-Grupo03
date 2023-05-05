@@ -10,12 +10,12 @@ namespace Eldersbane{
 
     PlayerAttack::~PlayerAttack()
     {
+        delete m_attackTimer;
     }
 
     Flamingo::BehaviourScript* PlayerAttack::clone(){
         return new PlayerAttack();
     }
-
 
     void PlayerAttack::start()
     {
@@ -26,6 +26,8 @@ namespace Eldersbane{
 
         m_sword->gameObject()->setActive(false);
         m_audio_ataque = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
+        m_attackTimer = new Flamingo::Timer();
+        m_cooldownAttack = 1400;
     }
 
     void PlayerAttack::update(float t_deltaTime)
@@ -41,7 +43,7 @@ namespace Eldersbane{
         mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
     
 
-        if (!m_sword->gameObject()->getActive() && Flamingo::Input().mouseButtonEvent() /*Flamingo::Input().getMouseButtonState(Flamingo::LEFT)*/)
+        if (!m_sword->gameObject()->getActive() && Flamingo::Input().getMouseButtonState(Flamingo::LEFT))
         {
             m_sword->gameObject()->setActive(true);
             std::cout << "\n\n\nATAQUE ACTIVADOO\n\n\n";
@@ -54,11 +56,12 @@ namespace Eldersbane{
         else if (m_sword->gameObject()->getActive())
         {
             frames++;
-            if (frames >= 64)
+            if (m_attackTimer->getElapsedTime() >= m_cooldownAttack)
             {
                 m_sword->gameObject()->setActive(false);
                 std::cout << "ATAQUE DESACTIVADOO\n";
                 frames = 0;
+                m_attackTimer->reset();
             }
         }
     }
