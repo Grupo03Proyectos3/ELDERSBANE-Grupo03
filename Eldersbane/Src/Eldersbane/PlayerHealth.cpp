@@ -141,5 +141,6 @@ void Eldersbane::PlayerHealth::killPlayer()
 {
     m_current_health = m_max_health;
 
+    Flamingo::FlamingoCore::getSceneManager()->reloadScenePetition();
     Flamingo::FlamingoCore::getSceneManager()->startScene(m_die_scene);
 }
