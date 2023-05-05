@@ -1,10 +1,10 @@
 ﻿#include "PlayerHealth.h"
+#include "Audio/AudioSource.h"
 #include "ECS/ManagerFunctions.h"
 #include "ECS/ecs_defs.h"
 #include "Enemy.h"
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
-#include "Audio/AudioSource.h"
 #include "PinkPotion.h"
 #include "RedPotion.h"
 #include <Audio/AudioSource.h>
@@ -146,6 +146,7 @@ void Eldersbane::PlayerHealth::killPlayer()
 {
     m_current_health = m_max_health;
 
-    Flamingo::FlamingoCore::getSceneManager()->reloadScenePetition();
-    Flamingo::FlamingoCore::getSceneManager()->startScene(m_die_scene);
+    auto sM = Flamingo::FlamingoCore::getSceneManager();
+    sM->reloadScenePetition();
+    sM->startScene(m_die_scene);
 }

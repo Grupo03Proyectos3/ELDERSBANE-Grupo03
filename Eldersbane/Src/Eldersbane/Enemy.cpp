@@ -66,8 +66,6 @@ namespace Eldersbane
     {
         checkDistance(m_tr_player->getPosition());
         if (!m_attacking)
-           /* attack();
-        else*/
             enemyMovement(t_delta_time);
     }
 
@@ -78,7 +76,6 @@ namespace Eldersbane
             std::cout << "Choque: Jugador-Enemigo  " << m_lives << std::endl;
             //m_lives--;
             m_attacking = true;
-            attack();
             //getDamage();
         }
     }
@@ -120,21 +117,7 @@ namespace Eldersbane
              t_player_pos.getZ() - m_tr->getPosition().getZ()};
         m_direction.normalize();
     }
-
-    void Enemy::attack()
-    {
-        //std::cout << "DAÑO: " << m_damage << "\n";
-        if (isAlive())
-        {
-            m_lives -=1;
-        }
-        else
-        {
-            m_ent->setActive(false);
-            m_ent->setAlive(false);
-        }
-    }
-
+   
     int Enemy::getDamage()
     {
         return m_damage;

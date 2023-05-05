@@ -23,7 +23,6 @@ namespace Eldersbane
         void onCollisionExit(Flamingo::GameObject* t_other) override;
         void checkDistance(Flamingo::SVector3 t_player_pos);
         void followPlayer(Flamingo::SVector3 t_player_pos);
-        void attack();
         int getDamage();
         void reciveDamage(int damage);
         bool isAlive(); 
