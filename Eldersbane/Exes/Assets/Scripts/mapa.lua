@@ -193,9 +193,9 @@ SwordCollider={
    
 }
 Player = {
-    Name={
-        t_name="player"
-    },
+   Name={
+       t_name="player"
+   },
    Transform = {
        positionX = "450.0",
        positionY="400.0",
@@ -221,9 +221,9 @@ Player = {
        t_node_z="25.0",
        t_mat_name= ""
    },
-    Animator={
-        t_name="Player"
-    },
+   Animator={
+       t_name="Player"
+   },
    Scripts={
         "PlayerMovement",
         "PickUp",
