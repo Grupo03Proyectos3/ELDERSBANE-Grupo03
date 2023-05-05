@@ -17,6 +17,9 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         void start() override;
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
+
+      private:
+        int m_damage = 2;
     };
 } // namespace Eldersbane
 #endif
