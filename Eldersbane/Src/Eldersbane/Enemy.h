@@ -29,6 +29,8 @@ namespace Eldersbane
         void enemyMovement(float t_delta_time);
        
       protected:
+        void lookAtWhereIAmMoving();
+
         Flamingo::Transform* m_tr;
         Flamingo::Transform* m_tr_player;
         float m_max_distance;
@@ -41,6 +43,7 @@ namespace Eldersbane
         bool m_colliding;
         int m_lives;
         int m_damage;
+        float m_speed;
 
         Eldersbane::BlueEnemy* m_blue_enemy;
         Eldersbane::RedEnemy* m_red_enemy;

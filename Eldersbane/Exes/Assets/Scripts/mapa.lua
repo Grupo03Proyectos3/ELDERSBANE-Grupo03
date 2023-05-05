@@ -382,10 +382,10 @@ MakoyAzul01 = {
     Scripts={
         "Enemy",
         "BlueEnemy"
+    },
+    Animator={
+        t_name="MakoyAzul01"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyAzul02 = {
     Name={
@@ -419,10 +419,10 @@ MakoyAzul02 = {
     Scripts={
         "Enemy",
         "BlueEnemy"
+    },
+    Animator={
+        t_name="MakoyAzul02"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyAzul03 = {
     Name={
@@ -456,10 +456,10 @@ MakoyAzul03 = {
     Scripts={
         "Enemy",
         "BlueEnemy"
+    },
+    Animator={
+        t_name="MakoyAzul03"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyAzul04 = {
     Name={
@@ -493,10 +493,10 @@ MakoyAzul04 = {
     Scripts={
         "Enemy",
         "BlueEnemy"
+    },
+    Animator={
+        t_name="MakoyAzul04"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyAzul05 = {
     Name={
@@ -530,10 +530,10 @@ MakoyAzul05 = {
     Scripts={
         "Enemy",
         "BlueEnemy"
+    },
+    Animator={
+        t_name="MakoyAzul05"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyRojo01 = {
     Name={
@@ -567,10 +567,10 @@ MakoyRojo01 = {
     Scripts={
         "Enemy",
         "RedEnemy"
+    },
+    Animator={
+        t_name="MakoyRojo01"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyRojo02 = {
     Name={
@@ -604,10 +604,10 @@ MakoyRojo02 = {
     Scripts={
         "Enemy",
         "RedEnemy"
+    },
+    Animator={
+        t_name="MakoyRojo02"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyRojo03 = {
     Name={
@@ -641,10 +641,10 @@ MakoyRojo03 = {
     Scripts={
         "Enemy",
         "RedEnemy"
+    },
+    Animator={
+        t_name="MakoyRojo03"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyRojo04 = {
     Name={
@@ -678,10 +678,10 @@ MakoyRojo04 = {
     Scripts={
         "Enemy",
         "RedEnemy"
+    },
+    Animator={
+        t_name="MakoyRojo04"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyMorado01 = {
     Name={
@@ -715,10 +715,10 @@ MakoyMorado01 = {
     Scripts={
         "Enemy",
         "PurpleEnemy"
+    },
+    Animator={
+        t_name="MakoyMorado01"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyMorado02 = {
     Name={
@@ -752,10 +752,10 @@ MakoyMorado02 = {
     Scripts={
         "Enemy",
         "PurpleEnemy"
+    },
+    Animator={
+        t_name="MakoyMorado02"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyMorado03 = {
     Name={
@@ -789,10 +789,10 @@ MakoyMorado03 = {
     Scripts={
         "Enemy",
         "PurpleEnemy"
+    },
+    Animator={
+        t_name="MakoyMorado03"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyMorado04 = {
     Name={
@@ -826,10 +826,10 @@ MakoyMorado04 = {
     Scripts={
         "Enemy",
         "PurpleEnemy"
+    },
+   Animator={
+        t_name="MakoyMorado04"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyMorado05 = {
     Name={
@@ -863,10 +863,10 @@ MakoyMorado05 = {
     Scripts={
         "Enemy",
         "PurpleEnemy"
+    },
+    Animator={
+        t_name="MakoyMorado05"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 MakoyKing = {
     Name={
@@ -900,10 +900,10 @@ MakoyKing = {
     Scripts={
         "Enemy",
         "BlackEnemy"
+    },
+    Animator={
+        t_name="MakoyKing"
     }
---    Animator={
---        t_name="dragon"
---    }
 }
 EspadaMetal = {
     Name={

@@ -5,6 +5,7 @@
 #include "FlamingoBase/SceneManager.h"
 #include "FlamingoExport/FlamingoCore.h"
 #include "PlayerMovement.h"
+#include <FlamingoUtils/SVector2.h>
 
 namespace Eldersbane
 {
@@ -60,6 +61,12 @@ namespace Eldersbane
             m_damage = m_black_enemy->getDamage();
             m_lives = m_black_enemy->getLives();
         }
+
+        auto anim = Flamingo::getComponent<Flamingo::Animator>(gameObject());
+        if (anim)
+            anim->setAnimation("my_animation", true, true);
+
+        m_speed = 1.5;
     }
 
     void Enemy::update(float t_delta_time)
@@ -162,7 +169,7 @@ namespace Eldersbane
             //   Mueve el enemigo mientras no haya pasado suficiente tiempo
             if (m_time_last_dir < 2000.0f)
             {
-                m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time));
+                m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time * m_speed));
             }
             else
             {
@@ -173,8 +180,21 @@ namespace Eldersbane
         {
             // Asigna una velocidad constante a lo largo de esta direcci�n
             m_velocity = m_direction * 0.2f;
-            m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time));
+            m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time * m_speed));
         }
+
+        lookAtWhereIAmMoving();
+    }
+
+    void Enemy::lookAtWhereIAmMoving()
+    {
+        Flamingo::SVector2 vNorm = {m_velocity.getX(), m_velocity.getZ()};
+        vNorm.normalize();
+        double degrees = atan2(vNorm.getX(), vNorm.getY()) * 180 / 3.1415926535;
+        Flamingo::SQuaternion q = {degrees, Flamingo::SVector3(0, 1, 0)};
+        Flamingo::SQuaternion q1 = {-90, Flamingo::SVector3(1, 0, 0)};
+        q *= q1;
+        m_tr->setRotation(q);
     }
 
    
