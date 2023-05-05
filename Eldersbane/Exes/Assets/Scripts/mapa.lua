@@ -216,6 +216,11 @@ SwordCollider={
         rotationZ="0.0",
         rotationW="1.0"
     },
+    RigidBody = {
+      t_mass = "0.1",
+      t_trigger = "1",
+      t_static = "0"
+    },
     Scripts={
         "Sword",
     },

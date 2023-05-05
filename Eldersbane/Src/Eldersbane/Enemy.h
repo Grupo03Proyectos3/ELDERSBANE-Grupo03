@@ -25,6 +25,7 @@ namespace Eldersbane
         void followPlayer(Flamingo::SVector3 t_player_pos);
         void attack();
         int getDamage();
+        void reciveDamage(int damage);
         bool isAlive(); 
         void enemyMovement(float t_delta_time);
        

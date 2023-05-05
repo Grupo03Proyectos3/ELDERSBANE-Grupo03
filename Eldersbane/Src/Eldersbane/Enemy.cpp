@@ -41,13 +41,25 @@ namespace Eldersbane
         m_purple_enemy = Flamingo::getComponent<Eldersbane::PurpleEnemy>(this->gameObject());
         m_black_enemy = Flamingo::getComponent<Eldersbane::BlackEnemy>(this->gameObject());
         if (m_blue_enemy != nullptr)
+        {
             m_damage = m_blue_enemy->getDamage();
+            m_lives = m_blue_enemy->getLives();
+        }
         else if (m_red_enemy != nullptr)
+        {
             m_damage = m_red_enemy->getDamage();
+            m_lives = m_red_enemy->getLives();
+        }
         else if (m_purple_enemy != nullptr)
+        {
             m_damage = m_purple_enemy->getDamage();
+            m_lives = m_purple_enemy->getLives();
+        }
         else if (m_black_enemy != nullptr)
+        {
             m_damage = m_black_enemy->getDamage();
+            m_lives = m_black_enemy->getLives();
+        }
     }
 
     void Enemy::update(float t_delta_time)
@@ -126,6 +138,14 @@ namespace Eldersbane
     int Enemy::getDamage()
     {
         return m_damage;
+    }
+
+    void Enemy::reciveDamage(int damage)
+    {
+        m_lives -= damage;
+        if (m_lives <= 0){
+            gameObject()->setActive(false);
+        }
     }
 
     bool Enemy::isAlive()

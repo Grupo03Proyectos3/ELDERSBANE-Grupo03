@@ -11,7 +11,6 @@ namespace Eldersbane
         BlackEnemy();
         ~BlackEnemy();
         Flamingo::BehaviourScript* clone() override;
-        void start() override;
         int getDamage();
         int getLives();
 

@@ -56,7 +56,6 @@ namespace Eldersbane
             controlAnim = true;
             m_animator->setAnimation("Correr", false, false);
             m_animator->setAnimation("Atacar", true, true);
-            std::cout << "ATACAR\n";
         }
         else if ((m_sword != nullptr && !m_sword->gameObject()->getActive()) /*&& controlAnim*/)
         {
