@@ -36,6 +36,7 @@ void Eldersbane::PlayerHealth::start()
     m_empty_name = "emptyContainer";
     m_empty_img = "EmptyHeart.png";
 
+    m_player_get_damage = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioPlayerGetDamage"));
     for (int i = 0; i < m_max_health; ++i)
     {
         auto heart_container = Flamingo::createGameObject({Flamingo::GROUP_UI});
@@ -103,7 +104,10 @@ void Eldersbane::PlayerHealth::takeDamage(int t_amount)
     {
         m_current_health = std::max(m_current_health - t_amount, 0);
         setUIToHealth();
-
+        if (m_player_get_damage)
+        {
+            m_player_get_damage->playAudio();
+        }
         if (m_current_health <= 0)
         {
             m_current_health = 0;

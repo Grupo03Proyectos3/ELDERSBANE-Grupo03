@@ -1,4 +1,4 @@
-entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -233,6 +233,28 @@ Player = {
     AudioSource = {
         t_routeSong = "Assets/Audio/Attack.mp3",
         t_songName = "Ataque",
+        t_music = "false"
+    }
+}
+AudioPlayerGetDamage = {
+    Name={
+        t_name ="AudioPlayerGetDamage"
+    },
+    Transform = {
+        positionX = "0.0",
+        positionY = "0.0",
+        positionZ = "0.0",
+        scaleX = "0.1",
+        scaleY = "0.1",
+        scaleZ = "0.1",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    AudioSource ={
+        t_routeSong = "Assets/Audio/GetDamage.mp3",
+        t_songName = "GetDamage",
         t_music = "false"
     }
 }

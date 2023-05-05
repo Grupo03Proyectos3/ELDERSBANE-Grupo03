@@ -28,8 +28,8 @@ namespace Eldersbane
     }
 
     void Sword::onCollisionEnter(Flamingo::GameObject* t_other){
-        if (Flamingo::getComponent<Enemy>(t_other)){
-            std::cout << "QUITAR VIDA A BICHO\n";
+        if (auto e = Flamingo::getComponent<Enemy>(t_other)){
+           
         }
     }
 } // namespace Eldersbane

@@ -22,7 +22,6 @@ namespace Eldersbane
         return new Enemy();
     }
 
-
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
