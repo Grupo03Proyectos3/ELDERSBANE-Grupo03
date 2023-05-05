@@ -26,5 +26,5 @@ void Eldersbane::GoToGame::start()
 
 void Eldersbane::GoToGame::clickFuntion()
 {
-    Flamingo::FlamingoCore::getSceneManager()->setSceneActive(m_scene);
+    Flamingo::FlamingoCore::getSceneManager()->startScene(m_scene);
 }
