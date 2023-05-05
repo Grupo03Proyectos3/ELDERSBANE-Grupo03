@@ -1,4 +1,4 @@
-entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -10,7 +10,36 @@ entities = {"ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordC
 "A668","A669","A670","A671","A673", "A675","A676","A679","A681","A682","A683","A686","A687","A688","A690","A692","A693","A696","A698","A6102","A6103","A6104","A6105",
 "A6106","A6107","A6111","A6114","A6115","A6117","A6120","A6121","A6123","A6124","A6125","A51","A52","A53","A54","A55","A56","A57","A58","A59","A510","A511","A512",
 "A513","A514","A515","A516"}
-
+SueloPlano = {
+    Name={
+        t_name="SueloPlano"
+    },
+    Transform = {
+        positionX = "450.0",
+        positionY="250.0",
+        positionZ="-400.0",
+        scaleX="50000.0",
+        scaleY="20.0",
+        scaleZ="50000.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0",
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "1"
+    },
+--    MeshRenderer = {
+--        t_model_name = "Sinbad.mesh",
+--        t_entity_name= "sinbad",
+--        t_node_x="1.0",
+--        t_node_y="1.0",
+--        t_node_z="1.0",
+--        t_mat_name= ""
+--    }
+}
 ButtonGame = {
     Name={
         t_name="button"
@@ -53,11 +82,11 @@ Mapa = {
         rotationZ = "0.0",
         rotationW = "1.0"
     },
-    RigidBody = {
-        t_mass = "20.0",
-        t_trigger = "0",
-        t_static = "1"
-    },
+    -- RigidBody = {
+    --     t_mass = "20.0",
+    --     t_trigger = "0",
+    --     t_static = "1"
+    -- },
     MeshRenderer = {
         t_model_name = "Escenario.mesh",
         t_entity_name= "mapa",
