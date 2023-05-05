@@ -1,5 +1,15 @@
 entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","TargetCamera","GranArbol","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
-"MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera"}
+"MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
+"EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
+"Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
+"A816","A817","A818","A819","Slime04","Slime05","Slime06","Slime07","Slime08","A823","A824","A825","A21","A22", "A23", "A28", "A29","A212","A214","A215","A216","A218",
+"A219","SlimeKing","Waldo","A220","A221","A223","A224","A225","A229","A230","A232","A233","A235","A236","A238","A239","A240","A242","A243","A244","A245","A246","A248",
+"A249","A250","A251","A253", "A255","A256","A258","A264","A266","A267","A268","A273","A275","A280","A281","A283","A284","A287","A288","A290","A291","A292","A293","A294",
+"A297","A298","A2100","A2102","A2105","A2107","A2108","A2109","A62","A63","A64","A66","A67","A69","A610","A611","A613","A615","A616","A617","A619","A620","A622","A623",
+"A624","A625","A626","A629","A631","A632","A634","A637","A640","A642","A643","A646","A648","A650","A653","A655","A657","A658","A661","A662","A663","A664","A666","A667",
+"A668","A669","A670","A671","A673", "A675","A676","A679","A681","A682","A683","A686","A687","A688","A690","A692","A693","A696","A698","A6102","A6103","A6104","A6105",
+"A6106","A6107","A6111","A6114","A6115","A6117","A6120","A6121","A6123","A6124","A6125","A51","A52","A53","A54","A55","A56","A57","A58","A59","A510","A511","A512",
+"A513","A514","A515","A516"}
 SueloPlano = {
     Name={
         t_name="SueloPlano"
