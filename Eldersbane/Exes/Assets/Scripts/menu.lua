@@ -23,7 +23,7 @@ ButtonGame = {
         t_image = "Play.png"
     },
     Scripts = {
-        "GoToGame",
+        "ChangeScene":[t_scene_change = "mapa"],
         "MenuMusic"
     },
     AudioSource = {
