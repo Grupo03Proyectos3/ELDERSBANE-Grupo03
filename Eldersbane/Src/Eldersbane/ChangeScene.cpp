@@ -25,7 +25,7 @@ namespace Eldersbane
 
     bool ChangeScene::initValues(std::unordered_map<std::string, std::string> t_args)
     {
-        auto k = t_args.find("t_model_name");
+        auto k = t_args.find("t_scene_change");
 
         if (k != t_args.end())
         {
