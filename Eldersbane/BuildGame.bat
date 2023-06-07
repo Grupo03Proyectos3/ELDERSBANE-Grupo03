@@ -19,4 +19,4 @@ msbuild "MiMotor.sln" /p:configuration=Release
 cd ..
 
 :: Mover assets del motor y .exe del motor a Eldersbane
-XCOPY /y /s /i .\Motor-Grupo3\Exes .\Exes\
+XCOPY /y /s .\Motor-Grupo3\Exes .\Exes
