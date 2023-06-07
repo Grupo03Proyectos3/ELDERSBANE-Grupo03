@@ -16,11 +16,12 @@ namespace Eldersbane
         PurpleEnemy();
         ~PurpleEnemy();
         Flamingo::BehaviourScript* clone() override;
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         int getDamage();
         int getLives();
 
       private:
-        int m_damage = 3;
+        int m_damage;
         int m_lives;
     };
 } // namespace Eldersbane

@@ -15,7 +15,7 @@ namespace Eldersbane
         RedEnemy();
         ~RedEnemy();
         Flamingo::BehaviourScript* clone() override;
-
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         int getDamage();
         int getLives();
 

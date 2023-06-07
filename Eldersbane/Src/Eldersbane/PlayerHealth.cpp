@@ -24,6 +24,53 @@ Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
     return new PlayerHealth();
 }
 
+//bool Eldersbane::PlayerHealth::initValues(std::unordered_map<std::string, std::string> t_args) {
+//    auto k = t_args.find("t_max_health");
+//
+//    if (k != t_args.end())
+//    {
+//        int s = std::stoi(k->second);
+//        m_max_health = s;
+//        return true;
+//    }
+//    k = t_args.find("t_full_name");
+//
+//    if (k != t_args.end())
+//    {
+//        m_full_name = k->second;
+//        return true;
+//    }
+//    k = t_args.find("t_full_img");
+//
+//    if (k != t_args.end())
+//    {
+//        m_full_img = k->second;
+//        return true;
+//    }
+//    k = t_args.find("t_empty_name");
+//
+//    if (k != t_args.end())
+//    {
+//        m_empty_name = k->second;
+//        return true;
+//    }
+//    k = t_args.find("t_empty_img");
+//
+//    if (k != t_args.end())
+//    {
+//        m_empty_img = k->second;
+//        return true;
+//    }
+//    k = t_args.find("t_die_scene");
+//
+//    if (k != t_args.end())
+//    {
+//        m_die_scene = k->second;
+//        return true;
+//    }
+//    return false;
+//}
+
 void Eldersbane::PlayerHealth::start()
 {
     m_max_health = 5;

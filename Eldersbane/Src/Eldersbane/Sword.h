@@ -15,11 +15,12 @@ namespace Eldersbane
         Sword();
         virtual ~Sword();
         Flamingo::BehaviourScript* clone() override;
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         void start() override;
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
       private:
-        int m_damage = 2;
+        int m_damage;
     };
 } // namespace Eldersbane
 #endif

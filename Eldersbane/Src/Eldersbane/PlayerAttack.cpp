@@ -17,6 +17,19 @@ namespace Eldersbane{
         return new PlayerAttack();
     }
 
+    bool Eldersbane::PlayerAttack::initValues(std::unordered_map<std::string, std::string> t_args) 
+    {
+        auto k = t_args.find("t_cooldownAttack");
+
+        if (k != t_args.end())
+        {
+            unsigned int s = std::stoi(k->second);
+            m_cooldownAttack = s;
+            return true;
+        }
+        return false;
+    }
+
     void PlayerAttack::start()
     {
         m_sword = Flamingo::getComponent<Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
@@ -27,7 +40,6 @@ namespace Eldersbane{
         m_sword->gameObject()->setActive(false);
         m_audio_ataque = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
         m_attackTimer = new Flamingo::Timer();
-        m_cooldownAttack = 2000;
     }
 
     void PlayerAttack::update(float t_deltaTime)

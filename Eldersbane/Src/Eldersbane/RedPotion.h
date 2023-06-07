@@ -15,6 +15,7 @@ namespace Eldersbane
 
         void start() override;
         BehaviourScript* clone() override;
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         int getExtraLives();
 
       private:

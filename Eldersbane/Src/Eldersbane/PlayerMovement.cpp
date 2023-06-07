@@ -26,6 +26,26 @@ namespace Eldersbane
         return new PlayerMovement();
     }
 
+    bool PlayerMovement::initValues(std::unordered_map<std::string, std::string> t_args)
+    {
+        auto k = t_args.find("t_speed");
+
+        if (k != t_args.end())
+        {
+            float s = std::stof(k->second);
+            speed = s;
+            return true;
+        }
+        k = t_args.find("t_sensitivity");
+        if (k != t_args.end())
+        {
+            float s = std::stof(k->second);
+            sensitivity = s;
+            return true;
+        }
+        return false;
+    }
+
     void PlayerMovement::start()
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());

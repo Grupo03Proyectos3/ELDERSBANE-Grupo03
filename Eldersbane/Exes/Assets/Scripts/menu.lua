@@ -23,8 +23,12 @@ ButtonGame = {
         t_image = "Play.png"
     },
     Scripts = {
-        "ChangeScene":[t_scene_change = "mapa"],
-        "MenuMusic"
+        ChangeScene={
+            t_scene_change = "mapa",
+        },
+        MenuMusic={
+
+        },
     },
     AudioSource = {
         t_routeSong = "Assets/Audio/EldersbaneMenuTheme.mp3",
@@ -55,7 +59,9 @@ ExitGame = {
         t_image = "Exit.png"
     },
     Scripts = {
-        t_scriptName = "ExitGame"
+        ExitGame={
+            
+        }
     }
 }
 Title = {

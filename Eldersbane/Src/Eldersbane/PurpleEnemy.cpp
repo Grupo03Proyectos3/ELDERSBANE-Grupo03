@@ -2,8 +2,6 @@
 
 Eldersbane::PurpleEnemy::PurpleEnemy()
 {
-    m_damage = 3;
-    m_lives = 5;
 }
 
 Eldersbane::PurpleEnemy::~PurpleEnemy()
@@ -13,6 +11,27 @@ Eldersbane::PurpleEnemy::~PurpleEnemy()
 Flamingo::BehaviourScript* Eldersbane::PurpleEnemy::clone()
 {
     return new PurpleEnemy();
+}
+
+bool Eldersbane::PurpleEnemy::initValues(std::unordered_map<std::string, std::string> t_args)
+{
+    auto k = t_args.find("t_lives");
+
+    if (k != t_args.end())
+    {
+        int s = std::stof(k->second);
+        m_lives = s;
+        return true;
+    }
+    k = t_args.find("t_damage");
+
+    if (k != t_args.end())
+    {
+        int s = std::stof(k->second);
+        m_damage = s;
+        return true;
+    }
+    return false;
 }
 
 int Eldersbane::PurpleEnemy::getDamage()

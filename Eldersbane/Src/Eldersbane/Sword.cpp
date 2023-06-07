@@ -23,6 +23,20 @@ namespace Eldersbane
         return new Sword();
     }
 
+    bool Sword::initValues(std::unordered_map<std::string, std::string> t_args)
+    {
+        auto k = t_args.find("t_damage");
+
+        if (k != t_args.end())
+        {
+            float s = std::stof(k->second);
+            m_damage = s;
+            return true;
+        }
+        else
+            return false;
+    }
+
     void Sword::start(){
         
     }
