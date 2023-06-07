@@ -8,6 +8,8 @@ Eldersbane/Eldersbane/x64/
 
 Eldersbane/Exes/*
 !Eldersbane/Exes/Assets/
+Eldersbane/Exes/Assets/UI/
+Eldersbane/Exes/Assets/Essencial/
 
 # TIPOS DE ARCHIVOS
 *.vcxproj.user
