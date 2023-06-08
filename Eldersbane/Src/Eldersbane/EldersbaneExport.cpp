@@ -36,6 +36,8 @@
 
 bool InitJuego(void)
 {
+    bool init = true;
+
     auto f_core = Flamingo::FlamingoCore::instance();
     // Inicializar primera escena
     std::string first_scene = "menu";
@@ -46,31 +48,31 @@ bool InitJuego(void)
     f_core->setFirstScene("menu");
 
     // pasarle la lista de componentes del juego
-    f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
-    f_core->addGameScript("ExitGame", new Eldersbane::ExitGame());
-    f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
-    f_core->addGameScript("PlayerHealth", new Eldersbane::PlayerHealth());
-    f_core->addGameScript("Enemy", new Eldersbane::Enemy());
-    f_core->addGameScript("PickUp", new Eldersbane::PickUp());
-    f_core->addGameScript("RedPotion", new Eldersbane::RedPotion());
-    f_core->addGameScript("PinkPotion", new Eldersbane::PinkPotion());
-    f_core->addGameScript("BluePotion", new Eldersbane::BluePotion());
-    f_core->addGameScript("GreenPotion", new Eldersbane::GreenPotion());
-    f_core->addGameScript("TargetCamera", new Eldersbane::TargetCamera());
-    f_core->addGameScript("Sword", new Eldersbane::Sword());
-    f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
-    f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
-    f_core->addGameScript("BlueEnemy", new Eldersbane::BlueEnemy());
-    f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
-    f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
-    f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
-    f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
-    f_core->addGameScript("GoToLose", new Eldersbane::GoToLose());
-    f_core->addGameScript("GoToGame", new Eldersbane::GoToGame());
-    f_core->addGameScript("GoToMenu", new Eldersbane::GoToMenu());
+    init = f_core->addGameScript("ChangeScene", new Eldersbane::ChangeScene());
+    init = f_core->addGameScript("ExitGame", new Eldersbane::ExitGame());
+    init = f_core->addGameScript("PlayerMovement", new Eldersbane::PlayerMovement());
+    init = f_core->addGameScript("PlayerHealth", new Eldersbane::PlayerHealth());
+    init = f_core->addGameScript("Enemy", new Eldersbane::Enemy());
+    init = f_core->addGameScript("PickUp", new Eldersbane::PickUp());
+    init = f_core->addGameScript("RedPotion", new Eldersbane::RedPotion());
+    init = f_core->addGameScript("PinkPotion", new Eldersbane::PinkPotion());
+    init = f_core->addGameScript("BluePotion", new Eldersbane::BluePotion());
+    init = f_core->addGameScript("GreenPotion", new Eldersbane::GreenPotion());
+    init = f_core->addGameScript("TargetCamera", new Eldersbane::TargetCamera());
+    init = f_core->addGameScript("Sword", new Eldersbane::Sword());
+    init = f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
+    init = f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
+    init = f_core->addGameScript("BlueEnemy", new Eldersbane::BlueEnemy());
+    init = f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
+    init = f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
+    init = f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
+    init = f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
+    init = f_core->addGameScript("GoToLose", new Eldersbane::GoToLose());
+    init = f_core->addGameScript("GoToGame", new Eldersbane::GoToGame());
+    init = f_core->addGameScript("GoToMenu", new Eldersbane::GoToMenu());
     // t_core->addGameScript("ChangeScene", new ChangeScene());
    
-    return true;
+    return init;
 }
 
 void setGameComponents()
