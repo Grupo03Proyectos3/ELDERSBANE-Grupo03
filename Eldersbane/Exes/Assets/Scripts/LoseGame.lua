@@ -23,9 +23,9 @@ MenuGame1 = {
         t_image = "Menu.png"
     },
     Scripts = {
-        GoToMenu={
-
-        },
+        ChangeScene={
+            t_scene_change = "menu",
+        }
     }
 }
 Back1 = {
@@ -75,9 +75,9 @@ PlayGame1 = {
         t_image = "Play.png"
     },
     Scripts = {
-       GoToGame={
-
-       },
+        ChangeScene={
+            t_scene_change = "mapa",
+        }
     }
 }
 CamaraPpal1={
