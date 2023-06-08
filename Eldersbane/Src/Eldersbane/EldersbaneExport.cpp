@@ -29,6 +29,7 @@
 #include "RedEnemy.h"
 #include "PurpleEnemy.h"
 #include "BlackEnemy.h"
+#include "GoToWin.h"
 
 bool InitJuego(void)
 {
@@ -62,6 +63,8 @@ bool InitJuego(void)
     init = f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
     init = f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
     init = f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
+    init = f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
+    // t_core->addGameScript("ChangeScene", new ChangeScene());
    
     return init;
 }

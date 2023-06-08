@@ -181,6 +181,7 @@
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h" />
     <ClInclude Include="..\..\Src\Eldersbane\Enemy.h" />
     <ClInclude Include="..\..\Src\Eldersbane\ExitGame.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\GoToWin.h" />
     <ClInclude Include="..\..\Src\Eldersbane\GreenPotion.h" />
     <ClInclude Include="..\..\Src\Eldersbane\MenuMusic.h" />
     <ClInclude Include="..\..\Src\Eldersbane\PickUp.h" />
@@ -204,6 +205,7 @@
     <ClCompile Include="..\..\Src\Eldersbane\EldersbaneExport.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Enemy.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\ExitGame.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\GoToWin.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\GreenPotion.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Main.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\MenuMusic.cpp" />
