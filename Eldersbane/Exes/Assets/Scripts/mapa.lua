@@ -42,10 +42,8 @@ ButtonGame = {
         t_text = "MENU",
         t_image = ""
     },
-    Scripts = {
-        ChangeScene={
-            t_scene_change = "menu",
-        }
+    ChangeScene={
+        t_scene_change = "menu",
     }
 }
 Mapa = {
@@ -203,12 +201,9 @@ SwordCollider={
       t_trigger = "1",
       t_static = "0"
     },
-    Scripts={
-        Sword={
-            t_damage = "2"
-        },
+    Sword={
+        t_damage = "2"
     },
-   
 }
 Player = {
    Name={
@@ -242,24 +237,24 @@ Player = {
    Animator={
        t_name="Player"
    },
-   Scripts={
-        PlayerMovement = {
-            t_speed="1.3",
-            t_sensitivity="0.04",
-        },
-        PickUp,
-        PlayerHealth={
-            --t_max_health="5",
-            --t_full_name="fullContainer",
-            --t_full_img="FullHeart.png",
-            --t_empty_name="emptyContainer",
-            --t_empty_img="EmptyHeart.png",
-            --t_die_scene="WinGame",
-        },
-        PlayerAttack={
-            t_cooldownAttack="2000",
-        },
-    },    
+    PlayerMovement = {
+        t_speed="1.3",
+        t_sensitivity="0.04",
+    },
+    PickUp={
+
+    },
+    PlayerHealth={
+        --t_max_health="5",
+        --t_full_name="fullContainer",
+        --t_full_img="FullHeart.png",
+        --t_empty_name="emptyContainer",
+        --t_empty_img="EmptyHeart.png",
+        --t_die_scene="WinGame",
+    },
+    PlayerAttack={
+        t_cooldownAttack="2000",
+    },
     AudioSource = {
         t_routeSong = "Assets/Audio/Attack.mp3",
         t_songName = "Ataque",
@@ -304,8 +299,8 @@ TargetCamera = {
         rotationZ = "0.0",
         rotationW = "1.0"
     },
-    Scripts={
-        TargetCamera,
+    TargetCamera={
+
     },
     MeshRenderer = {
        t_model_name = "cube.mesh",
@@ -375,15 +370,13 @@ MakoyAzul01 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        BlueEnemy={
-            t_lives="2",
-            t_damage="1",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    BlueEnemy={
+        t_lives="2",
+        t_damage="1",
     },
     Animator={
         t_name="MakoyAzul01"
@@ -418,15 +411,13 @@ MakoyAzul02 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        BlueEnemy={
-            t_lives="2",
-            t_damage="1",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    BlueEnemy={
+        t_lives="2",
+        t_damage="1",
     },
     Animator={
         t_name="MakoyAzul02"
@@ -461,19 +452,17 @@ MakoyAzul03 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-            
-        },
-        BlueEnemy={
-            t_lives="2",
-            t_damage="1",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+        
+    },
+    BlueEnemy={
+        t_lives="2",
+        t_damage="1",
     },
     Animator={
-        t_name="MakoyAzul03"
+        t_name="MakoyAzul03",
     }
 }
 MakoyAzul04 = {
@@ -505,15 +494,13 @@ MakoyAzul04 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        BlueEnemy={
-            t_lives="2",
-            t_damage="1",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    BlueEnemy={
+        t_lives="2",
+        t_damage="1",
     },
     Animator={
         t_name="MakoyAzul04"
@@ -548,15 +535,13 @@ MakoyAzul05 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        BlueEnemy={
-            t_lives="2",
-            t_damage="1",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    BlueEnemy={
+        t_lives="2",
+        t_damage="1",
     },
     Animator={
         t_name="MakoyAzul05"
@@ -591,15 +576,13 @@ MakoyRojo01 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        RedEnemy={
-            t_lives="3",
-            t_damage="2",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    RedEnemy={
+        t_lives="3",
+        t_damage="2",
     },
     Animator={
         t_name="MakoyRojo01"
@@ -634,15 +617,13 @@ MakoyRojo02 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        RedEnemy={
-            t_lives="3",
-            t_damage="2",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    RedEnemy={
+        t_lives="3",
+        t_damage="2",
     },
     Animator={
         t_name="MakoyRojo02"
@@ -677,15 +658,13 @@ MakoyRojo03 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        RedEnemy={
-            t_lives="3",
-            t_damage="2",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    RedEnemy={
+        t_lives="3",
+        t_damage="2",
     },
     Animator={
         t_name="MakoyRojo03"
@@ -720,15 +699,13 @@ MakoyRojo04 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        RedEnemy={
-            t_lives="3",
-            t_damage="2",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    RedEnemy={
+        t_lives="3",
+        t_damage="2",
     },
     Animator={
         t_name="MakoyRojo04"
@@ -763,15 +740,13 @@ MakoyMorado01 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        PurpleEnemy={
-            t_lives="5",
-            t_damage="3",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    PurpleEnemy={
+        t_lives="5",
+        t_damage="3",
     },
     Animator={
         t_name="MakoyMorado01"
@@ -806,15 +781,13 @@ MakoyMorado02 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        PurpleEnemy={
-            t_lives="5",
-            t_damage="3",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    PurpleEnemy={
+        t_lives="5",
+        t_damage="3",
     },
     Animator={
         t_name="MakoyMorado02"
@@ -849,15 +822,13 @@ MakoyMorado03 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        PurpleEnemy={
-            t_lives="5",
-            t_damage="3",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    PurpleEnemy={
+        t_lives="5",
+        t_damage="3",
     },
     Animator={
         t_name="MakoyMorado03"
@@ -892,15 +863,13 @@ MakoyMorado04 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        PurpleEnemy={
-            t_lives="5",
-            t_damage="3",
-        }
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    PurpleEnemy={
+        t_lives="5",
+        t_damage="3",
     },
    Animator={
         t_name="MakoyMorado04"
@@ -935,15 +904,13 @@ MakoyMorado05 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.5",
-            t_max_distance ="1500.0",
-        },
-        PurpleEnemy={
-            t_lives="5",
-            t_damage="3",
-        },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    PurpleEnemy={
+        t_lives="5",
+        t_damage="3",
     },
     Animator={
         t_name="MakoyMorado05"
@@ -978,15 +945,13 @@ MakoyKing = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        Enemy={
-            t_speed = "1.1",
-            t_max_distance ="1500.0",
-        },
-        BlackEnemy={
-            t_lives="7",
-            t_damage="4",
-        }
+    Enemy={
+        t_speed = "1.1",
+        t_max_distance ="1500.0",
+    },
+    BlackEnemy={
+        t_lives="7",
+        t_damage="4",
     },
     Animator={
         t_name="MakoyKing"
@@ -1351,10 +1316,8 @@ Waldo = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        GoToWin={
+    GoToWin={
 
-        }
     },
 }
 SlimeKing = {
@@ -1446,11 +1409,9 @@ PocionRoja = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        RedPotion={
-            t_lives="3",
-        }
-    }
+    RedPotion={
+        t_lives="3",
+    },
 }
 
 PocionRosa = {
@@ -1482,11 +1443,10 @@ PocionRosa = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        PinkPotion={
-            t_lives="1",
-        }
+    PinkPotion={
+        t_lives="1",
     }
+    
 }
 PocionAzul = {
     Name={
@@ -1517,10 +1477,8 @@ PocionAzul = {
         t_node_z="0",
         t_mat_name= ""
     },
-    Scripts={
-        BluePotion={
-            t_speed_multiplier="2",
-        }
+    BluePotion={
+        t_speed_multiplier="2",
     }
 }
 Tronco01 = {
