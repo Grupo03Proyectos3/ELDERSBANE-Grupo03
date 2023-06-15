@@ -1,5 +1,5 @@
 #include "BlackEnemy.h"
-
+#include <iostream>
 Eldersbane::BlackEnemy::BlackEnemy()
 {
 }
@@ -21,17 +21,20 @@ bool Eldersbane::BlackEnemy::initValues(std::unordered_map<std::string, std::str
     {
         int s = std::stof(k->second);
         m_lives = s;
-        return true;
     }
+    else
+        return false;
     k = t_args.find("t_damage");
 
     if (k != t_args.end())
     {
         int s = std::stof(k->second);
         m_damage = s;
-        return true;
     }
-    return false;
+    else
+        return false;
+
+    return true;
 }
 
 int Eldersbane::BlackEnemy::getDamage()

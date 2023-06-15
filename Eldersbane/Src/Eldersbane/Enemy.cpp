@@ -23,7 +23,7 @@ namespace Eldersbane
         return new Enemy();
     }
 
-    bool Enemy::initValues(std::unordered_map<std::string, std::string>t_args)
+    bool Enemy::initValues(std::unordered_map<std::string, std::string> t_args)
     {
         auto k = t_args.find("t_speed");
 
@@ -31,23 +31,25 @@ namespace Eldersbane
         {
             float s = std::stof(k->second);
             m_speed = s;
-            return true;
         }
+        else
+            return false;
         k = t_args.find("t_max_distance");
-
         if (k != t_args.end())
         {
             float d = std::stof(k->second);
             m_max_distance = d;
-            return true;
         }
-        return false;
+        else
+            return false;
+
+        return true;
     }
 
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-        
+
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
         m_time_last_dir = 0;
@@ -94,7 +96,7 @@ namespace Eldersbane
     void Enemy::update(float t_delta_time)
     {
         checkDistance(m_tr_player->getPosition());
-        if (!m_attacking && ! m_dyingAnimation)
+        if (!m_attacking && !m_dyingAnimation)
             enemyMovement(t_delta_time);
         if (m_dyingAnimation)
             dyingAnimation();
@@ -119,6 +121,7 @@ namespace Eldersbane
     void Enemy::checkDistance(Flamingo::SVector3 t_player_pos)
     {
         double distancia = Flamingo::SVector3::distance(m_tr->getPosition(), t_player_pos);
+        // std::cout << m_max_distance << std::endl;
         if (distancia >= m_max_distance)
         {
             m_attacking = false;
@@ -143,7 +146,7 @@ namespace Eldersbane
              t_player_pos.getZ() - m_tr->getPosition().getZ()};
         m_direction.normalize();
     }
-   
+
     int Enemy::getDamage()
     {
         return m_damage;
@@ -152,9 +155,10 @@ namespace Eldersbane
     void Enemy::recieveDamage(int t_damage)
     {
         m_lives -= t_damage;
-        if (m_lives <= 0){
+        if (m_lives <= 0)
+        {
             m_dyingAnimation = true;
-            m_reductionPercent = m_tr->getScale().getX()/m_totalDyingSteps;
+            m_reductionPercent = m_tr->getScale().getX() / m_totalDyingSteps;
         }
     }
 
@@ -214,9 +218,9 @@ namespace Eldersbane
         else
         {
             m_currentDyingSteps++;
-           
-            m_tr->setScale(m_tr->getScale() - 
-                Flamingo::SVector3(m_reductionPercent, m_reductionPercent, m_reductionPercent));
+
+            m_tr->setScale(m_tr->getScale() -
+                           Flamingo::SVector3(m_reductionPercent, m_reductionPercent, m_reductionPercent));
         }
     }
 
@@ -231,5 +235,4 @@ namespace Eldersbane
         m_tr->setRotation(q);
     }
 
-   
 } // namespace Eldersbane

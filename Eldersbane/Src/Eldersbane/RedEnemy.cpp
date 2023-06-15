@@ -23,6 +23,8 @@ bool Eldersbane::RedEnemy::initValues(std::unordered_map<std::string, std::strin
         m_lives = s;
         return true;
     }
+    else
+        return false;
     k = t_args.find("t_damage");
 
     if (k != t_args.end())
@@ -31,7 +33,10 @@ bool Eldersbane::RedEnemy::initValues(std::unordered_map<std::string, std::strin
         m_damage = s;
         return true;
     }
-    return false;
+    else
+        return false;
+
+    return true;
 }
 
 int Eldersbane::RedEnemy::getDamage()
