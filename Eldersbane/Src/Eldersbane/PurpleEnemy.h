@@ -6,7 +6,7 @@
 namespace Eldersbane
 {
 
-     /// <summary>
+    /// <summary>
     /// Clase de enemigo fuerte y con bastante vida.
     /// Posee variables para obtener sus atributos
     /// </summary>
@@ -19,8 +19,10 @@ namespace Eldersbane
         int getDamage();
         int getLives();
 
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
+
       private:
-        int m_damage = 3;
+        int m_damage;
         int m_lives;
     };
 } // namespace Eldersbane

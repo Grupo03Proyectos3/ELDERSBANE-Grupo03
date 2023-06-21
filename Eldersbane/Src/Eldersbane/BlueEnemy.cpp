@@ -2,8 +2,6 @@
 
 Eldersbane::BlueEnemy::BlueEnemy()
 {
-    m_damage = 1;
-    m_lives = 2;
 }
 
 Eldersbane::BlueEnemy::~BlueEnemy()
@@ -23,4 +21,19 @@ int Eldersbane::BlueEnemy::getDamage()
 int Eldersbane::BlueEnemy::getLives()
 {
     return m_lives;
+}
+
+bool Eldersbane::BlueEnemy::initValues(std::unordered_map<std::string, std::string> t_args)
+{
+    auto it_lives = t_args.find("t_lives");
+    auto it_damage = t_args.find("t_damage");
+
+    if (it_lives != t_args.end() && it_damage != t_args.end())
+    {
+        m_lives = std::stof(it_lives->second);
+        m_damage = std::stof(it_damage->second);
+        return true;
+    }
+
+    return false;
 }

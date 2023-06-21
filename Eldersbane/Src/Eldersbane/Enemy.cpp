@@ -22,20 +22,32 @@ namespace Eldersbane
     {
         return new Enemy();
     }
+    bool Eldersbane::Enemy::initValues(std::unordered_map<std::string, std::string> t_args) {
+        auto it_speed = t_args.find("t_speed");
+        auto it_dist = t_args.find("t_max_distance");
 
+        if (it_speed != t_args.end() && it_dist != t_args.end())
+        {
+            m_speed = std::stof(it_speed->second);
+            m_max_distance = std::stof(it_dist->second);
+            return true;
+        }
+
+        return false;
+    }
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
         
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
-        m_max_distance = 1500.0f;
+     
         m_time_last_dir = 0;
         m_time_last_move = 0;
         m_velocity = Flamingo::SVector3(0, 0, 0);
         m_wandering = true;
         m_attacking = false;
-        m_lives = 2;
+     
 
         m_blue_enemy = Flamingo::getComponent<Eldersbane::BlueEnemy>(this->gameObject());
         m_red_enemy = Flamingo::getComponent<Eldersbane::RedEnemy>(this->gameObject());
@@ -66,7 +78,6 @@ namespace Eldersbane
         if (anim)
             anim->setAnimation("my_animation", true, true);
 
-        m_speed = 1.5;
         m_dyingAnimation = false;
         m_currentDyingSteps = 0;
         m_totalDyingSteps = 30;

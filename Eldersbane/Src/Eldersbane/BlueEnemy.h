@@ -17,9 +17,9 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         int getDamage();
         int getLives();
-
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
       private:
-        int m_damage = 1;
+        int m_damage;
         int m_lives;
     };
 }

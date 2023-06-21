@@ -23,19 +23,33 @@ Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
 {
     return new PlayerHealth();
 }
+bool Eldersbane::PlayerHealth::initValues(std::unordered_map<std::string, std::string> t_args)
+{
+    auto it_max_health = t_args.find("t_max_health");
+    auto it_full_name = t_args.find("t_full_name");
+    auto it_full_img = t_args.find("t_full_img");
+    auto it_empty_name = t_args.find("t_empty_name");
+    auto it_empty_img = t_args.find("t_empty_img");
+    auto it_die_scene = t_args.find("t_die_scene");
 
+    if (it_max_health != t_args.end() && it_full_name != t_args.end() && it_full_img != t_args.end() &&
+        it_empty_name != t_args.end() && it_empty_img != t_args.end() && it_die_scene != t_args.end())
+    {
+        m_max_health = std::stof(it_max_health->second);
+        m_full_name = it_full_name->second;
+        m_full_img = it_full_img->second;
+        m_empty_name = it_empty_name->second;
+        m_empty_img = it_empty_img->second;
+        m_die_scene = it_die_scene->second;
+
+        return true;
+    }
+
+    return false;
+}
 void Eldersbane::PlayerHealth::start()
 {
-    m_max_health = 5;
     m_current_health = m_max_health;
-
-    m_die_scene = "WinGame";
-
-    m_full_name = "fullContainer";
-    m_full_img = "FullHeart.png";
-    m_empty_name = "emptyContainer";
-    m_empty_img = "EmptyHeart.png";
-
     m_player_get_damage = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioPlayerGetDamage"));
     for (int i = 0; i < m_max_health; ++i)
     {
@@ -74,10 +88,10 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
-        takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage()); 
+        takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage());
     }
 
-    if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other!=nullptr)
+    if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other != nullptr)
     {
         auto redPotion = Flamingo::getComponent<Eldersbane::RedPotion>(t_other);
         healDamage(redPotion->getExtraLives());

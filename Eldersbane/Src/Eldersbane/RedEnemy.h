@@ -19,8 +19,11 @@ namespace Eldersbane
         int getDamage();
         int getLives();
 
-        int m_damage=2;
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
+
+      private:
+        int m_damage = 2;
         int m_lives;
     };
-}
+} // namespace Eldersbane
 #endif
