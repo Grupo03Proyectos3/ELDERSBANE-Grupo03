@@ -33,6 +33,7 @@
 #include "GoToWin.h"
 #include "GoToMenu.h"
 #include "GoToGame.h"
+#include "FlowersEnemy.h"
 
 bool InitJuego(void)
 {
@@ -61,6 +62,7 @@ bool InitJuego(void)
     f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
     f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
     f_core->addGameScript("BlueEnemy", new Eldersbane::BlueEnemy());
+    f_core->addGameScript("FlowersEnemy", new Eldersbane::FlowersEnemy());
     f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
     f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
     f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
