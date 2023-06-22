@@ -55,7 +55,7 @@ ButtonGame = {
         t_image = ""
     },
     ChangeScene={
-        t_scene_change = "menu",
+        t_scene = "menu",
     }
 }
 Mapa = {
@@ -87,6 +87,7 @@ Mapa = {
         t_node_z="1.0",
         t_mat_name= ""
     }
+   
 }
 CamaraPpal={
     Name={
@@ -1396,9 +1397,9 @@ Waldo = {
         t_node_z="0",
         t_mat_name= ""
     },
-    -- GoToWin={
+    GoToWin={
 
-    -- },
+    },
 }
 SlimeKing = {
     Name={

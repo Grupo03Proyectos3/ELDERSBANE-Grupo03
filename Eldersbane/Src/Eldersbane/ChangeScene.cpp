@@ -26,13 +26,28 @@ namespace Eldersbane
     void ChangeScene::setFirstScene()
     {
 
-        if (Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getName() == "mapa")
+       /* if (Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getName() == "mapa")
             Flamingo::FlamingoCore::getSceneManager()->startScene("menu");
         else
-            Flamingo::FlamingoCore::getSceneManager()->startScene("mapa");
+            Flamingo::FlamingoCore::getSceneManager()->startScene("mapa");*/
+
+         Flamingo::FlamingoCore::getSceneManager()->startScene(m_scene);
 
     }
+    bool Eldersbane::ChangeScene::initValues(std::unordered_map<std::string, std::string> t_args)
+    {
+        auto it_scene = t_args.find("t_scene");
+       
 
+        if (it_scene != t_args.end())
+        {
+            m_scene = it_scene->second;
+            
+            return true;
+        }
+
+        return false;
+    }
     void ChangeScene::start()
     {
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();

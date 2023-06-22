@@ -11,12 +11,15 @@ namespace Eldersbane
         ~ChangeScene();
 
         BehaviourScript* clone() override;
-
+        bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         void start() override;
 
         void clickFuntion() override;
 
         void setFirstScene();
+
+      private:
+        std::string m_scene;
     };
 } // namespace Eldersbane
 #endif

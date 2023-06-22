@@ -23,7 +23,7 @@ MenuGame = {
         t_image = "Menu.png"
     },
     ChangeScene={
-        t_scene_change = "menu",
+        t_scene = "menu",
     }
 }
 Back = {
@@ -73,7 +73,7 @@ PlayGame = {
         t_image = "Play.png"
     },
     ChangeScene={
-        t_scene_change = "mapa",
+        t_scene = "mapa",
     }   
 }
 CamaraPpal={
