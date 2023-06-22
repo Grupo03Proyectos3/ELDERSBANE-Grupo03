@@ -381,7 +381,7 @@ Flores01 = {
         t_name="flo1"
     },
     Transform = {
-        positionX = "450.0",
+        positionX = "650.0",
         positionY="400.0",
         positionZ="-400.0",
         scaleX = "0.8",
@@ -398,7 +398,7 @@ Flores01 = {
         t_static = "1"
     },
     MeshRenderer = {
-        t_model_name = "makoyazul.mesh",
+        t_model_name = "lotus.mesh",
         t_entity_name= "flo1",
         t_node_x="0",
         t_node_y="0",
