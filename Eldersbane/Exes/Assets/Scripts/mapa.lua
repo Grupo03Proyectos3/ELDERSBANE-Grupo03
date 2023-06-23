@@ -307,6 +307,11 @@ Player = {
         t_routeSong = "Assets/Audio/Attack.mp3",
         t_songName = "Ataque",
         t_music = "false"
+    },
+    ParticleSystem={
+        t_name="psSangre",
+        t_template="PsPrueba/blood_default",
+        t_static = "0"
     }
 }
 AudioPlayerGetDamage = {
@@ -462,22 +467,14 @@ Flores01 = {
         t_node_z="0",
         t_mat_name= ""
     },
-    -- Enemy={
-    --     t_speed = "1.5",
-    --     t_max_distance ="1500.0",
-        
-    -- },
-    -- BlueEnemy={
-    --     t_lives="2",
-    --     t_damage="1",
-    -- },
     FlowersEnemy={
         t_lives="2",
         t_damage="1",
     },
     ParticleSystem={
-        t_name="psBomba",
+        t_name="psFlor01",
         t_template="PsPrueba/smoke_flores",
+        t_static = "1"
     }
 }
 MakoyAzul01 = {

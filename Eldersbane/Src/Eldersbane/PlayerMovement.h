@@ -1,6 +1,7 @@
 #pragma once
 #include "Scripting\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
+#include "Render/ParticleSystem.h"
 #include <Render/Camera.h>
 #include <Physics/RigidBody.h>
 #include "Sword.h"
@@ -67,5 +68,7 @@ namespace Eldersbane
         bool m_is_dashing = false;
 
         Flamingo::AudioSource* m_dash_sound;
+
+        Flamingo::ParticleSystem* m_parts;
     };
 } // namespace Eldersbane

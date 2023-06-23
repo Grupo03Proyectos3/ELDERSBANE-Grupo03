@@ -73,6 +73,8 @@ namespace Eldersbane
         m_time_keys = 0;
 
         m_dash_sound = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioDash"));
+        m_parts = Flamingo::getComponent<Flamingo::ParticleSystem>(this->gameObject());
+        
     }
 
     void PlayerMovement::update(float t_deltaTime)
@@ -143,6 +145,8 @@ namespace Eldersbane
             // Realizar el dash
             performDash();
         }
+        m_parts->updatePosition();
+       
     }
     void PlayerMovement::onCollisionEnter(Flamingo::GameObject* t_other)
     {
