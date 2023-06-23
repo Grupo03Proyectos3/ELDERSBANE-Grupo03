@@ -475,8 +475,9 @@ Flores01 = {
         t_lives="2",
         t_damage="1",
     },
-    Animator={
-        t_name="Flores01",
+    ParticleSystem={
+        t_name="psBomba",
+        t_template="PsPrueba/smoke_flores",
     }
 }
 MakoyAzul01 = {

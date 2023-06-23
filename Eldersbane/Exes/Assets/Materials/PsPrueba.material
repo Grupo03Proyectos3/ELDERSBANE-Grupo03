@@ -72,3 +72,30 @@ particle_system PsPrueba/smoke_default {
         angle_variation   2
     }
 }
+
+particle_system PsPrueba/smoke_flores {
+
+    material        	Prueba/smoke
+    // Configuración de las partículas
+    quota 100
+    default_width        0.01
+    default_height       0.01
+    quota                100
+    keep_local           on
+    particle_width_range 0.01 0.02
+    particle_height_range 0.01 0.02
+    sorted               on
+ 
+    // Configuración de los emisores
+    emitter Point {
+        emission_rate 5
+        time_to_live      3.0
+        direction 0 1 0
+        velocity 300
+        velocity_variation 10
+        angle             5
+        angle_variation   2
+           colour 1. 1. 0. .7
+    }
+   
+}
