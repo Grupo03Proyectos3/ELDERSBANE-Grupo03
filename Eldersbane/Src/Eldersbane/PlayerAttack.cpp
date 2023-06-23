@@ -10,13 +10,27 @@ namespace Eldersbane{
 
     PlayerAttack::~PlayerAttack()
     {
-        delete m_attackTimer;
+        delete m_attack_timer;
     }
 
     Flamingo::BehaviourScript* PlayerAttack::clone(){
         return new PlayerAttack();
     }
 
+    bool Eldersbane::PlayerAttack::initValues(std::unordered_map<std::string, std::string> t_args)
+    {
+        auto it_cooldown_attack = t_args.find("t_cooldown_attack");
+
+        if (it_cooldown_attack != t_args.end())
+        {
+            unsigned int s = std::stoi(it_cooldown_attack->second);
+            m_cooldown_attack = s;
+
+            return true;
+        }
+
+        return false;
+    }
     void PlayerAttack::start()
     {
         m_sword = Flamingo::getComponent<Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
@@ -26,8 +40,7 @@ namespace Eldersbane{
 
         m_sword->gameObject()->setActive(false);
         m_audio_ataque = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());
-        m_attackTimer = new Flamingo::Timer();
-        m_cooldownAttack = 2000;
+        m_attack_timer = new Flamingo::Timer();
     }
 
     void PlayerAttack::update(float t_deltaTime)
@@ -54,12 +67,10 @@ namespace Eldersbane{
         }
         else if (m_sword->gameObject()->getActive())
         {
-            frames++;
-            if (m_attackTimer->getElapsedTime() >= m_cooldownAttack)
+            if (m_attack_timer->getElapsedTime() >= m_cooldown_attack)
             {
                 m_sword->gameObject()->setActive(false);
-                frames = 0;
-                m_attackTimer->reset();
+                m_attack_timer->reset();
             }
         }
     }

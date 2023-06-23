@@ -6,6 +6,7 @@
 #include "Audio/AudioSource.h"
 #include "FlamingoUtils/Timer.h"
 #include "Shield.h"
+#include "PlayerMovement.h"
 
 namespace Eldersbane {
 	/// <summary>
@@ -41,7 +42,6 @@ namespace Eldersbane {
 		Shield* m_shield;
         Flamingo::Transform* m_transform;
         Flamingo::Transform* m_shield_transform;
-
         unsigned int m_cooldown_cover;
         unsigned int m_duration_cover;
 

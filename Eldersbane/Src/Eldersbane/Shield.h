@@ -17,6 +17,7 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         void start() override;
+        void resetHits();
         void takeHit();
         bool getAvailability();
 
@@ -24,7 +25,7 @@ namespace Eldersbane
 
         int m_shield_durability;
         int m_currentHits;
-        bool m_available = false;
+        bool m_available;
     };
 } // namespace Eldersbane
 #endif

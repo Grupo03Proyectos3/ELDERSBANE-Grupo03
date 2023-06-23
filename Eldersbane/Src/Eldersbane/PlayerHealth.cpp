@@ -8,6 +8,7 @@
 #include "PinkPotion.h"
 #include "RedPotion.h"
 #include <Audio/AudioSource.h>
+#include <ECS/InputHandlerContainer.h>
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {
@@ -64,7 +65,9 @@ void Eldersbane::PlayerHealth::start()
     m_shield_transform = Flamingo::getComponent<Flamingo::Transform>(m_shield->gameObject());
     m_transform = Flamingo::getComponent<Flamingo::Transform>(gameObject());
 
-    m_shield->gameObject()->setActive(true);
+    m_shield->gameObject()->setActive(false);
+    Flamingo::getComponent<Flamingo::MeshRenderer>(m_shield->gameObject())->onDisable();
+    m_invencibility = new Flamingo::Timer();
     m_cover_timer = new Flamingo::Timer();
 
     for (int i = 0; i < m_max_health; ++i)
@@ -102,7 +105,7 @@ void Eldersbane::PlayerHealth::start()
 
 void Eldersbane::PlayerHealth::update(float t_deltaTime)
 {
-    Flamingo::SVector3 offset = {200, -20, 100};
+    Flamingo::SVector3 offset = {150, -20, 60};
     m_shield_transform->setPosition(m_transform->getPosition() + offset);
 
     auto trpTarget = m_transform;
@@ -111,6 +114,26 @@ void Eldersbane::PlayerHealth::update(float t_deltaTime)
     Flamingo::SVector3 newOffset = trpTarget->getRotation().Rotate(offset);
     mtrp->setPosition(trpTarget->getPosition() - newOffset);
     mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
+
+    if (!m_shield->gameObject()->getActive() && Flamingo::Input().getMouseButtonState(Flamingo::RIGHT) && m_shield->getAvailability())
+    {
+        if (m_cover_timer->getElapsedTime() >= m_cooldown_cover)
+        {
+            m_shield->gameObject()->setActive(true);
+            Flamingo::getComponent<Flamingo::MeshRenderer>(m_shield->gameObject())->onEnable();
+            m_invencibility->reset();
+        }
+    }
+    else if (m_shield->gameObject()->getActive())
+    {
+        if (m_invencibility->getElapsedTime() >= m_duration_cover || !m_shield->getAvailability())
+        {
+            m_shield->resetHits();
+            m_shield->gameObject()->setActive(false);
+            Flamingo::getComponent<Flamingo::MeshRenderer>(m_shield->gameObject())->onDisable();
+            m_cover_timer->reset();
+        }
+    }
 }
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -118,7 +141,13 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
         // si no tiene shield
-        takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage());
+        if (!m_shield->gameObject()->getActive())
+            takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage());
+        else
+        {
+            m_cover_hit_sound->playAudio();
+            m_shield->takeHit();
+        }
         // else make shield hit noise
     }
 

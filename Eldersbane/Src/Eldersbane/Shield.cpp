@@ -23,7 +23,7 @@ namespace Eldersbane
 
     bool Shield::initValues(std::unordered_map<std::string, std::string> t_args)
     {
-       /* auto k = t_args.find("t_durability");
+        auto k = t_args.find("t_durability");
 
         if (k != t_args.end())
         {
@@ -32,15 +32,18 @@ namespace Eldersbane
             return true;
         }
         else
-            return false;*/
+            return false;
         return true;
     }
 
     void Shield::start()
     {
         m_currentHits = 0;
+        m_available = true;
     }
-
+    void Shield::resetHits() {
+        m_currentHits = 0;
+    }
     void Shield::takeHit()
     {
         m_currentHits++;

@@ -226,9 +226,9 @@ Escudo={
         positionX = "450.0",
         positionY="400.0",
         positionZ="-400.0",
-        scaleX="1.0",
-        scaleY="1.0",
-        scaleZ="1.0",
+        scaleX="60.0",
+        scaleY="60.0",
+        scaleZ="60.0",
         rotationX="0.0",
         rotationY="0.0",
         rotationZ="0.0",
@@ -240,7 +240,7 @@ Escudo={
         t_static = "0"
     },
     MeshRenderer = {
-        t_model_name = "Dabnis.mesh",
+        t_model_name = "EscudoMadera.mesh",
         t_entity_name= "Escudo",
         t_node_x="25.0",
         t_node_y="25.0",
@@ -248,7 +248,7 @@ Escudo={
         t_mat_name= ""
     },
     Shield={
-        t_durability = "2"
+        t_durability = "3"
     }
 }
 Player = {
@@ -301,7 +301,7 @@ Player = {
         t_duration_cover="2000",
     },
     PlayerAttack={
-        t_cooldownAttack="2000",
+        t_cooldown_attack="2000",
     },
     AudioSource = {
         t_routeSong = "Assets/Audio/Attack.mp3",
