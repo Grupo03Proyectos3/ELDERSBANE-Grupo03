@@ -31,9 +31,12 @@ bool Eldersbane::PlayerHealth::initValues(std::unordered_map<std::string, std::s
     auto it_empty_name = t_args.find("t_empty_name");
     auto it_empty_img = t_args.find("t_empty_img");
     auto it_die_scene = t_args.find("t_die_scene");
+    auto it_cooldown_cover = t_args.find("t_cooldown_cover");
+    auto it_duration_cover = t_args.find("t_duration_cover");
 
     if (it_max_health != t_args.end() && it_full_name != t_args.end() && it_full_img != t_args.end() &&
-        it_empty_name != t_args.end() && it_empty_img != t_args.end() && it_die_scene != t_args.end())
+        it_empty_name != t_args.end() && it_empty_img != t_args.end() && it_die_scene != t_args.end() &&
+        it_cooldown_cover != t_args.end() && it_duration_cover != t_args.end())
     {
         m_max_health = std::stof(it_max_health->second);
         m_full_name = it_full_name->second;
@@ -41,6 +44,10 @@ bool Eldersbane::PlayerHealth::initValues(std::unordered_map<std::string, std::s
         m_empty_name = it_empty_name->second;
         m_empty_img = it_empty_img->second;
         m_die_scene = it_die_scene->second;
+        unsigned int s = std::stoi(it_cooldown_cover->second);
+        m_cooldown_cover = s;
+        unsigned int b = std::stoi(it_duration_cover->second);
+        m_duration_cover = b;
 
         return true;
     }
@@ -51,6 +58,15 @@ void Eldersbane::PlayerHealth::start()
 {
     m_current_health = m_max_health;
     m_player_get_damage = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioPlayerGetDamage"));
+    m_cover_hit_sound = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioCover"));
+
+    m_shield = Flamingo::getComponent<Shield>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("Escudo"));
+    m_shield_transform = Flamingo::getComponent<Flamingo::Transform>(m_shield->gameObject());
+    m_transform = Flamingo::getComponent<Flamingo::Transform>(gameObject());
+
+    m_shield->gameObject()->setActive(true);
+    m_cover_timer = new Flamingo::Timer();
+
     for (int i = 0; i < m_max_health; ++i)
     {
         auto heart_container = Flamingo::createGameObject(m_full_name + std::to_string(i), {Flamingo::GROUP_UI});
@@ -84,11 +100,26 @@ void Eldersbane::PlayerHealth::start()
     setUIToHealth();
 }
 
+void Eldersbane::PlayerHealth::update(float t_deltaTime)
+{
+    Flamingo::SVector3 offset = {200, -20, 100};
+    m_shield_transform->setPosition(m_transform->getPosition() + offset);
+
+    auto trpTarget = m_transform;
+    auto mtrp = m_shield_transform;
+
+    Flamingo::SVector3 newOffset = trpTarget->getRotation().Rotate(offset);
+    mtrp->setPosition(trpTarget->getPosition() - newOffset);
+    mtrp->setRotation(trpTarget->getRotation(), Flamingo::STransformSpace::WORLD);
+}
+
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
     if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
     {
+        // si no tiene shield
         takeDamage(Flamingo::getComponent<Eldersbane::Enemy>(t_other)->getDamage());
+        // else make shield hit noise
     }
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other != nullptr)

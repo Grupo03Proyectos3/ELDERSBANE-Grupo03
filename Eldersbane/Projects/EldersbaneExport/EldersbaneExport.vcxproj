@@ -196,6 +196,7 @@
     <ClInclude Include="..\..\Src\Eldersbane\PurpleEnemy.h" />
     <ClInclude Include="..\..\Src\Eldersbane\RedEnemy.h" />
     <ClInclude Include="..\..\Src\Eldersbane\RedPotion.h" />
+    <ClInclude Include="..\..\Src\Eldersbane\Shield.h" />
     <ClInclude Include="..\..\Src\Eldersbane\Sword.h" />
     <ClInclude Include="..\..\Src\Eldersbane\TargetCamera.h" />
     <ClInclude Include="resource.h" />
@@ -225,6 +226,7 @@
     <ClCompile Include="..\..\Src\Eldersbane\PurpleEnemy.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\RedEnemy.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\RedPotion.cpp" />
+    <ClCompile Include="..\..\Src\Eldersbane\Shield.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\Sword.cpp" />
     <ClCompile Include="..\..\Src\Eldersbane\TargetCamera.cpp" />
     <ClCompile Include="dllmain.cpp" />

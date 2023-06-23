@@ -1,4 +1,4 @@
-entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider","Player", "AudioPlayerGetDamage","AudioDash","TargetCamera","GranArbol","Flores01","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -218,6 +218,39 @@ SwordCollider={
         t_damage = "2"
     },
 }
+Escudo={
+    Name={
+        t_name ="Escudo"
+    },
+    Transform = {
+        positionX = "450.0",
+        positionY="400.0",
+        positionZ="-400.0",
+        scaleX="1.0",
+        scaleY="1.0",
+        scaleZ="1.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "0.1",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "Dabnis.mesh",
+        t_entity_name= "Escudo",
+        t_node_x="25.0",
+        t_node_y="25.0",
+        t_node_z="25.0",
+        t_mat_name= ""
+    },
+    Shield={
+        t_durability = "2"
+    }
+}
 Player = {
    Name={
        t_name="player"
@@ -264,6 +297,8 @@ Player = {
         t_empty_name="emptyContainer",
         t_empty_img="EmptyHeart.png",
         t_die_scene="WinGame",
+        t_cooldown_cover="3000",
+        t_duration_cover="2000",
     },
     PlayerAttack={
         t_cooldownAttack="2000",
@@ -315,6 +350,28 @@ AudioDash = {
     AudioSource ={
         t_routeSong = "Assets/Audio/Dash.mp3",
         t_songName = "Dash",
+        t_music = "false"
+    }
+}
+AudioCover = {
+    Name={
+        t_name ="AudioCover"
+    },
+    Transform = {
+        positionX = "0.0",
+        positionY = "0.0",
+        positionZ = "0.0",
+        scaleX = "0.1",
+        scaleY = "0.1",
+        scaleZ = "0.1",
+        rotationX = "0.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    AudioSource ={
+        t_routeSong = "Assets/Audio/CoverHit.mp3",
+        t_songName = "CoverHit",
         t_music = "false"
     }
 }
