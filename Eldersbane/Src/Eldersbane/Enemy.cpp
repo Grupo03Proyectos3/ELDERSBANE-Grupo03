@@ -16,13 +16,15 @@ namespace Eldersbane
 
     Enemy::~Enemy()
     {
+        delete m_tree_attack_timer;
     }
 
     Flamingo::BehaviourScript* Enemy::clone()
     {
         return new Enemy();
     }
-    bool Eldersbane::Enemy::initValues(std::unordered_map<std::string, std::string> t_args) {
+    bool Eldersbane::Enemy::initValues(std::unordered_map<std::string, std::string> t_args)
+    {
         auto it_speed = t_args.find("t_speed");
         auto it_dist = t_args.find("t_max_distance");
 
@@ -38,21 +40,23 @@ namespace Eldersbane
     void Enemy::start()
     {
         m_tr = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
-        
+
         auto m_sceneMngr = Flamingo::FlamingoCore::getSceneManager();
         m_tr_player = Flamingo::getComponent<Flamingo::Transform>(m_sceneMngr->getSceneActive()->getObject("player"));
-     
+
         m_time_last_dir = 0;
         m_time_last_move = 0;
         m_velocity = Flamingo::SVector3(0, 0, 0);
         m_wandering = true;
         m_attacking = false;
-     
+
+        m_tree_attack_timer = new Flamingo::Timer();
 
         m_blue_enemy = Flamingo::getComponent<Eldersbane::BlueEnemy>(this->gameObject());
         m_red_enemy = Flamingo::getComponent<Eldersbane::RedEnemy>(this->gameObject());
         m_purple_enemy = Flamingo::getComponent<Eldersbane::PurpleEnemy>(this->gameObject());
         m_black_enemy = Flamingo::getComponent<Eldersbane::BlackEnemy>(this->gameObject());
+        m_tree_enemy = Flamingo::getComponent<Eldersbane::TreeEnemy>(this->gameObject());
         if (m_blue_enemy != nullptr)
         {
             m_damage = m_blue_enemy->getDamage();
@@ -73,6 +77,12 @@ namespace Eldersbane
             m_damage = m_black_enemy->getDamage();
             m_lives = m_black_enemy->getLives();
         }
+        else if (m_tree_enemy != nullptr)
+        {
+            m_damage = m_tree_enemy->getDamage();
+            m_lives = m_tree_enemy->getLives();
+            m_tree_attack_cooldown = m_tree_enemy->getCooldown();
+        }
 
         auto anim = Flamingo::getComponent<Flamingo::Animator>(gameObject());
         if (anim)
@@ -86,7 +96,7 @@ namespace Eldersbane
     void Enemy::update(float t_delta_time)
     {
         checkDistance(m_tr_player->getPosition());
-        if (!m_attacking && ! m_dyingAnimation)
+        if (!m_attacking && !m_dyingAnimation)
             enemyMovement(t_delta_time);
         if (m_dyingAnimation)
             dyingAnimation();
@@ -94,9 +104,12 @@ namespace Eldersbane
 
     void Enemy::onCollisionEnter(Flamingo::GameObject* t_other)
     {
-        if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
+        if (m_tree_enemy == nullptr)
         {
-            m_attacking = true;
+            if (Flamingo::hasComponent<Eldersbane::PlayerMovement>(t_other))
+            {
+                m_attacking = true;
+            }
         }
     }
 
@@ -116,11 +129,20 @@ namespace Eldersbane
             m_attacking = false;
             m_wandering = true;
         }
-        // Sigue al jugador
+        // Si esta cerca
         else if (distancia <= m_max_distance && !m_attacking)
         {
-            followPlayer(t_player_pos);
-            m_wandering = false;
+            // si es Makoy le sigue
+            if (m_tree_enemy == nullptr)
+                followPlayer(t_player_pos);
+            // si es Arbol mágico le ataca con manzanas
+            else
+            {
+                m_wandering = false;
+                m_attacking = true;
+                m_tree_attack_timer->reset();
+                treeAttackPlayer(t_player_pos);
+            }
         }
         // Si esta al lado, no merodea sino ataca
         else
@@ -135,7 +157,17 @@ namespace Eldersbane
              t_player_pos.getZ() - m_tr->getPosition().getZ()};
         m_direction.normalize();
     }
-   
+
+    void Enemy::treeAttackPlayer(Flamingo::SVector3 t_player_pos)
+    {
+        if (m_tree_attack_timer->getElapsedTime() >= m_tree_attack_cooldown)
+        {
+            // LANZAR MANZANA
+            
+            m_tree_attack_timer->reset();
+        }
+    }
+
     int Enemy::getDamage()
     {
         return m_damage;
@@ -144,9 +176,10 @@ namespace Eldersbane
     void Enemy::recieveDamage(int t_damage)
     {
         m_lives -= t_damage;
-        if (m_lives <= 0){
+        if (m_lives <= 0)
+        {
             m_dyingAnimation = true;
-            m_reductionPercent = m_tr->getScale().getX()/m_totalDyingSteps;
+            m_reductionPercent = m_tr->getScale().getX() / m_totalDyingSteps;
         }
     }
 
@@ -187,7 +220,7 @@ namespace Eldersbane
                 m_velocity = Flamingo::SVector3(0, 0, 0);
             }
         }
-        else if (!m_wandering && !m_attacking)
+        else if (!m_wandering && !m_attacking && m_tree_enemy == nullptr)
         {
             // Asigna una velocidad constante a lo largo de esta direcci�n
             m_velocity = m_direction * 0.2f;
@@ -206,9 +239,9 @@ namespace Eldersbane
         else
         {
             m_currentDyingSteps++;
-           
-            m_tr->setScale(m_tr->getScale() - 
-                Flamingo::SVector3(m_reductionPercent, m_reductionPercent, m_reductionPercent));
+
+            m_tr->setScale(m_tr->getScale() -
+                           Flamingo::SVector3(m_reductionPercent, m_reductionPercent, m_reductionPercent));
         }
     }
 
@@ -222,6 +255,4 @@ namespace Eldersbane
         q *= q1;
         m_tr->setRotation(q);
     }
-
-   
 } // namespace Eldersbane

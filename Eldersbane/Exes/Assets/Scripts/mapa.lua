@@ -1,4 +1,4 @@
-entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Manzana", "TreeEnemy01", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -249,6 +249,78 @@ Escudo={
     },
     Shield={
         t_durability = "3"
+    }
+}
+Manzana={
+    Name={
+        t_name ="Manzana"
+    },
+    Transform = {
+        positionX = "450.0",
+        positionY="400.0",
+        positionZ="-400.0",
+        scaleX="1.0",
+        scaleY="1.0",
+        scaleZ="1.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "100.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "cube.mesh",
+        t_entity_name= "Manzana1",
+        t_node_x="0.0",
+        t_node_y="0.0",
+        t_node_z="0.0",
+        t_mat_name= ""
+    },
+    Apple={
+        t_durability = "2000"
+    }
+}
+TreeEnemy01 = {
+    Name={
+        t_name="TreeEnemy01"
+    },
+    Transform = {
+        positionX = "850.0",
+        positionY="400.0",
+        positionZ="-400.0",
+        scaleX="40.0",
+        scaleY="40.0",
+        scaleZ="40.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "arbolEnemigoFruta.mesh",
+        t_entity_name= "TreeEnemy01",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    TreeEnemy={
+        t_lives="3",
+        t_damage="1",
+        t_cooldown="4000"
     }
 }
 Player = {

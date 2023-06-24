@@ -6,6 +6,9 @@
 #include "PurpleEnemy.h"
 #include "RedEnemy.h"
 #include "Scripting/BehaviourScript.h"
+#include "FlamingoUtils/Timer.h"
+#include "TreeEnemy.h"
+#include "Apple.h"
 #include <FlamingoBase/Transform.h>
 
 namespace Eldersbane
@@ -42,6 +45,14 @@ namespace Eldersbane
          * @return
          */
         void followPlayer(Flamingo::SVector3 t_player_pos);
+        /*
+         * @brief Se llama para que el arbol dispare al jugador
+         * 
+         * @param[in] t_player_pos SVector3 posición del jugador
+         * 
+         * @return
+         */
+        void treeAttackPlayer(Flamingo::SVector3 t_player_pos);
         /**
          * @brief Se llama para obtener el daño que hace el enemigo
          * @return
@@ -75,10 +86,10 @@ namespace Eldersbane
 
       protected:
         /**
-        * @brief Se llama para que el enemigo rote en función de
-        * su dirección
-        * @return
-        */
+         * @brief Se llama para que el enemigo rote en función de
+         * su dirección
+         * @return
+         */
         void lookAtWhereIAmMoving();
 
         Flamingo::Transform* m_tr;
@@ -94,8 +105,10 @@ namespace Eldersbane
         int m_lives;
         int m_damage;
         float m_speed;
-
         float m_reductionPercent;
+
+        Flamingo::Timer* m_tree_attack_timer;
+        int m_tree_attack_cooldown;
 
         // Die
         bool m_dyingAnimation;
@@ -106,6 +119,7 @@ namespace Eldersbane
         Eldersbane::RedEnemy* m_red_enemy;
         Eldersbane::BlackEnemy* m_black_enemy;
         Eldersbane::PurpleEnemy* m_purple_enemy;
+        Eldersbane::TreeEnemy* m_tree_enemy;
     };
 } // namespace Eldersbane
 #endif

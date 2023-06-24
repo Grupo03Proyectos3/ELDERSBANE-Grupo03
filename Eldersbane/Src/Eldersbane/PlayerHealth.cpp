@@ -18,6 +18,8 @@ Eldersbane::PlayerHealth::~PlayerHealth()
 {
     m_full_containers.clear();
     m_empty_containers.clear();
+    delete m_invencibility;
+    delete m_cover_timer;
 }
 
 Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()
@@ -102,9 +104,9 @@ void Eldersbane::PlayerHealth::start()
 
     setUIToHealth();
     m_parts = Flamingo::getComponent<Flamingo::ParticleSystem>(this->gameObject());
-    m_bleeding=false;
-    m_timer_elapsed=0;
-    m_timer_duration=1000.0f;
+    m_bleeding = false;
+    m_timer_elapsed = 0;
+    m_timer_duration = 1000.0f;
 }
 
 void Eldersbane::PlayerHealth::update(float t_deltaTime)
@@ -143,7 +145,7 @@ void Eldersbane::PlayerHealth::update(float t_deltaTime)
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
 {
-    if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other))
+    if (Flamingo::hasComponent<Eldersbane::Enemy>(t_other) && !Flamingo::hasComponent<Eldersbane::TreeEnemy>(t_other))
     {
         // si no tiene shield
         if (!m_shield->gameObject()->getActive())
@@ -155,6 +157,8 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
         }
         // else make shield hit noise
     }
+    if (Flamingo::hasComponent<Eldersbane::Apple>(t_other))
+        takeDamage(1);
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other != nullptr)
     {

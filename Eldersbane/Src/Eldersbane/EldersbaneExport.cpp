@@ -24,11 +24,13 @@
 #include "TargetCamera.h"
 #include "Sword.h"
 #include "Shield.h"
+#include "Apple.h"
 #include "PlayerAttack.h"
 #include "MenuMusic.h"
 #include "BlueEnemy.h"
 #include "RedEnemy.h"
 #include "PurpleEnemy.h"
+#include "TreeEnemy.h"
 #include "BlackEnemy.h"
 #include "GoToLose.h"
 #include "GoToWin.h"
@@ -61,18 +63,19 @@ bool InitJuego(void)
     f_core->addGameScript("TargetCamera", new Eldersbane::TargetCamera());
     f_core->addGameScript("Sword", new Eldersbane::Sword());
     f_core->addGameScript("Shield", new Eldersbane::Shield());
+    f_core->addGameScript("Apple", new Eldersbane::Apple());
     f_core->addGameScript("PlayerAttack", new Eldersbane::PlayerAttack());
     f_core->addGameScript("MenuMusic", new Eldersbane::MenuMusic());
     f_core->addGameScript("BlueEnemy", new Eldersbane::BlueEnemy());
     f_core->addGameScript("FlowersEnemy", new Eldersbane::FlowersEnemy());
     f_core->addGameScript("RedEnemy", new Eldersbane::RedEnemy());
     f_core->addGameScript("PurpleEnemy", new Eldersbane::PurpleEnemy());
+    f_core->addGameScript("TreeEnemy", new Eldersbane::TreeEnemy());
     f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
     f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
     f_core->addGameScript("GoToLose", new Eldersbane::GoToLose());
     f_core->addGameScript("GoToGame", new Eldersbane::GoToGame());
     f_core->addGameScript("GoToMenu", new Eldersbane::GoToMenu());
-    // t_core->addGameScript("ChangeScene", new ChangeScene());
    
     return true;
 }

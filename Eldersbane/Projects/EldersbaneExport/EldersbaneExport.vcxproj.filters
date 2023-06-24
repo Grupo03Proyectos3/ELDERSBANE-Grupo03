@@ -85,6 +85,12 @@
     <ClCompile Include="..\..\Src\Eldersbane\Shield.cpp">
       <Filter>Archivos de origen\Player</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\TreeEnemy.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Eldersbane\Apple.cpp">
+      <Filter>Archivos de origen\Enemies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Src\Eldersbane\EldersbaneExport.h">
@@ -164,6 +170,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Src\Eldersbane\Shield.h">
       <Filter>Archivos de encabezado\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\TreeEnemy.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Eldersbane\Apple.h">
+      <Filter>Archivos de encabezado\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
