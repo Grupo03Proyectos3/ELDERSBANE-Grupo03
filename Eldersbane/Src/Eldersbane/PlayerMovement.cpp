@@ -74,7 +74,7 @@ namespace Eldersbane
 
         m_dash_sound = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioDash"));
         m_parts = Flamingo::getComponent<Flamingo::ParticleSystem>(this->gameObject());
-        m_parts->emit(false);
+       /* m_parts->emit(false);*/
         
     }
 
