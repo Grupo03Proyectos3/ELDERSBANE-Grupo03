@@ -101,6 +101,10 @@ void Eldersbane::PlayerHealth::start()
     }
 
     setUIToHealth();
+    m_parts = Flamingo::getComponent<Flamingo::ParticleSystem>(this->gameObject());
+    m_bleeding=false;
+    m_timer_elapsed=0;
+    m_timer_duration=1000.0f;
 }
 
 void Eldersbane::PlayerHealth::update(float t_deltaTime)
@@ -134,6 +138,7 @@ void Eldersbane::PlayerHealth::update(float t_deltaTime)
             m_cover_timer->reset();
         }
     }
+    bloodTimer(t_deltaTime);
 }
 
 void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -174,6 +179,8 @@ void Eldersbane::PlayerHealth::takeDamage(int t_amount)
         if (m_player_get_damage)
         {
             m_player_get_damage->playAudio();
+            m_parts->emit(true);
+            m_bleeding = true;
         }
         if (m_current_health <= 0)
         {
@@ -214,4 +221,17 @@ void Eldersbane::PlayerHealth::killPlayer()
     auto sM = Flamingo::FlamingoCore::getSceneManager();
     sM->reloadScenePetition();
     sM->startScene("LoseGame");
+}
+void Eldersbane::PlayerHealth::bloodTimer(float t_deltaTime)
+{
+    if (m_bleeding)
+    {
+        m_timer_elapsed += t_deltaTime;
+        if (m_timer_elapsed >= m_timer_duration)
+        {
+            m_bleeding = false;
+            m_timer_elapsed = 0;
+            m_parts->emit(false); // Detener la emisión del sistema de partículas
+        }
+    }
 }

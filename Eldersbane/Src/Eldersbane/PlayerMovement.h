@@ -1,7 +1,7 @@
 #pragma once
 #include "Scripting\BehaviourScript.h"
 #include <FlamingoBase/Transform.h>
-#include "Render/ParticleSystem.h"
+#include <Render/ParticleSystem.h>
 #include <Render/Camera.h>
 #include <Physics/RigidBody.h>
 #include "Sword.h"
