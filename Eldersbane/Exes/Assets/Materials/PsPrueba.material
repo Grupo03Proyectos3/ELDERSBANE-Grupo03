@@ -99,3 +99,65 @@ particle_system PsPrueba/smoke_flores {
     }
    
 }
+
+particle_system PsPrueba/niebla
+{
+    material        Prueba/smoke
+    particle_width  3500
+    particle_height 3500
+    cull_each       false
+    quota           1000
+    billboard_type  point
+    
+    // Area emitter.
+    emitter Box
+    {
+        angle           30
+        emission_rate   20
+        time_to_live    7
+        direction       0 1 0
+        velocity    	0
+        colour          0.8 0.8 0.8 0.1
+        width           600
+        height          600
+        depth           60
+    }
+
+}
+
+
+particle_system PsPrueba/lluvia
+{
+    material        Prueba/smoke
+    particle_width  20
+    particle_height 100
+    cull_each       true
+    quota           10000
+    // Make common direction straight down (faster than self oriented)
+    billboard_type  oriented_common
+    common_direction 0 -1 0
+    
+    // Area emitter.
+    emitter Box
+    {
+        angle           0
+        emission_rate   100
+        time_to_live    5
+        direction       0 -1 0
+        velocity    	50
+        colour          0.0 0.2 1 0.6
+        width           1000
+        height          1000
+        depth           0
+    }
+
+    // Gravity.
+    affector LinearForce
+    {
+        force_vector      0 -200 0
+        force_application add
+    }
+
+}
+
+

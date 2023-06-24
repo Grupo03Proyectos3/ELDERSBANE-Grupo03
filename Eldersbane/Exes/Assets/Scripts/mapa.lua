@@ -1,4 +1,4 @@
-entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Manzana", "TreeEnemy01", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
+entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Manzana", "TreeEnemy01", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01", "Niebla", "Lluvia", "MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
 "MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
 "EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
@@ -546,6 +546,50 @@ Flores01 = {
     ParticleSystem={
         t_name="psFlor01",
         t_template="PsPrueba/smoke_flores",
+        t_static = "1"
+    }
+}
+Niebla = {
+    Name={
+        t_name="niebla"
+    },
+    Transform = {
+        positionX = "-51000.0",
+        positionY = "560.0",
+        positionZ = "8700.0",
+        scaleX = "8",
+        scaleY = "8",
+        scaleZ = "8",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    ParticleSystem={
+        t_name="psNiebla",
+        t_template="PsPrueba/niebla",
+        t_static = "1"
+    }
+}
+Lluvia = {
+    Name={
+        t_name="lluvia"
+    },
+    Transform = {
+        positionX = "3950.0",
+        positionY="1570.0",
+        positionZ="-400.0",
+        scaleX = "8",
+        scaleY = "8",
+        scaleZ = "8",
+        rotationX = "-1.0",
+        rotationY = "0.0",
+        rotationZ = "0.0",
+        rotationW = "1.0"
+    },
+    ParticleSystem={
+        t_name="psLluvia",
+        t_template="PsPrueba/lluvia",
         t_static = "1"
     }
 }
