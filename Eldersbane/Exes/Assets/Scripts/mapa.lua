@@ -555,9 +555,9 @@ Niebla = {
         t_name="niebla"
     },
     Transform = {
-        positionX = "-51000.0",
+        positionX = "5100.0",
         positionY = "560.0",
-        positionZ = "8700.0",
+        positionZ = "4700.0",
         scaleX = "8",
         scaleY = "8",
         scaleZ = "8",
@@ -577,9 +577,9 @@ Lluvia = {
         t_name="lluvia"
     },
     Transform = {
-        positionX = "3950.0",
+        positionX = "-3950.0",
         positionY="1570.0",
-        positionZ="-400.0",
+        positionZ="-800.0",
         scaleX = "8",
         scaleY = "8",
         scaleZ = "8",
