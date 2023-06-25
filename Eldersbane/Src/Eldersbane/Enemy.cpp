@@ -144,7 +144,7 @@ namespace Eldersbane
             {
                 m_wandering = false;
                 m_attacking = true;
-                m_tree_attack_timer->reset();
+
                 treeAttackPlayer(t_player_pos);
             }
         }
@@ -173,7 +173,9 @@ namespace Eldersbane
                  t_player_pos.getY() - m_tr->getPosition().getY(),
                  t_player_pos.getZ() - m_tr->getPosition().getZ()};
             m_direction.normalize();
-            // m_apple->addVelocity({200000, 0, 0});
+            m_apple->gameObject()->setActive(true);
+
+            m_apple->attackPlayer(m_direction, m_tr->getPosition());
             m_tree_attack_timer->reset();
         }
     }
@@ -210,11 +212,11 @@ namespace Eldersbane
                 float y = 0;
                 float z = ((float)rand() / RAND_MAX) * 2.0f - 1.0f;
 
-                // Crea un vector con estos valores y normal�zalo
+                // Crea un vector con estos valores y normal zalo
                 m_direction = Flamingo::SVector3(x, y, z);
                 m_direction.normalize();
 
-                // Asigna una velocidad constante a lo largo de esta direcci�n
+                // Asigna una velocidad constante a lo largo de esta direcci n
                 m_velocity = m_direction * 0.2f;
 
                 // Reinicia el contador de tiempo
@@ -232,7 +234,7 @@ namespace Eldersbane
         }
         else if (!m_wandering && !m_attacking && m_tree_enemy == nullptr)
         {
-            // Asigna una velocidad constante a lo largo de esta direcci�n
+            // Asigna una velocidad constante a lo largo de esta direcci n
             m_velocity = m_direction * 0.2f;
             m_tr->translate(Flamingo::SVector3(m_velocity * t_delta_time * m_speed));
         }

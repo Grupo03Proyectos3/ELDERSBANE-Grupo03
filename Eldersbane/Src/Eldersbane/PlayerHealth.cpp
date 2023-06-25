@@ -158,7 +158,9 @@ void Eldersbane::PlayerHealth::onCollisionEnter(Flamingo::GameObject* t_other)
         // else make shield hit noise
     }
     if (Flamingo::hasComponent<Eldersbane::Apple>(t_other))
-        takeDamage(1);
+    {
+        takeDamage(Flamingo::getComponent<Eldersbane::Apple>(t_other)->getDamage());
+    }
 
     if (Flamingo::hasComponent<Eldersbane::RedPotion>(t_other) && t_other != nullptr)
     {

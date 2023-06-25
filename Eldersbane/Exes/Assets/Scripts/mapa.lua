@@ -259,9 +259,9 @@ Manzana={
         positionX = "450.0",
         positionY="400.0",
         positionZ="-400.0",
-        scaleX="60.0",
-        scaleY="60.0",
-        scaleZ="60.0",
+        scaleX="30.0",
+        scaleY="30.0",
+        scaleZ="30.0",
         rotationX="0.0",
         rotationY="0.0",
         rotationZ="0.0",
@@ -282,7 +282,8 @@ Manzana={
     },
     Apple={
         t_durability = "2000",
-        t_velocity = "20000"
+        t_velocity = "15",
+        t_damage="1"
     }
 }
 TreeEnemy01 = {
