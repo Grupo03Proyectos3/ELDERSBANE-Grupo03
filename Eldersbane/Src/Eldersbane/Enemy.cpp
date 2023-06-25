@@ -143,8 +143,6 @@ namespace Eldersbane
             else
             {
                 m_wandering = false;
-                m_attacking = true;
-
                 treeAttackPlayer(t_player_pos);
             }
         }

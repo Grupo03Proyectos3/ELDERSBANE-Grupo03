@@ -40,13 +40,22 @@ namespace Eldersbane
         int m_current_health;
 
         Shield* m_shield;
+
         Flamingo::Transform* m_transform;
         Flamingo::Transform* m_shield_transform;
+
+        Flamingo::Timer* m_invencibility;
+        Flamingo::Timer* m_cover_timer;
+        Flamingo::Timer* m_blood_timer;
+
         unsigned int m_cooldown_cover;
         unsigned int m_duration_cover;
+        unsigned int m_duration_blood;
+        unsigned int m_duration_invencibility;
 
         std::vector<Flamingo::UIElement*> m_full_containers;
         std::vector<Flamingo::UIElement*> m_empty_containers;
+
         std::string m_full_name;
         std::string m_full_img;
         std::string m_empty_name;
@@ -55,20 +64,10 @@ namespace Eldersbane
 
         Flamingo::AudioSource* m_player_get_damage;
         Flamingo::AudioSource* m_cover_hit_sound;
-
-        Flamingo::Timer* m_invencibility;
-        Flamingo::Timer* m_cover_timer;
-        // Tiempo en milisegundos
-        unsigned int m_invencibility_time;
-
-        //timer particulas de sangre
+        
         Flamingo::ParticleSystem* m_parts;
 
-        void bloodTimer(float t_deltaTime);
-
         bool m_bleeding;
-        float m_timer_elapsed;
-        float m_timer_duration;
     };
 } // namespace Eldersbane
 

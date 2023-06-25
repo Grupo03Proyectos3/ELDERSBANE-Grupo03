@@ -373,6 +373,7 @@ Player = {
         t_die_scene="WinGame",
         t_cooldown_cover="3000",
         t_duration_cover="2000",
+        t_duration_blood="1000",
     },
     PlayerAttack={
         t_cooldown_attack="2000",
