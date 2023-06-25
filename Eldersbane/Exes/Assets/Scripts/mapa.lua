@@ -1,6 +1,8 @@
-entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Manzana", "TreeEnemy01", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","Flores02","Flores03","Flores04", "Niebla", "Lluvia", "MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03",
-"MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02","MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera",
-"EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja","PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
+entities = {"SueloPlano","ButtonGame","Mapa","CamaraPpal","Luz","Luz2","Luz3","Luz4", "SwordCollider", "Escudo", "Manzana01","Manzana02","Manzana03","Manzana04","TreeEnemy01",
+"TreeEnemy02","TreeEnemy03","TreeEnemy04", "Player", "AudioPlayerGetDamage", "AudioCover", "AudioDash","TargetCamera","GranArbol","Flores01","Flores02","Flores03","Flores04", 
+"Niebla", "Lluvia", "MakoyAzul01","MakoyRojo01","MakoyMorado01","MakoyMorado02","MakoyMorado03","MakoyMorado04","MakoyMorado05","MakoyRojo02","MakoyRojo03","MakoyAzul02",
+"MakoyAzul03","MakoyAzul04","MakoyAzul05","MakoyRojo04","MakoyKing","EspadaMetal","EspadaMadera","EspadaEspecial","Slime01","Slime02","Slime03","EscudoMadera","PocionRoja",
+"PocionRosa","PocionAzul","M1","M2","M3","M4","M5","M6","Tronco01","Tronco02","Tronco03","Tronco04","Tronco05","Tronco06",
 "Tronco07","M7","M8","M9","M10","M11","M12","M13","M14","M15","M16","M17","M18","M19","M20","M21","M22","A81","A82","A84","A86","A87","A88","A89","A813","A814","A815",
 "A816","A817","A818","A819","Slime04","Slime05","Slime06","Slime07","Slime08","A823","A824","A825","A21","A22", "A23", "A28", "A29","A212","A214","A215","A216","A218",
 "A219","SlimeKing","Waldo","A220","A221","A223","A224","A225","A229","A230","A232","A233","A235","A236","A238","A239","A240","A242","A243","A244","A245","A246","A248",
@@ -251,9 +253,9 @@ Escudo={
         t_durability = "3"
     }
 }
-Manzana={
+Manzana01={
     Name={
-        t_name ="Manzana"
+        t_name ="Manzana01"
     },
     Transform = {
         positionX = "450.0",
@@ -274,7 +276,7 @@ Manzana={
     },
     MeshRenderer = {
         t_model_name = "manzana.mesh",
-        t_entity_name= "Manzana1",
+        t_entity_name= "Manzana01",
         t_node_x="0.0",
         t_node_y="0.0",
         t_node_z="0.0",
@@ -291,9 +293,9 @@ TreeEnemy01 = {
         t_name="TreeEnemy01"
     },
     Transform = {
-        positionX = "850.0",
+        positionX = "550.0",
         positionY="400.0",
-        positionZ="-400.0",
+        positionZ="-3400.0",
         scaleX="40.0",
         scaleY="40.0",
         scaleZ="40.0",
@@ -322,7 +324,233 @@ TreeEnemy01 = {
     TreeEnemy={
         t_lives="3",
         t_damage="1",
-        t_cooldown="4000"
+        t_cooldown="4000",
+        t_apple_name="Manzana01"
+    }
+}
+Manzana02={
+    Name={
+        t_name ="Manzana02"
+    },
+    Transform = {
+        positionX = "-15850.0",
+        positionY="400.0",
+        positionZ="-6400.0",
+        scaleX="30.0",
+        scaleY="30.0",
+        scaleZ="30.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "100.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "manzana.mesh",
+        t_entity_name= "Manzana02",
+        t_node_x="0.0",
+        t_node_y="0.0",
+        t_node_z="0.0",
+        t_mat_name= ""
+    },
+    Apple={
+        t_durability = "2000",
+        t_velocity = "15",
+        t_damage="1"
+    }
+}
+TreeEnemy02 = {
+    Name={
+        t_name="TreeEnemy02"
+    },
+    Transform = {
+        positionX = "-15850.0",
+        positionY="400.0",
+        positionZ="-5400.0",
+        scaleX="40.0",
+        scaleY="40.0",
+        scaleZ="40.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "arbolEnemigoFruta.mesh",
+        t_entity_name= "TreeEnemy02",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    TreeEnemy={
+        t_lives="3",
+        t_damage="1",
+        t_cooldown="4000",
+        t_apple_name="Manzana02"
+    }
+}
+Manzana03={
+    Name={
+        t_name ="Manzana03"
+    },
+    Transform = {
+        positionX = "-9950.0",
+        positionY="250.0",
+        positionZ="400.0",
+        scaleX="30.0",
+        scaleY="30.0",
+        scaleZ="30.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "100.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "manzana.mesh",
+        t_entity_name= "Manzana03",
+        t_node_x="0.0",
+        t_node_y="0.0",
+        t_node_z="0.0",
+        t_mat_name= ""
+    },
+    Apple={
+        t_durability = "2000",
+        t_velocity = "15",
+        t_damage="1"
+    }
+}
+TreeEnemy03 = {
+    Name={
+        t_name="TreeEnemy03"
+    },
+    Transform = {
+        positionX = "-9950.0",
+        positionY="250.0",
+        positionZ="400.0",
+        scaleX="40.0",
+        scaleY="40.0",
+        scaleZ="40.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "arbolEnemigoFruta.mesh",
+        t_entity_name= "TreeEnemy03",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    TreeEnemy={
+        t_lives="3",
+        t_damage="1",
+        t_cooldown="4000",
+        t_apple_name="Manzana03"
+    }
+}
+Manzana04={
+    Name={
+        t_name ="Manzana04"
+    },
+    Transform = {
+        positionX = "500.0",
+        positionY = "330.0",
+        positionZ = "-26100.0",
+        scaleX="30.0",
+        scaleY="30.0",
+        scaleZ="30.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "100.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "manzana.mesh",
+        t_entity_name= "Manzana04",
+        t_node_x="0.0",
+        t_node_y="0.0",
+        t_node_z="0.0",
+        t_mat_name= ""
+    },
+    Apple={
+        t_durability = "2000",
+        t_velocity = "15",
+        t_damage="1"
+    }
+}
+TreeEnemy04 = {
+    Name={
+        t_name="TreeEnemy04"
+    },
+    Transform = {
+        positionX = "500.0",
+        positionY = "330.0",
+        positionZ = "-26100.0",
+        scaleX="40.0",
+        scaleY="40.0",
+        scaleZ="40.0",
+        rotationX="0.0",
+        rotationY="0.0",
+        rotationZ="0.0",
+        rotationW="1.0"
+    },
+    RigidBody = {
+        t_mass = "20.0",
+        t_trigger = "0",
+        t_static = "0"
+    },
+    MeshRenderer = {
+        t_model_name = "arbolEnemigoFruta.mesh",
+        t_entity_name= "TreeEnemy04",
+        t_node_x="0",
+        t_node_y="0",
+        t_node_z="0",
+        t_mat_name= ""
+    },
+    Enemy={
+        t_speed = "1.5",
+        t_max_distance ="1500.0",
+    },
+    TreeEnemy={
+        t_lives="3",
+        t_damage="1",
+        t_cooldown="4000",
+        t_apple_name="Manzana04"
     }
 }
 

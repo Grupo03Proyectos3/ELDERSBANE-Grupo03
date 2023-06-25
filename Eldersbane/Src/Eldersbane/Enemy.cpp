@@ -165,7 +165,7 @@ namespace Eldersbane
         if (m_tree_attack_timer->getElapsedTime() >= m_tree_attack_cooldown)
         {
             // LANZAR MANZANA
-            auto m_apple = Flamingo::getComponent<Apple>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("Manzana"));
+            auto m_apple = Flamingo::getComponent<Apple>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject(m_tree_enemy->getAppleName()));
             m_direction =
                 {t_player_pos.getX() - m_tr->getPosition().getX(),
                  t_player_pos.getY() - m_tr->getPosition().getY(),
