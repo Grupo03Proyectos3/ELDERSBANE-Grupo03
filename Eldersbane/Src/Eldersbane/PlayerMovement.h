@@ -45,7 +45,7 @@ namespace Eldersbane
         Flamingo::Camera* m_camera;
         Flamingo::Animator* m_animator;
         Eldersbane::Sword* m_sword;
-        float percentRotate=0;
+        float m_percent_rotate=0;
 
         Flamingo::RigidBody* m_rb;
         Flamingo::SVector3 m_forward;
@@ -53,7 +53,7 @@ namespace Eldersbane
 
         float initialY;
 
-        bool controlAnim;
+        bool m_control_anim;
 
         // keys
         Flamingo::FLM_KeyCode m_key_left;

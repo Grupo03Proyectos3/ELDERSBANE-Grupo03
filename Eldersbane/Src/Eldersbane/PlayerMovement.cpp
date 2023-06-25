@@ -44,7 +44,7 @@ namespace Eldersbane
     {
         m_transform = Flamingo::getComponent<Flamingo::Transform>(this->gameObject());
         m_animator = Flamingo::getComponent<Flamingo::Animator>(this->gameObject());
-        percentRotate = 0;
+        m_percent_rotate = 0;
         m_camera = Flamingo::getComponent<Flamingo::Camera>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("myCamera"));
         auto sword_obj = Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword");
         if (sword_obj != nullptr)
@@ -58,11 +58,11 @@ namespace Eldersbane
         m_animator->setAnimation("Atacar", true, true);
         m_forward = {1, 0, 0};
         m_right = {0, 0, 1};
-        controlAnim = false;
+        m_control_anim = false;
         m_transform->setPosition({m_transform->getPosition().getX(), m_transform->getPosition().getY(), m_transform->getPosition().getZ()});
 
-        m_forward = getOrientation(percentRotate);
-        m_right = getOrientation(percentRotate + 90);
+        m_forward = getOrientation(m_percent_rotate);
+        m_right = getOrientation(m_percent_rotate + 90);
 
         m_key_left = Flamingo::FLM_a;
         m_key_right = Flamingo::FLM_d;
@@ -84,13 +84,13 @@ namespace Eldersbane
         double rotacion;
         if (m_sword != nullptr && m_sword->gameObject()->getActive())
         {
-            controlAnim = true;
+            m_control_anim = true;
             m_animator->setAnimation("Correr", false, false);
             m_animator->setAnimation("Atacar", true, true);
         }
         else if ((m_sword != nullptr && !m_sword->gameObject()->getActive()))
         {
-            controlAnim = false;
+            m_control_anim = false;
             m_animator->setAnimation("Atacar", false, false);
             m_animator->setAnimation("Correr", true, true);
         }
@@ -181,18 +181,19 @@ namespace Eldersbane
         float xRel = x / std::abs(x), zRel = z / std::abs(z);
         return Flamingo::SVector3(x * x * xRel, 0, z * z * zRel);
     }
+
     Flamingo::SVector3 PlayerMovement::getForward()
     {
         return m_forward;
     }
 
-    void PlayerMovement::lookAtMouse(float t_deltaTime)
+    void PlayerMovement::lookAtMouse(float t_delta_time)
     {
-        Flamingo::SQuaternion quat = Flamingo::SQuaternion((percentRotate += Flamingo::Input().getMouseMotionPos().first * m_sensitivity * t_deltaTime * -1), Flamingo::SVector3(0, 1, 0));
+        Flamingo::SQuaternion quat = Flamingo::SQuaternion((m_percent_rotate += Flamingo::Input().getMouseMotionPos().first * m_sensitivity * t_delta_time * -1), Flamingo::SVector3(0, 1, 0));
         m_transform->setRotation(quat);
 
-        m_forward = getOrientation(percentRotate);
-        m_right = getOrientation(percentRotate + 90);
+        m_forward = getOrientation(m_percent_rotate);
+        m_right = getOrientation(m_percent_rotate + 90);
     }
 
     void PlayerMovement::changeKeys(bool t_state)

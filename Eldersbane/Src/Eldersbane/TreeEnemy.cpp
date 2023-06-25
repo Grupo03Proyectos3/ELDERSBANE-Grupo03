@@ -13,20 +13,6 @@ Flamingo::BehaviourScript* Eldersbane::TreeEnemy::clone()
     return new TreeEnemy();
 }
 
-int Eldersbane::TreeEnemy::getDamage()
-{
-    return m_damage;
-}
-
-int Eldersbane::TreeEnemy::getLives()
-{
-    return m_lives;
-}
-int Eldersbane::TreeEnemy::getCooldown()
-{
-    return m_cooldown;
-}
-
 bool Eldersbane::TreeEnemy::initValues(std::unordered_map<std::string, std::string> t_args)
 {
     auto it_lives = t_args.find("t_lives");
@@ -42,4 +28,18 @@ bool Eldersbane::TreeEnemy::initValues(std::unordered_map<std::string, std::stri
     }
 
     return false;
+}
+
+int Eldersbane::TreeEnemy::getDamage()
+{
+    return m_damage;
+}
+
+int Eldersbane::TreeEnemy::getLives()
+{
+    return m_lives;
+}
+int Eldersbane::TreeEnemy::getCooldown()
+{
+    return m_cooldown;
 }

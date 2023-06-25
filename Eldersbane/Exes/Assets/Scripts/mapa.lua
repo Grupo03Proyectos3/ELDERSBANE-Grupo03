@@ -259,9 +259,9 @@ Manzana={
         positionX = "450.0",
         positionY="400.0",
         positionZ="-400.0",
-        scaleX="1.0",
-        scaleY="1.0",
-        scaleZ="1.0",
+        scaleX="60.0",
+        scaleY="60.0",
+        scaleZ="60.0",
         rotationX="0.0",
         rotationY="0.0",
         rotationZ="0.0",
@@ -273,7 +273,7 @@ Manzana={
         t_static = "0"
     },
     MeshRenderer = {
-        t_model_name = "cube.mesh",
+        t_model_name = "manzana.mesh",
         t_entity_name= "Manzana1",
         t_node_x="0.0",
         t_node_y="0.0",
@@ -281,7 +281,8 @@ Manzana={
         t_mat_name= ""
     },
     Apple={
-        t_durability = "2000"
+        t_durability = "2000",
+        t_velocity = "20000"
     }
 }
 TreeEnemy01 = {
