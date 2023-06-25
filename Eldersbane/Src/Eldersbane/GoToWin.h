@@ -14,9 +14,9 @@ namespace Eldersbane
         virtual ~GoToWin(){};
         Flamingo::BehaviourScript* clone() override;
 
-        void start() override;
+       bool initValues(std::unordered_map<std::string, std::string> = {}) override;
 
-        void update(float t_deltaTime) override;
+       
 
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 

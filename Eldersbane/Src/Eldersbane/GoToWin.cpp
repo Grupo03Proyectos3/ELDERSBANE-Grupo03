@@ -12,13 +12,19 @@ Flamingo::BehaviourScript* Eldersbane::GoToWin::clone()
     return new GoToWin();
 }
 
-void Eldersbane::GoToWin::start()
+bool Eldersbane::GoToWin::initValues(std::unordered_map<std::string, std::string> t_args)
 {
-    m_scene = "WinGame"; 
-}
+    auto k = t_args.find("t_scene");
 
-void Eldersbane::GoToWin::update(float t_deltaTime)
-{
+    if (k != t_args.end())
+    {
+        m_scene = k->second;
+
+        return true;
+    }
+    else
+        return false;
+    return true;
 }
 
 void Eldersbane::GoToWin::onCollisionEnter(Flamingo::GameObject* t_other)
@@ -29,6 +35,6 @@ void Eldersbane::GoToWin::onCollisionEnter(Flamingo::GameObject* t_other)
 
         auto sM = Flamingo::FlamingoCore::getSceneManager();
         sM->reloadScenePetition();
-        sM->startScene("WinGame");
+        sM->startScene(m_scene);
     }
 }

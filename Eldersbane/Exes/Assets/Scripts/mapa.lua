@@ -1572,7 +1572,7 @@ Waldo = {
         t_mat_name= ""
     },
     GoToWin={
-
+        t_scene="WinGame"
     },
 }
 SlimeKing = {
