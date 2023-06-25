@@ -32,10 +32,9 @@
 #include "PurpleEnemy.h"
 #include "TreeEnemy.h"
 #include "BlackEnemy.h"
-#include "GoToLose.h"
+
 #include "GoToWin.h"
-#include "GoToMenu.h"
-#include "GoToGame.h"
+
 #include "FlowersEnemy.h"
 
 bool InitJuego(void)
@@ -73,9 +72,7 @@ bool InitJuego(void)
     f_core->addGameScript("TreeEnemy", new Eldersbane::TreeEnemy());
     f_core->addGameScript("BlackEnemy", new Eldersbane::BlackEnemy());
     f_core->addGameScript("GoToWin", new Eldersbane::GoToWin());
-    f_core->addGameScript("GoToLose", new Eldersbane::GoToLose());
-    f_core->addGameScript("GoToGame", new Eldersbane::GoToGame());
-    f_core->addGameScript("GoToMenu", new Eldersbane::GoToMenu());
+    
    
     return true;
 }
