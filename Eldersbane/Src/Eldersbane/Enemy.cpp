@@ -169,7 +169,7 @@ namespace Eldersbane
                  t_player_pos.getY() - m_tr->getPosition().getY(),
                  t_player_pos.getZ() - m_tr->getPosition().getZ()};
             m_direction.normalize();
-            m_apple->addVelocity({200000, 0, 0});
+           // m_apple->addVelocity({200000, 0, 0});
             m_tree_attack_timer->reset();
         }
     }
