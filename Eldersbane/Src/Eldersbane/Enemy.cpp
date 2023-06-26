@@ -79,7 +79,6 @@ namespace Eldersbane
         }
         else if (m_tree_enemy != nullptr)
         {
-            m_damage = m_tree_enemy->getDamage();
             m_lives = m_tree_enemy->getLives();
             m_tree_attack_cooldown = m_tree_enemy->getCooldown();
         }

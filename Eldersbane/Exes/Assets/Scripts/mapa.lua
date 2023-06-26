@@ -323,7 +323,6 @@ TreeEnemy01 = {
     },
     TreeEnemy={
         t_lives="3",
-        t_damage="1",
         t_cooldown="4000",
         t_apple_name="Manzana01"
     }
@@ -370,7 +369,7 @@ TreeEnemy02 = {
     Transform = {
         positionX = "-15850.0",
         positionY="400.0",
-        positionZ="-5400.0",
+        positionZ="-7400.0",
         scaleX="40.0",
         scaleY="40.0",
         scaleZ="40.0",
@@ -398,7 +397,6 @@ TreeEnemy02 = {
     },
     TreeEnemy={
         t_lives="3",
-        t_damage="1",
         t_cooldown="4000",
         t_apple_name="Manzana02"
     }
@@ -473,7 +471,6 @@ TreeEnemy03 = {
     },
     TreeEnemy={
         t_lives="3",
-        t_damage="1",
         t_cooldown="4000",
         t_apple_name="Manzana03"
     }
@@ -548,7 +545,6 @@ TreeEnemy04 = {
     },
     TreeEnemy={
         t_lives="3",
-        t_damage="1",
         t_cooldown="4000",
         t_apple_name="Manzana04"
     }
