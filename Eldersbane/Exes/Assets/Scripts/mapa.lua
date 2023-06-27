@@ -610,7 +610,7 @@ Player = {
     },
     ParticleSystem={
         t_name="psSangre",
-        t_template="PsPrueba/blood_default",
+        t_template="SistemasParticulas/blood_default",
         t_static = "0"
     }
 }
@@ -773,7 +773,7 @@ Flores01 = {
     },
     ParticleSystem={
         t_name="psFlor01",
-        t_template="PsPrueba/smoke_flores",
+        t_template="SistemasParticulas/smoke_flores",
         t_static = "1"
     }
 }
@@ -812,7 +812,7 @@ Flores02 = {
     },
     ParticleSystem={
         t_name="psFlor02",
-        t_template="PsPrueba/smoke_flores",
+        t_template="SistemasParticulas/smoke_flores",
         t_static = "1"
     }
 }
@@ -851,7 +851,7 @@ Flores03 = {
     },
     ParticleSystem={
         t_name="psFlor03",
-        t_template="PsPrueba/smoke_flores",
+        t_template="SistemasParticulas/smoke_flores",
         t_static = "1"
     }
 }
@@ -890,7 +890,7 @@ Flores04 = {
     },
     ParticleSystem={
         t_name="psFlor04",
-        t_template="PsPrueba/smoke_flores",
+        t_template="SistemasParticulas/smoke_flores",
         t_static = "1"
     }
 }
@@ -912,7 +912,7 @@ Niebla = {
     },
     ParticleSystem={
         t_name="psNiebla",
-        t_template="PsPrueba/niebla",
+        t_template="SistemasParticulas/niebla",
         t_static = "1"
     }
 }
@@ -934,7 +934,7 @@ Lluvia = {
     },
     ParticleSystem={
         t_name="psLluvia",
-        t_template="PsPrueba/lluvia",
+        t_template="SistemasParticulas/lluvia",
         t_static = "1"
     }
 }

@@ -1,7 +1,7 @@
 // Example particle systems
 
 
-particle_system PsPrueba/fire_default {
+particle_system SistemasParticulas/fire_default {
 
     material        	Prueba/fire
     // Configuración de las partículas
@@ -26,7 +26,7 @@ particle_system PsPrueba/fire_default {
     }
 }
 
-particle_system PsPrueba/blood_default {
+particle_system SistemasParticulas/blood_default {
 
     loop false
     material        	Prueba/blood
@@ -48,7 +48,7 @@ particle_system PsPrueba/blood_default {
 }
 
 
-particle_system PsPrueba/smoke_default {
+particle_system SistemasParticulas/smoke_default {
 
     material        	Prueba/smoke
     // Configuración de las partículas
@@ -73,7 +73,7 @@ particle_system PsPrueba/smoke_default {
     }
 }
 
-particle_system PsPrueba/smoke_flores {
+particle_system SistemasParticulas/smoke_flores {
 
     material        	Prueba/smoke
     // Configuración de las partículas
@@ -100,7 +100,7 @@ particle_system PsPrueba/smoke_flores {
    
 }
 
-particle_system PsPrueba/niebla
+particle_system SistemasParticulas/niebla
 {
     material        Prueba/smoke
     particle_width  3500
@@ -126,7 +126,7 @@ particle_system PsPrueba/niebla
 }
 
 
-particle_system PsPrueba/lluvia
+particle_system SistemasParticulas/lluvia
 {
     material        Prueba/smoke
     particle_width  20
