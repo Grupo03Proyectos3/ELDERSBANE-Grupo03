@@ -20,6 +20,7 @@ Eldersbane::PlayerHealth::~PlayerHealth()
     m_empty_containers.clear();
     delete m_invencibility;
     delete m_cover_timer;
+    delete m_blood_timer;
 }
 
 Flamingo::BehaviourScript* Eldersbane::PlayerHealth::clone()

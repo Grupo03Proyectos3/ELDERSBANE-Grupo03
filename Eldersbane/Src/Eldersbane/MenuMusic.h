@@ -4,9 +4,9 @@
 #include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
-    /// <summary>
-    /// Reproduce música en el menú
-    /// </summary>
+    /**
+     * @brief Reproduce música en el menú.
+     */
     class MenuMusic : public Flamingo::BehaviourScript
     {
       public:

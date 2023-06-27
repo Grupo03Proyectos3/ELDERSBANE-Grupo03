@@ -4,9 +4,9 @@
 #include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
-    /// <summary>
-    /// Al pulsar en el botón asignado, esta clase hace que se salda del juego.
-    /// </summary>
+     /**
+     * @brief Al pulsar en el botón asignado, esta clase hace que salgamos del juego.
+     */
     class ExitGame : public Flamingo::BehaviourScript
     {
       public:

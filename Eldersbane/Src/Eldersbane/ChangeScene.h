@@ -4,6 +4,10 @@
 #include "Scripting/BehaviourScript.h"
 namespace Eldersbane
 {
+
+    /**
+     * @brief Funcionalidad de cambiar de escena
+     */
     class ChangeScene : public Flamingo::BehaviourScript
     {
       public:

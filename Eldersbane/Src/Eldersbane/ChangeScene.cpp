@@ -26,11 +26,6 @@ namespace Eldersbane
     void ChangeScene::setFirstScene()
     {
 
-       /* if (Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getName() == "mapa")
-            Flamingo::FlamingoCore::getSceneManager()->startScene("menu");
-        else
-            Flamingo::FlamingoCore::getSceneManager()->startScene("mapa");*/
-
          Flamingo::FlamingoCore::getSceneManager()->startScene(m_scene);
 
     }
