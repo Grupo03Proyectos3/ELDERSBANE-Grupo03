@@ -5,10 +5,10 @@
 
 namespace Eldersbane
 {
-    /// <summary>
-    /// Clase de enemigo fuerte pero con poca vida.
-    /// Posee variables para obtener sus atributos
-    /// </summary>
+    /**
+     * @brief  Clase de enemigo fuerte pero con poca vida.
+     * Posee variables para obtener sus atributos
+     */
     class RedEnemy : public Flamingo::BehaviourScript
     {
       public:

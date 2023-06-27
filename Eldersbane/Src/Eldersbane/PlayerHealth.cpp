@@ -1,5 +1,4 @@
 ﻿#include "PlayerHealth.h"
-#include "Audio/AudioSource.h"
 #include "ECS/ManagerFunctions.h"
 #include "ECS/ecs_defs.h"
 #include "Enemy.h"
@@ -7,8 +6,8 @@
 #include "FlamingoExport/FlamingoCore.h"
 #include "PinkPotion.h"
 #include "RedPotion.h"
-#include <Audio/AudioSource.h>
 #include <ECS/InputHandlerContainer.h>
+#include <Render/MeshRenderer.h>
 
 Eldersbane::PlayerHealth::PlayerHealth()
 {

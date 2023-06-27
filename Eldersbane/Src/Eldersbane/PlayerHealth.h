@@ -3,10 +3,10 @@
 #define __PLAYER_HEALTH_H__
 #include "Audio/AudioSource.h"
 #include "FlamingoUtils/Timer.h"
-#include "PlayerMovement.h"
 #include "Scripting/BehaviourScript.h"
 #include "Shield.h"
 #include "UI/UIElement.h"
+#include <Render/ParticleSystem.h>
 
 namespace Eldersbane
 {

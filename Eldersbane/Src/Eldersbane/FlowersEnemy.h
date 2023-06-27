@@ -5,10 +5,9 @@
 
 namespace Eldersbane
 {
-    /// <summary>
-    /// La clase de enemigo más débil.
-    /// Posee variables para obtener sus atributos
-    /// </summary>
+    /**
+     * @brief Enemigo que te cambiará los controles al chocar con él
+     */
     class FlowersEnemy : public Flamingo::BehaviourScript
     {
       public:

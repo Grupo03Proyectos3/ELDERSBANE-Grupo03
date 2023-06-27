@@ -29,11 +29,13 @@ namespace Eldersbane
     {
         auto it_speed = t_args.find("t_speed");
         auto it_sens = t_args.find("t_sensitivity");
+        auto it_dash = t_args.find("t_dash_cooldown");
 
         if (it_speed != t_args.end() && it_sens != t_args.end())
         {
             m_speed = std::stof(it_speed->second);
             m_sensitivity = std::stof(it_sens->second);
+            m_dash_cooldown = std::stof(it_dash->second);
 
             return true;
         }
@@ -71,9 +73,11 @@ namespace Eldersbane
 
         m_keys_changed = false;
         m_time_keys = 0;
-
+        m_is_dashing = false;
         m_dash_sound = Flamingo::getComponent<Flamingo::AudioSource>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("AudioDash"));
         m_parts = Flamingo::getComponent<Flamingo::ParticleSystem>(this->gameObject());
+
+        m_dash_timer = 0.0f;
        /* m_parts->emit(false);*/
         
     }

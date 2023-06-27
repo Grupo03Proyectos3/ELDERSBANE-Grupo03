@@ -585,6 +585,7 @@ Player = {
     PlayerMovement = {
         t_speed="1.25",
         t_sensitivity="0.04",
+        t_dash_cooldown="7000"
     },
     PickUp={
 
