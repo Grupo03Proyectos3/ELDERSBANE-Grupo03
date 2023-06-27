@@ -7,9 +7,10 @@
 #include <Physics/RigidBody.h>
 namespace Eldersbane
 {
-    /// <summary>
-    /// Clase que representa la manzana que el árbol mágico usa como munición
-    /// </summary>
+    /**
+     * @brief Clase que representa la manzana que el árbol mágico usa como munición
+     */
+
     class Apple : public Flamingo::BehaviourScript
     {
       public:
@@ -20,19 +21,37 @@ namespace Eldersbane
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
         void start() override;
         void update(float t_delta_time) override;
-        int getDurability();
-        void attackPlayer(Flamingo::SVector3 t_dir, Flamingo::SVector3 t_pos);
-        void deactivate();
+        /**
+         * @brief Devuelve el valor del daño
+         */
         int getDamage();
+        /**
+         * @brief Devuelve el valor del la duración del ataque de la manzana
+         */
+        int getDurability();
+        /**
+         * @brief La manzana se posiciona en el árbol y se dirige hacia la posición del jugador
+         * @param[in] t_dir Dirección hacia jugador
+         * @param[in] t_pos Posición del árbol
+         */
+        void attackPlayer(Flamingo::SVector3 t_dir, Flamingo::SVector3 t_pos);
+        /**
+         * @brief Desactiva la visibilidad de la manzana
+         */
+        void deactivate();
 
       private:
-        int m_apple_durability;
-        float m_velocity;
-        Flamingo::SVector3 m_direction;
+        int m_apple_durability; /**< Duración de la manzana */
+        int m_damage;           /**< Cantidad de daño de la manzaña */
+        float m_velocity;       /**< Velocidad con la que se mueve la manzana */
+
+        bool m_follow; /**< Indica si la manzana está en movimiento */
+
+        Flamingo::SVector3 m_direction; /**< Direccion en la que se mueve */
+
         Flamingo::Transform* m_transform;
-        bool m_follow;
-        Flamingo::Timer* m_timer;
-        int m_damage;
+
+        Flamingo::Timer* m_timer; /**< Temporizador para la duración de la manzana. */
     };
 } // namespace Eldersbane
 #endif

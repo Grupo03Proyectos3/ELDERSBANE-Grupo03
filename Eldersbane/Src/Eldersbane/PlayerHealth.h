@@ -53,8 +53,8 @@ namespace Eldersbane
 
         Shield* m_shield; /**< Puntero al escudo del jugador. */
 
-        Flamingo::Transform* m_transform;        /**< Puntero a la transformación del jugador. */
-        Flamingo::Transform* m_shield_transform; /**< Puntero a la transformación del escudo. */
+        Flamingo::Transform* m_transform;
+        Flamingo::Transform* m_shield_transform; 
 
         Flamingo::Timer* m_invencibility; /**< Temporizador de invencibilidad del jugador. */
         Flamingo::Timer* m_cover_timer;   /**< Temporizador para la duración de la cubierta. */

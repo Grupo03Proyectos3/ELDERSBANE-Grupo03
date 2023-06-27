@@ -6,9 +6,11 @@
 #include <Physics/RigidBody.h>
 namespace Eldersbane
 {
-    /// <summary>
-    /// Clase que representa un escudo y guarda el número de golpes de ha recibido, y si esta disponible para usar
-    /// </summary>
+
+    /**
+     * @brief Clase que representa un escudo y guarda el número de golpes de ha recibido, y si esta disponible para usar
+     */
+
     class Shield : public Flamingo::BehaviourScript
     {
       public:
@@ -17,12 +19,20 @@ namespace Eldersbane
         Flamingo::BehaviourScript* clone() override;
         bool initValues(std::unordered_map<std::string, std::string> = {}) override;
         void start() override;
-        void resetHits();
+        /**
+         * @brief El escudo recibe un golpe
+         */
         void takeHit();
+        /**
+         * @brief Resetea los golpes 
+         */
+        void resetHits();
+        /**
+         * @brief Devuelve si el escudo esta disponible para usar
+         */
         bool getAvailability();
 
       private:
-
         int m_shield_durability;
         int m_currentHits;
         bool m_available;

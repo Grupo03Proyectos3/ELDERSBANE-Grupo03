@@ -88,11 +88,13 @@ namespace Eldersbane
         Flamingo::getComponent<Flamingo::MeshRenderer>(gameObject())->onEnable();
         m_timer->reset();
     }
+
     void Apple::deactivate()
     {
         gameObject()->setActive(false);
         Flamingo::getComponent<Flamingo::MeshRenderer>(gameObject())->onDisable();
     }
+
     int Apple::getDamage()
     {
         return m_damage;

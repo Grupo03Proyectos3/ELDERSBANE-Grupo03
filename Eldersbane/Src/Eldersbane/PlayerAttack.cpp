@@ -36,7 +36,6 @@ namespace Eldersbane{
         m_sword = Flamingo::getComponent<Sword>(Flamingo::FlamingoCore::getSceneManager()->getSceneActive()->getObject("sword"));
         m_Swordtransform = Flamingo::getComponent<Flamingo::Transform>(m_sword->gameObject());
         m_transform = Flamingo::getComponent<Flamingo::Transform>(gameObject());
-        playerMovement = Flamingo::getComponent<PlayerMovement>(gameObject());
 
         m_sword->gameObject()->setActive(false);
         m_audio_ataque = Flamingo::getComponent<Flamingo::AudioSource>(gameObject());

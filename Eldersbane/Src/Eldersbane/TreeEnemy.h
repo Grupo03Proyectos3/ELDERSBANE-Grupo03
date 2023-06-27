@@ -5,9 +5,11 @@
 
 namespace Eldersbane
 {
-    /// <summary>
-    /// La clase del enemigo árbol mágico
-    /// </summary>
+
+    /**
+     * @brief Clase del enemigo árbol mágico. Este enemigo dispara al jugador a distancia.
+     */
+
     class TreeEnemy : public Flamingo::BehaviourScript
     {
       public:
@@ -15,9 +17,17 @@ namespace Eldersbane
         ~TreeEnemy();
         Flamingo::BehaviourScript* clone() override;
         bool initValues(std::unordered_map<std::string, std::string> = {}) override;
-        
+        /**
+         * @brief Devuelve las vidas del enemigo
+         */
         int getLives();
+        /**
+         * @brief Devuelve el cooldown del enemigo
+         */
         int getCooldown();
+        /**
+         * @brief Devuelve el nombre de la manzana
+         */
         std::string getAppleName();
 
       private:

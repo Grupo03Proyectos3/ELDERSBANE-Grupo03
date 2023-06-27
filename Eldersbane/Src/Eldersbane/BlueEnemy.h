@@ -15,12 +15,19 @@ namespace Eldersbane
         BlueEnemy();
         ~BlueEnemy();
         Flamingo::BehaviourScript* clone() override;
-        int getDamage();
-        int getLives();
         bool initValues(std::unordered_map<std::string, std::string> = {}) override;
+        /**
+         * @brief Devuelve el daño del enemigo
+         */
+        int getDamage();
+        /**
+         * @brief Devuelve las vidas del enemigo
+         */
+        int getLives();
+
       private:
         int m_damage;
         int m_lives;
     };
-}
+} // namespace Eldersbane
 #endif

@@ -6,20 +6,20 @@
 #include <Physics/RigidBody.h>
 namespace Eldersbane
 {
-    /// <summary>
-    /// Clase que representa una espada y realiza daño a los enemigos al atacar.
-    /// </summary>
+    /**
+     * @brief Clase que representa una espada y realiza daño a los enemigos al atacar.
+     */
     class Sword : public Flamingo::BehaviourScript
     {
       public:
         Sword();
         virtual ~Sword();
         Flamingo::BehaviourScript* clone() override;
-        void start() override;
+        bool initValues(std::unordered_map<std::string, std::string>) override;
         void onCollisionEnter(Flamingo::GameObject* t_other) override;
 
       private:
-        int m_damage = 2;
+        int m_damage;
     };
 } // namespace Eldersbane
 #endif
